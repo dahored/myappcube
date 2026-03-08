@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "games": "Games"
+  },
+  "home": {
+    "headline": "Games you'll love.",
+    "tagline": "We craft fun experiences made to play with everyone.",
+    "scrollCta": "Discover our games",
+    "featuredLabel": "Available now",
+    "featuredCta": "Learn more"
+  },
+  "common": {
+    "comingSoon": "Coming Soon",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "downloadOn": "Download on the",
+    "getItOn": "Get it on"
+  },
+  "games": {
+    "el-infiltrado": {
+      "description": "A fun party game where friends try to find the infiltrator among the group. Perfect for gatherings — no app needed for players."
+    },
+    "word-rush": {
+      "description": "A fast-paced word game that tests your vocabulary and reflexes. Play solo or challenge your friends in real time."
+    },
+    "cube-quest": {
+      "description": "A satisfying puzzle game where you stack, balance and explode cubes through increasingly creative levels."
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Everything you need to know about our games.",
+    "q1": "Where can I download the games?",
+    "a1": "Our games are available on Google Play for Android devices.",
+    "q2": "Are the games free?",
+    "a2": "Yes, all our games are free to download. Some include optional in-app purchases.",
+    "q3": "What devices are supported?",
+    "a3": "Our games are compatible with Android devices. iOS support is coming soon.",
+    "q4": "Will there be more games coming soon?",
+    "a4": "Yes! We are actively developing new titles. Follow us on social media to stay updated on upcoming releases.",
+    "q5": "How can I contact the team?",
+    "a5": "You can reach us through the contact forms on each game page, or send us a message on our social media channels."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  }
+}

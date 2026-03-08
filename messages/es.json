@@ -1,0 +1,49 @@
+{
+  "nav": {
+    "games": "Juegos"
+  },
+  "home": {
+    "headline": "Juegos que enamoran.",
+    "tagline": "Creamos experiencias divertidas para jugar con todos.",
+    "scrollCta": "Descubre nuestros juegos",
+    "featuredLabel": "Disponible ahora",
+    "featuredCta": "Conoce el juego"
+  },
+  "common": {
+    "comingSoon": "Próximamente",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "downloadOn": "Descárgalo en",
+    "getItOn": "Disponible en"
+  },
+  "games": {
+    "el-infiltrado": {
+      "description": "Un juego de fiesta donde tus amigos intentan descubrir al infiltrado del grupo. Perfecto para reuniones — los jugadores no necesitan la app."
+    },
+    "word-rush": {
+      "description": "Un juego de palabras trepidante que pone a prueba tu vocabulario y reflejos. Juega solo o desafía a tus amigos en tiempo real."
+    },
+    "cube-quest": {
+      "description": "Un adictivo juego de puzzles donde apilás, equilibrás y explotás cubos en niveles cada vez más creativos."
+    }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Todo lo que necesitás saber sobre nuestros juegos.",
+    "q1": "¿Dónde puedo descargar los juegos?",
+    "a1": "Nuestros juegos están disponibles en Google Play para dispositivos Android.",
+    "q2": "¿Los juegos son gratuitos?",
+    "a2": "Sí, todos nuestros juegos son gratuitos para descargar. Algunos incluyen compras opcionales dentro de la app.",
+    "q3": "¿En qué dispositivos funcionan?",
+    "a3": "Nuestros juegos son compatibles con dispositivos Android. Estamos trabajando en soporte para iOS próximamente.",
+    "q4": "¿Habrá más juegos próximamente?",
+    "a4": "¡Sí! Estamos desarrollando nuevos títulos. Seguinos en redes sociales para enterarte de los próximos lanzamientos.",
+    "q5": "¿Cómo puedo contactar al equipo?",
+    "a5": "Podés escribirnos a través de los formularios de contacto en cada juego, o enviarnos un mensaje por nuestras redes sociales."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Privacidad",
+    "terms": "Términos"
+  }
+}
