@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Plus, X, Smile, Gamepad2, Users } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
@@ -20,11 +20,24 @@ export interface AboutCardData {
 
 export default function AboutCardsGrid({ cards }: { cards: AboutCardData[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [visible, setVisible] = useState(false);
   const active = openIndex !== null ? cards[openIndex] : null;
+
+  // Animate in
+  useEffect(() => {
+    if (openIndex !== null) {
+      requestAnimationFrame(() => setVisible(true));
+    }
+  }, [openIndex]);
+
+  function closeModal() {
+    setVisible(false);
+    setTimeout(() => setOpenIndex(null), 200);
+  }
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
         {cards.map(({ icon, iconColor, accentColor, before, accent, after, modalTitle, modalBody }, i) => {
           const Icon = iconMap[icon];
           return (
@@ -56,15 +69,15 @@ export default function AboutCardsGrid({ cards }: { cards: AboutCardData[] }) {
       {/* Modal */}
       {active && (
         <div
-          className="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/50 backdrop-blur-sm"
-          onClick={() => setOpenIndex(null)}
+          className={`fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/50 backdrop-blur-sm transition-opacity duration-200 ${visible ? 'opacity-100' : 'opacity-0'}`}
+          onClick={closeModal}
         >
           <div
-            className="modal-card relative bg-white dark:bg-zinc-900 rounded-3xl p-8 max-w-md w-full shadow-2xl border border-zinc-200/60 dark:border-zinc-700/60"
+            className={`relative bg-white dark:bg-zinc-900 rounded-3xl p-8 max-w-md w-full shadow-2xl border border-zinc-200/60 dark:border-zinc-700/60 transition-all duration-200 ${visible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              onClick={() => setOpenIndex(null)}
+              onClick={closeModal}
               className="absolute top-4 right-4 w-9 h-9 rounded-full bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors cursor-pointer"
               aria-label="Close"
             >
