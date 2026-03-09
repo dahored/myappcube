@@ -27,7 +27,7 @@ export default async function Footer() {
               />
               <span className="font-bold text-zinc-900 dark:text-zinc-50">myappcube</span>
             </Link>
-            <p className="text-sm text-zinc-500 leading-relaxed max-w-xs">
+            <p className="text-base text-zinc-500 leading-relaxed max-w-xs">
               {t('description')}
             </p>
             <a
@@ -57,17 +57,17 @@ export default async function Footer() {
             </h3>
             <ul className="flex flex-col gap-3">
               <li>
-                <Link href="/#about" className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
+                <Link href="/#about" className="text-base text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
                   {t('linkAbout')}
                 </Link>
               </li>
               <li>
-                <Link href="/#all-games" className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
+                <Link href="/#all-games" className="text-base text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
                   {t('linkGames')}
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
+                <Link href="/contact" className="text-base text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
                   {t('linkContact')}
                 </Link>
               </li>
@@ -83,11 +83,11 @@ export default async function Footer() {
               {games.map((game) => (
                 <li key={game.slug}>
                   {game.comingSoon ? (
-                    <span className="text-sm text-zinc-400 dark:text-zinc-600">
+                    <span className="text-base text-zinc-400 dark:text-zinc-600">
                       {game.name}
                     </span>
                   ) : (
-                    <Link href={`/games/${game.slug}`} className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
+                    <Link href={`/games/${game.slug}`} className="text-base text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
                       {game.name}
                     </Link>
                   )}
@@ -125,7 +125,7 @@ export default async function Footer() {
       <div className="border-t border-zinc-200/60 dark:border-zinc-800/60">
         <div className="container mx-auto px-6 py-6">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-          <nav className="flex flex-wrap items-center gap-x-0 text-sm text-zinc-500">
+          <nav className="flex flex-wrap items-center gap-x-0 text-base text-zinc-500">
             {[
               { href: '/privacy', label: t('privacy') },
               { href: '/terms', label: t('terms') },
@@ -143,7 +143,7 @@ export default async function Footer() {
               </span>
             ))}
           </nav>
-          <p className="text-sm text-zinc-500">
+          <p className="text-base text-zinc-500">
             &copy; {year} myappcube. {t('rights')}
           </p>
         </div>

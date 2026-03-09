@@ -10,6 +10,7 @@ import StoreBadges from '@/components/ui/StoreBadges';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import StickyScreenshots from '@/components/ui/StickyScreenshots';
+import BentoSection from '@/components/sections/BentoSection';
 
 /* ─── Static params ─────────────────────────────────────────────────────── */
 
@@ -387,6 +388,9 @@ export default async function GameDetailPage({
         title={t('screenshotsTitle')}
       />
 
+      {/* ── Bento ────────────────────────────────────────────────────── */}
+      <BentoSection />
+
       {/* ── Testimonials ─────────────────────────────────────────────── */}
       <TestimonialsSection />
 
@@ -441,7 +445,7 @@ export default async function GameDetailPage({
             </ScrollReveal>
 
             <ScrollReveal delay={300}>
-              <div className="flex items-center gap-1 text-sm text-zinc-500">
+              <div className="flex items-center gap-1 text-base text-zinc-500">
                 <Link href={`/games/${slug}/privacy`} className="hover:text-zinc-300 transition-colors px-3">
                   {locale === 'es' ? 'Privacidad' : 'Privacy'}
                 </Link>

@@ -40,8 +40,8 @@ export default async function FeaturedGameSection({ game }: { game: Game }) {
       */}
       {!game.comingSoon && (
         <div className='absolute flex items-end justify-center top-0 left-0 right-0 h-full'>
-          <div className="sticky bottom-6 z-40 overflow-visible flex items-end justify-center pointer-events-none mb-28">
-            <ScrollReveal delay={300} repeat>
+          <div className="sticky bottom-6 z-40 overflow-visible flex items-end justify-center pointer-events-none mb-28 mt-8">
+            <ScrollReveal delay={0} repeat>
               <Link
                 href={`/games/${game.slug}`}
                 className="pointer-events-auto flex items-center gap-4 pl-5 pr-2 py-2 h-13 rounded-full bg-gray-300/80 dark:bg-zinc-950/80 backdrop-blur-sm"
@@ -60,7 +60,7 @@ export default async function FeaturedGameSection({ game }: { game: Game }) {
 
       {/* overflow-hidden on inner div only — keeps glow clipped without breaking sticky */}
       <div className="overflow-hidden">
-        <div className="container mx-auto px-6 py-24 pb-36 md:py-44 md:pb-48">
+        <div className="container mx-auto px-6 py-24 pb-48 md:py-44 md:pb-48">
           <div className="max-w-6xl mx-auto">
 
             <ScrollReveal delay={0}>
