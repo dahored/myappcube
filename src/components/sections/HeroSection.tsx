@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { ChevronsDown, Gamepad2, ChevronRight } from 'lucide-react';
+import { ChevronsDown, Layers, ChevronRight } from 'lucide-react';
 import { games } from '@/config/games';
 import FloatingGameIcons from '@/components/ui/FloatingGameIcons';
 
@@ -44,7 +44,7 @@ export default async function HeroSection() {
       <div className="relative z-10 flex flex-col items-center">
 
         <p className="mb-8 flex items-center gap-2 text-sm font-semibold tracking-widest uppercase text-zinc-500">
-          <Gamepad2 className="w-4 h-4" />
+          <Layers className="w-4 h-4" />
           myappcube studio
         </p>
 
