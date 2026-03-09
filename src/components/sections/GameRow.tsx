@@ -9,9 +9,9 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 import type { Game } from '@/config/games';
 
 const accentChip: Record<string, string> = {
-  orange: 'bg-orange-500/10 border-orange-500/20 text-orange-600 dark:text-orange-400',
-  violet: 'bg-violet-500/10 border-violet-500/20 text-violet-600 dark:text-violet-400',
-  emerald: 'bg-emerald-500/10 border-emerald-500/20 text-emerald-600 dark:text-emerald-400',
+  orange: 'text-orange-600 dark:text-orange-400',
+  violet: 'text-violet-600 dark:text-violet-400',
+  emerald: 'text-emerald-600 dark:text-emerald-400',
 };
 
 const accentBtn: Record<string, string> = {
@@ -47,8 +47,9 @@ export default async function GameRow({
   const glow = accentGlow[game.accent] ?? accentGlow.violet;
 
   return (
-    <section className="border-t border-zinc-200/60 dark:border-zinc-800/60 overflow-hidden">
+    <section className={`border-t border-zinc-200/60 dark:border-zinc-800/60 overflow-hidden ${isEven ? 'bg-white dark:bg-zinc-950' : 'bg-zinc-50 dark:bg-zinc-900'}`}>
       <div className="container mx-auto px-6 py-20 md:py-32">
+        <div className="max-w-6xl mx-auto">
         <div
           className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 lg:gap-20`}
         >
@@ -56,7 +57,7 @@ export default async function GameRow({
           <ScrollReveal from={isEven ? 'left' : 'right'} className="flex-1 text-center lg:text-left">
             {/* Chip */}
             <span
-              className={`inline-flex items-center px-3 py-1 rounded-full border text-xs font-semibold tracking-widest uppercase mb-6 ${chip}`}
+              className={`text-xs font-semibold tracking-widest uppercase mb-6 ${chip}`}
             >
               {game.comingSoon ? tCommon('comingSoon') : t('featuredLabel')}
             </span>
@@ -106,6 +107,7 @@ export default async function GameRow({
               </div>
             </div>
           </ScrollReveal>
+        </div>
         </div>
       </div>
     </section>

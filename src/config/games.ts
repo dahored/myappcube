@@ -33,30 +33,14 @@ export const games: Game[] = [
     },
   },
   // ── Coming soon ──────────────────────────────────────────────────────────
-  // These are placeholders to preview the multi-game layout.
-  // Remove or replace when real games are ready.
   {
-    slug: 'word-rush',
-    name: 'Word Rush',
-    tagline: 'Race against the clock.',
-    description:
-      'A fast-paced word game that tests your vocabulary and reflexes. Play solo or challenge your friends in real time.',
+    slug: 'oculto',
+    name: 'Oculto',
+    tagline: '???',
+    description: '???',
     banner: '/images/games/el-infiltrado/banner.png',
-    logo: '/images/games/el-infiltrado/logo.jpg',
-    genre: 'Word / Casual',
-    platform: 'Android',
-    accent: 'emerald',
-    comingSoon: true,
-  },
-  {
-    slug: 'cube-quest',
-    name: 'Cube Quest',
-    tagline: 'Build. Destroy. Repeat.',
-    description:
-      'A satisfying puzzle game where you stack, balance and explode cubes through increasingly creative levels.',
-    banner: '/images/games/el-infiltrado/banner.png',
-    logo: '/images/games/el-infiltrado/logo.jpg',
-    genre: 'Puzzle',
+    logo: '/images/logos/logo_myappcube.png',
+    genre: 'Oculto',
     platform: 'Android',
     accent: 'violet',
     comingSoon: true,

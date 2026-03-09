@@ -2,7 +2,10 @@ import type { Metadata } from 'next';
 import { games } from '@/config/games';
 import HeroSection from '@/components/sections/HeroSection';
 import FeaturedGameSection from '@/components/sections/FeaturedGameSection';
-import GameRow from '@/components/sections/GameRow';
+import AboutSection from '@/components/sections/AboutSection';
+import GamesSection from '@/components/sections/GamesSection';
+import TestimonialsSection from '@/components/sections/TestimonialsSection';
+import BentoSection from '@/components/sections/BentoSection';
 import FaqSection from '@/components/sections/FaqSection';
 
 export const metadata: Metadata = {
@@ -16,15 +19,16 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
-  const [featured, ...rest] = games;
+  const [featured] = games;
 
   return (
     <>
       <HeroSection />
       {featured && <FeaturedGameSection game={featured} />}
-      {rest.map((game, i) => (
-        <GameRow key={game.slug} game={game} index={i} />
-      ))}
+      <BentoSection />
+      <GamesSection />
+      <AboutSection />
+      <TestimonialsSection />
       <FaqSection />
     </>
   );

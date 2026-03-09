@@ -25,7 +25,7 @@ export default function MobileNav({ gamesLabel }: MobileNavProps) {
       {/* Hamburger button — visible only on mobile */}
       <button
         onClick={() => setOpen((v) => !v)}
-        className="sm:hidden flex items-center justify-center w-9 h-9 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50"
+        className="sm:hidden flex items-center justify-center w-11 h-11 rounded-full hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-colors text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 cursor-pointer"
         aria-label="Toggle menu"
         aria-expanded={open}
       >

@@ -7,7 +7,8 @@
     "tagline": "We craft fun experiences made to play with everyone.",
     "scrollCta": "Discover our games",
     "featuredLabel": "Available now",
-    "featuredCta": "Learn more"
+    "featuredCta": "Learn more",
+    "appStore": "App Store"
   },
   "common": {
     "comingSoon": "Coming Soon",
@@ -27,6 +28,64 @@
       "description": "A satisfying puzzle game where you stack, balance and explode cubes through increasingly creative levels."
     }
   },
+  "about": {
+    "label": "Our studio",
+    "title": "We build games that bring people together",
+    "body": "We are an independent studio passionate about creating unique gaming experiences. Every title we develop is designed to generate fun moments — whether at gatherings, on trips, or just at home.",
+    "v1before": "Designed to make you ",
+    "v1accent": "laugh and connect",
+    "v1after": " with the people you love.",
+    "v2before": "Easy to learn so ",
+    "v2accent": "everyone can play",
+    "v2after": " from the very first round.",
+    "v3before": "Every game is better when ",
+    "v3accent": "shared with friends",
+    "v3after": " and family.",
+    "v1modalTitle": "Fun above everything",
+    "v1modalBody": "We design every mechanic to generate laughs and great moments. We believe the best games are the ones that make people want to play just one more round.",
+    "v2modalTitle": "No learning curve",
+    "v2modalBody": "From the very first game, anyone can join without reading a manual. Simplicity is a design decision, not a limitation.",
+    "v3modalTitle": "Better together",
+    "v3modalBody": "Our games come alive when played with others. Every mechanic is designed to spark conversations, tension, and memorable group moments."
+  },
+  "gamesSection": {
+    "label": "Collection",
+    "title": "Our games",
+    "subtitle": "Download for free and start playing.",
+    "explore": "Explore",
+    "comingSoon": "Coming soon"
+  },
+  "bento": {
+    "title": "Everything you need for the perfect game night.",
+    "subtitle": "El Infiltrado is designed for everyone to have fun, no hassle.",
+    "c1label": "Featured game",
+    "c1title": "Can you find the infiltrator among your friends?",
+    "c2title": "No download for players",
+    "c2desc": "Only the host needs the app. Everyone else plays from the main screen.",
+    "c3title": "Every round is unique",
+    "c3desc": "Random roles and new words make sure no two games are ever the same.",
+    "c4desc": "Rating on Google Play",
+    "c5title": "Ready to play?",
+    "c5desc": "Download for free and start your first game in under a minute.",
+    "c5badge": "Get it on"
+  },
+  "testimonials": {
+    "label": "Reviews",
+    "title": "What our players say",
+    "subtitle": "Thousands of rounds played around the world.",
+    "r1name": "Valentina R.",
+    "r1": "El Infiltrado became the go-to game at every family gathering. Everyone wants to play!",
+    "r2name": "Marcos T.",
+    "r2": "Super easy to understand and really fun. We downloaded it for a game night and ended up playing until 3am.",
+    "r3name": "Lucía M.",
+    "r3": "I love that not everyone needs the game installed. Perfect for any gathering.",
+    "r4name": "Diego P.",
+    "r4": "The infiltrator dynamic is brilliant. Every round is different and always full of tension.",
+    "r5name": "Camila S.",
+    "r5": "Simple, addictive and very funny. Exactly what I was looking for to play with friends.",
+    "r6name": "Andrés F.",
+    "r6": "Perfect for breaking the ice at gatherings where people don't know each other well."
+  },
   "faq": {
     "title": "Frequently asked questions",
     "subtitle": "Everything you need to know about our games.",
@@ -44,6 +103,15 @@
   "footer": {
     "rights": "All rights reserved.",
     "privacy": "Privacy",
-    "terms": "Terms"
+    "terms": "Terms",
+    "description": "Independent studio crafting mobile games to connect people.",
+    "company": "Company",
+    "linkAbout": "About",
+    "linkGames": "Games",
+    "linkContact": "Contact",
+    "gamesCol": "Games",
+    "followUs": "Follow us",
+    "storeCta": "Go to store",
+    "contactSubject": "Contact myappcube"
   }
 }

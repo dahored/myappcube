@@ -14,12 +14,12 @@ function FaqRow({ item }: { item: FaqItem }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="border-b border-zinc-200/60 dark:border-zinc-800/60 last:border-0">
+    <div>
       <button
         onClick={() => setOpen((v) => !v)}
         className="w-full flex items-center justify-between gap-4 py-5 text-left group"
       >
-        <span className="text-sm sm:text-base font-medium text-zinc-800 dark:text-zinc-200 group-hover:text-zinc-900 dark:group-hover:text-zinc-50 transition-colors">
+        <span className="text-base font-medium text-zinc-800 dark:text-zinc-200 group-hover:text-zinc-900 dark:group-hover:text-zinc-50 transition-colors">
           {item.q}
         </span>
         <Plus
@@ -35,7 +35,7 @@ function FaqRow({ item }: { item: FaqItem }) {
         style={{ gridTemplateRows: open ? '1fr' : '0fr' }}
       >
         <div className="overflow-hidden">
-          <p className="pb-5 text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-2xl">
+          <p className="pb-5 text-base text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-2xl">
             {item.a}
           </p>
         </div>
@@ -56,9 +56,9 @@ export default function FaqSection() {
   ];
 
   return (
-    <section className="border-t border-zinc-200/60 dark:border-zinc-800/60">
+    <section className="border-t border-zinc-200/60 dark:border-zinc-800/60 bg-white dark:bg-zinc-950">
       <div className="container mx-auto px-6 py-20 md:py-28">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-3xl mx-auto">
           <ScrollReveal>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 mb-2 text-center">
               {t('title')}
@@ -66,7 +66,7 @@ export default function FaqSection() {
             <p className="text-zinc-500 text-center mb-12">{t('subtitle')}</p>
           </ScrollReveal>
 
-          <div>
+          <div className="divide-y divide-zinc-300 dark:divide-zinc-700">
             {items.map((item, i) => (
               <ScrollReveal key={i} delay={i * 80}>
                 <FaqRow item={item} />

@@ -7,7 +7,8 @@
     "tagline": "Creamos experiencias divertidas para jugar con todos.",
     "scrollCta": "Descubre nuestros juegos",
     "featuredLabel": "Disponible ahora",
-    "featuredCta": "Conoce el juego"
+    "featuredCta": "Conoce el juego",
+    "appStore": "App Store"
   },
   "common": {
     "comingSoon": "Próximamente",
@@ -27,6 +28,64 @@
       "description": "Un adictivo juego de puzzles donde apilás, equilibrás y explotás cubos en niveles cada vez más creativos."
     }
   },
+  "about": {
+    "label": "Nuestro estudio",
+    "title": "Creamos juegos que conectan personas",
+    "body": "Somos un estudio independiente apasionado por crear experiencias de juego únicas. Cada título que desarrollamos está pensado para generar momentos divertidos, ya sea en reuniones, viajes o simplemente en casa.",
+    "v1before": "Diseñados para ",
+    "v1accent": "hacer reír",
+    "v1after": " y conectar con los que más querés.",
+    "v2before": "Fáciles de aprender para que ",
+    "v2accent": "todos puedan jugar",
+    "v2after": " desde el primer momento.",
+    "v3before": "Cada juego es mejor cuando ",
+    "v3accent": "se comparte",
+    "v3after": " con amigos y familia.",
+    "v1modalTitle": "Diversión antes que todo",
+    "v1modalBody": "Diseñamos cada mecánica para que genere risas y buenos momentos. Creemos que los mejores juegos son los que hacen que la gente quiera seguir jugando una ronda más.",
+    "v2modalTitle": "Sin curva de aprendizaje",
+    "v2modalBody": "Desde la primera partida, cualquier persona puede participar sin haber leído un manual. La simplicidad es una decisión de diseño, no una limitación.",
+    "v3modalTitle": "Mejor en compañía",
+    "v3modalBody": "Nuestros juegos cobran vida cuando se juegan con otros. Cada mecánica está pensada para generar conversaciones, tensión y momentos memorables en grupo."
+  },
+  "gamesSection": {
+    "label": "Colección",
+    "title": "Nuestros juegos",
+    "subtitle": "Descargá gratis y empezá a jugar.",
+    "explore": "Explorar",
+    "comingSoon": "Próximamente"
+  },
+  "bento": {
+    "title": "Todo lo que necesitas para la noche de juegos perfecta.",
+    "subtitle": "El Infiltrado está diseñado para que todos se diviertan, sin complicaciones.",
+    "c1label": "Juego destacado",
+    "c1title": "¿Puedes descubrir al infiltrado entre tus amigos?",
+    "c2title": "Sin descarga para los jugadores",
+    "c2desc": "Solo el anfitrión necesita la app. El resto juega desde la pantalla.",
+    "c3title": "Cada ronda es única",
+    "c3desc": "Roles aleatorios y palabras nuevas hacen que nunca dos partidas sean iguales.",
+    "c4desc": "Calificación en Google Play",
+    "c5title": "¿Listo para jugar?",
+    "c5desc": "Descarga gratis y empieza tu primera partida en menos de un minuto.",
+    "c5badge": "Disponible en"
+  },
+  "testimonials": {
+    "label": "Opiniones",
+    "title": "Lo que dicen nuestros jugadores",
+    "subtitle": "Miles de partidas jugadas alrededor del mundo.",
+    "r1name": "Valentina R.",
+    "r1": "El Infiltrado se convirtió en el juego obligatorio de cada reunión familiar. ¡Todos quieren jugarlo!",
+    "r2name": "Marcos T.",
+    "r2": "Súper fácil de entender y muy divertido. Lo descargamos para una noche de juegos y terminamos jugando hasta las 3am.",
+    "r3name": "Lucía M.",
+    "r3": "Me encanta que no todos necesitan tener el juego instalado. Perfecto para cualquier reunión.",
+    "r4name": "Diego P.",
+    "r4": "La dinámica del infiltrado es genial. Cada ronda es diferente y siempre hay mucha tensión.",
+    "r5name": "Camila S.",
+    "r5": "Simple, adictivo y muy gracioso. Exactamente lo que buscaba para jugar con amigos.",
+    "r6name": "Andrés F.",
+    "r6": "Perfecto para romper el hielo en reuniones con gente que no se conoce mucho."
+  },
   "faq": {
     "title": "Preguntas frecuentes",
     "subtitle": "Todo lo que necesitás saber sobre nuestros juegos.",
@@ -44,6 +103,15 @@
   "footer": {
     "rights": "Todos los derechos reservados.",
     "privacy": "Privacidad",
-    "terms": "Términos"
+    "terms": "Términos",
+    "description": "Estudio independiente creando juegos móviles para conectar personas.",
+    "company": "Empresa",
+    "linkAbout": "Nosotros",
+    "linkGames": "Juegos",
+    "linkContact": "Contacto",
+    "gamesCol": "Juegos",
+    "followUs": "Síguenos",
+    "storeCta": "Ir a la tienda",
+    "contactSubject": "Contacto myappcube"
   }
 }

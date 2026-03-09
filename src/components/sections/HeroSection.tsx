@@ -67,7 +67,7 @@ export default async function HeroSection() {
 
         <Link
           href="#games"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-violet-600 hover:bg-violet-500 text-white text-sm font-semibold transition-colors"
+          className="inline-flex h-13 items-center gap-2 px-6 py-3 rounded-full bg-violet-600 hover:bg-violet-500 text-white text-medium font-semibold transition-colors"
         >
           {t('scrollCta')}
         </Link>

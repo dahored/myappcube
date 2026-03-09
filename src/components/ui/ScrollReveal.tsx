@@ -10,6 +10,8 @@ interface ScrollRevealProps {
   delay?: number;
   /** Animation direction */
   from?: 'bottom' | 'left' | 'right' | 'none';
+  /** Re-animate every time the element enters the viewport */
+  repeat?: boolean;
 }
 
 export default function ScrollReveal({
@@ -17,6 +19,7 @@ export default function ScrollReveal({
   className = '',
   delay = 0,
   from = 'bottom',
+  repeat = false,
 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(!ENABLE_SCROLL_ANIMATIONS);
@@ -27,20 +30,24 @@ export default function ScrollReveal({
     const el = ref.current;
     if (!el) return;
 
+    let timer: ReturnType<typeof setTimeout>;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          const timer = setTimeout(() => setVisible(true), delay);
-          observer.unobserve(el);
-          return () => clearTimeout(timer);
+          timer = setTimeout(() => setVisible(true), delay);
+          if (!repeat) observer.unobserve(el);
+        } else if (repeat) {
+          clearTimeout(timer);
+          setVisible(false);
         }
       },
       { threshold: 0.12 }
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
-  }, [delay]);
+    return () => { observer.disconnect(); clearTimeout(timer); };
+  }, [delay, repeat]);
 
   if (!ENABLE_SCROLL_ANIMATIONS) {
     return <div className={className}>{children}</div>;
