@@ -4,7 +4,7 @@ import { studio } from '@/config/studio';
 
 export const metadata: Metadata = {
   title: 'Terms of Service — myappcube',
-  description: 'Terms of service for myappcube and its mobile games.',
+  description: 'Terms of service for myappcube and its mobile apps.',
 };
 
 export default async function TermsPage({
