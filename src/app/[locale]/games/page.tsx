@@ -5,15 +5,30 @@ import FeaturedGameSection from '@/components/sections/FeaturedGameSection';
 import GameRow from '@/components/sections/GameRow';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
-export const metadata: Metadata = {
-  title: 'Games — myappcube',
-  description: 'Discover all mobile games by myappcube studio.',
-  openGraph: {
-    title: 'Games — myappcube',
-    description: 'Discover all mobile games by myappcube studio.',
-    images: ['/images/logos/logo_myappcube.png'],
-  },
-};
+const base = 'https://myappcube.com';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isEs = locale === 'es';
+  const title = isEs ? 'Juegos — myappcube' : 'Games — myappcube';
+  const description = isEs
+    ? 'Descubre todos los juegos móviles de myappcube. Juegos de fiesta para Android e iOS.'
+    : 'Discover all mobile games by myappcube. Party games for Android and iOS.';
+
+  return {
+    title,
+    description,
+    openGraph: { title, description, images: ['/images/logos/logo_myappcube.png'] },
+    alternates: {
+      canonical: `${base}/${locale}/games`,
+      languages: { en: `${base}/en/games`, es: `${base}/es/games` },
+    },
+  };
+}
 
 export default async function GamesPage() {
   const t = await getTranslations('gamesSection');

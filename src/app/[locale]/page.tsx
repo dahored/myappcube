@@ -9,15 +9,30 @@ import BentoSection from '@/components/sections/BentoSection';
 import FaqSection from '@/components/sections/FaqSection';
 import ContactSection from '@/components/sections/ContactSection';
 
-export const metadata: Metadata = {
-  title: 'myappcube — Mobile Game Studio',
-  description: 'We craft fun and unique mobile games for everyone.',
-  openGraph: {
-    title: 'myappcube — Mobile Game Studio',
-    description: 'We craft fun and unique mobile games for everyone.',
-    images: ['/images/logos/logo_myappcube.png'],
-  },
-};
+const base = 'https://myappcube.com';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isEs = locale === 'es';
+  const title = 'myappcube — Mobile Game Studio';
+  const description = isEs
+    ? 'myappcube crea juegos móviles de fiesta divertidos y únicos. Descarga El Infiltrado en Android.'
+    : 'myappcube crafts fun and unique mobile party games. Download El Infiltrado on Android.';
+
+  return {
+    title,
+    description,
+    openGraph: { title, description, images: ['/images/logos/logo_myappcube.png'] },
+    alternates: {
+      canonical: `${base}/${locale}`,
+      languages: { en: `${base}/en`, es: `${base}/es` },
+    },
+  };
+}
 
 export default function HomePage() {
   const [featured] = games;

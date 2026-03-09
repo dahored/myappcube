@@ -27,17 +27,33 @@ export async function generateMetadata({
 }: {
   params: Promise<{ slug: string; locale: string }>;
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const game = games.find((g) => g.slug === slug);
   if (!game) return {};
 
+  const base = 'https://myappcube.com';
+
   return {
-    title: `${game.name} — myappcube`,
+    title: game.name,
     description: game.description,
     openGraph: {
+      type: 'website',
+      title: game.name,
+      description: game.description,
+      images: [{ url: game.banner, width: 1200, height: 675, alt: `${game.name} banner` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
       title: game.name,
       description: game.description,
       images: [game.banner],
+    },
+    alternates: {
+      canonical: `${base}/${locale}/games/${slug}`,
+      languages: {
+        en: `${base}/en/games/${slug}`,
+        es: `${base}/es/games/${slug}`,
+      },
     },
   };
 }
@@ -145,8 +161,28 @@ export default async function GameDetailPage({
     { icon: Layers, value: '3', label: t('statsModes') },
   ];
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'MobileApplication',
+    name: game.name,
+    description: game.description,
+    operatingSystem: game.storeUrl?.ios ? 'Android, iOS' : 'Android',
+    applicationCategory: 'GameApplication',
+    genre: game.genre,
+    image: `https://myappcube.com${game.banner}`,
+    screenshot: screenshots.map((s) => `https://myappcube.com${s.src}`),
+    author: { '@type': 'Organization', name: 'myappcube', url: 'https://myappcube.com' },
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    ...(game.storeUrl?.android && { installUrl: game.storeUrl.android }),
+    ...(game.storeUrl?.ios && { installUrl: game.storeUrl.ios }),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* ── Hero ─────────────────────────────────────────────────────── */}
       <section className="relative bg-zinc-950 overflow-hidden -mt-16 pt-16">
         {/* Background glow */}
@@ -227,7 +263,7 @@ export default async function GameDetailPage({
           <div className="max-w-2xl mx-auto grid grid-cols-3 gap-4">
             {stats.map(({ icon: Icon, value, label }) => (
               <div key={label} className="flex flex-col items-center gap-2 text-center">
-                <Icon className="w-5 h-5 text-orange-500 dark:text-orange-400" />
+                <Icon className="w-8 h-8 text-orange-500 dark:text-orange-400" />
                 <span className="text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-zinc-50 tracking-tight">
                   {value}
                 </span>
@@ -277,7 +313,7 @@ export default async function GameDetailPage({
                       <div className="w-full md:w-1/2">
                         <div className="flex items-center gap-3 mb-4">
                           <StepIcon className={`w-8 h-8 shrink-0 ${color}`} />
-                          <span className={`flex-shrink-0 w-6 h-6 rounded-full ${numBg} text-white text-xs font-bold flex items-center justify-center`}>
+                          <span className={`shrink-0 w-6 h-6 rounded-full ${numBg} text-white text-xs font-bold flex items-center justify-center`}>
                             {step.num}
                           </span>
                           <h3 className="text-xl sm:text-2xl font-bold text-zinc-900 dark:text-zinc-50">
