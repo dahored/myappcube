@@ -10,6 +10,7 @@ interface CarouselControlsProps {
   onTogglePause: () => void;
   /** 'auto' adapts to light/dark mode; 'dark' forces dark styles */
   theme?: 'auto' | 'dark';
+  showPause?: boolean;
   className?: string;
 }
 
@@ -20,6 +21,7 @@ export default function CarouselControls({
   onGoTo,
   onTogglePause,
   theme = 'auto',
+  showPause = true,
   className = '',
 }: CarouselControlsProps) {
   const isDark = theme === 'dark';
@@ -44,16 +46,18 @@ export default function CarouselControls({
           />
         ))}
       </div>
-      <button
-        onClick={onTogglePause}
-        aria-label={paused ? 'Play' : 'Pause'}
-        className={`w-13 h-13 rounded-full flex items-center justify-center transition-colors cursor-pointer ${btnBg}`}
-      >
-        {paused
-          ? <Play className="w-3.5 h-3.5 fill-current" />
-          : <Pause className="w-3.5 h-3.5 fill-current" />
-        }
-      </button>
+      {showPause && (
+        <button
+          onClick={onTogglePause}
+          aria-label={paused ? 'Play' : 'Pause'}
+          className={`w-13 h-13 rounded-full flex items-center justify-center transition-colors cursor-pointer ${btnBg}`}
+        >
+          {paused
+            ? <Play className="w-3.5 h-3.5 fill-current" />
+            : <Pause className="w-3.5 h-3.5 fill-current" />
+          }
+        </button>
+      )}
     </div>
   );
 }
