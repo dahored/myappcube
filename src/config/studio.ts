@@ -6,9 +6,9 @@ export const studio = {
   email: 'dahoreddiegohernandez@gmail.com',
   googlePlayDeveloperUrl: 'https://play.google.com/store/apps/developer?id=myappcube',
   adsensePublisherId: 'ca-pub-5119314285197382',
-  /** Set to true to show the coming soon page on all routes */
-  comingSoon: false,
-} as const;
+  /** Controlled via NEXT_PUBLIC_COMING_SOON env var — set to "false" in Vercel to launch */
+  comingSoon: process.env.NEXT_PUBLIC_COMING_SOON !== 'false',
+} satisfies Record<string, unknown>;
 
 export interface Social {
   label: string;
