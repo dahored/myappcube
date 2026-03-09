@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { Mail, ChevronDown } from 'lucide-react';
+import { Mail, ChevronDown, ChevronRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { studio, socials } from '@/config/studio';
 import ScrollReveal from '@/components/ui/ScrollReveal';
@@ -129,12 +129,17 @@ export default async function ContactPage({
         </div>
 
         <ScrollReveal delay={320}>
-          <div className="mt-12 text-center">
+          <div className="mt-12 flex justify-center">
             <Link
               href="/games"
-              className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-50 transition-colors"
+              className="inline-flex items-center gap-4 pl-5 pr-2 py-2 h-13 rounded-full bg-zinc-800/80 hover:bg-zinc-700/80 backdrop-blur-sm transition-colors"
             >
-              {t('gamesCta')} →
+              <span className="text-base font-medium text-zinc-100 whitespace-nowrap">
+                {t('gamesCta')}
+              </span>
+              <span className="w-9 h-9 rounded-full bg-violet-600 flex items-center justify-center shrink-0">
+                <ChevronRight className="w-5 h-5 text-white" />
+              </span>
             </Link>
           </div>
         </ScrollReveal>
