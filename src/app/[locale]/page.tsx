@@ -7,6 +7,7 @@ import GamesSection from '@/components/sections/GamesSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import BentoSection from '@/components/sections/BentoSection';
 import FaqSection from '@/components/sections/FaqSection';
+import ContactSection from '@/components/sections/ContactSection';
 
 export const metadata: Metadata = {
   title: 'myappcube — Mobile Game Studio',
@@ -30,6 +31,7 @@ export default function HomePage() {
       <AboutSection />
       <TestimonialsSection />
       <FaqSection />
+      <ContactSection />
     </>
   );
 }

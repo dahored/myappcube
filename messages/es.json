@@ -12,6 +12,8 @@
   },
   "common": {
     "comingSoon": "Próximamente",
+    "comingSoonTitle": "Próximo juego",
+    "comingSoonDesc": "Estamos trabajando en algo nuevo. Pronto habrá más novedades.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "downloadOn": "Descárgalo en",
@@ -99,6 +101,13 @@
     "a4": "¡Sí! Estamos desarrollando nuevos títulos. Seguinos en redes sociales para enterarte de los próximos lanzamientos.",
     "q5": "¿Cómo puedo contactar al equipo?",
     "a5": "Podés escribirnos a través de los formularios de contacto en cada juego, o enviarnos un mensaje por nuestras redes sociales."
+  },
+  "contact": {
+    "label": "Contacto",
+    "title": "¿Hablamos?",
+    "subtitle": "Preguntas, feedback o simplemente saludar — estamos acá.",
+    "emailCta": "Escribinos",
+    "gamesCta": "Ver todos los juegos"
   },
   "footer": {
     "rights": "Todos los derechos reservados.",

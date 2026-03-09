@@ -12,6 +12,8 @@
   },
   "common": {
     "comingSoon": "Coming Soon",
+    "comingSoonTitle": "Next game",
+    "comingSoonDesc": "We're working on something new. More details coming soon.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "downloadOn": "Download on the",
@@ -99,6 +101,13 @@
     "a4": "Yes! We are actively developing new titles. Follow us on social media to stay updated on upcoming releases.",
     "q5": "How can I contact the team?",
     "a5": "You can reach us through the contact forms on each game page, or send us a message on our social media channels."
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Let's talk.",
+    "subtitle": "Questions, feedback, or just saying hi — we're here.",
+    "emailCta": "Send us an email",
+    "gamesCta": "See all games"
   },
   "footer": {
     "rights": "All rights reserved.",
