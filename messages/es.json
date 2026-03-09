@@ -1,6 +1,7 @@
 {
   "nav": {
-    "games": "Juegos"
+    "games": "Juegos",
+    "socials": "Redes"
   },
   "home": {
     "headline": "Juegos que enamoran.",
@@ -21,7 +22,28 @@
   },
   "games": {
     "el-infiltrado": {
-      "description": "Un juego de fiesta donde tus amigos intentan descubrir al infiltrado del grupo. Perfecto para reuniones — los jugadores no necesitan la app."
+      "description": "Un juego de fiesta donde tus amigos intentan descubrir al infiltrado del grupo. Perfecto para reuniones — los jugadores no necesitan la app.",
+      "tagline": "¿Puedes encontrar al infiltrado entre tus amigos?",
+      "step1Title": "Configurar la partida",
+      "step1Desc": "Añade los jugadores, elige las categorías de palabras y ajusta las opciones: número de infiltrados, rondas, duración de la discusión y modo de juego.",
+      "step2Title": "Palabras secretas",
+      "step2Desc": "Cada jugador toma el teléfono en privado y ve su palabra secreta. Los inocentes ven la misma palabra. El infiltrado ve una diferente — o nada en modo difícil.",
+      "step3Title": "El infiltrado",
+      "step3Desc": "Uno o más jugadores son infiltrados: no conocen la palabra real. En modo difícil tampoco reciben pista — solo su instinto para sobrevivir.",
+      "step4Title": "La discusión",
+      "step4Desc": "Todos hablan sobre la palabra sin decirla directamente. El infiltrado intenta pasar desapercibido usando el contexto de lo que escucha.",
+      "step5Title": "La votación",
+      "step5Desc": "Al terminar la discusión, todos votan a quien creen que es el infiltrado. La mayoría decide quién es eliminado.",
+      "step6Title": "El resultado",
+      "step6Desc": "Se revela la verdad — ¿era inocente o infiltrado? El juego continúa hasta descubrir al infiltrado o que los infiltrados logren sobrevivir.",
+      "modeClassicTitle": "Clásico",
+      "modeClassicDesc": "El infiltrado recibe una pista con una palabra similar a la real. Ideal para partidas equilibradas.",
+      "modeHardTitle": "Difícil",
+      "modeHardDesc": "El infiltrado no recibe ninguna pista. Solo instinto y capacidad de actuación para sobrevivir.",
+      "modeChaosTitle": "Infiltrado",
+      "modeChaosDesc": "El número de infiltrados es aleatorio — nadie sabe cuántos hay. La desconfianza es total.",
+      "tipTitle": "Consejo estratégico",
+      "tip": "Sé vago pero convincente. Demasiada información te delata, pero dudar demasiado también."
     },
     "word-rush": {
       "description": "Un juego de palabras trepidante que pone a prueba tu vocabulario y reflejos. Juega solo o desafía a tus amigos en tiempo real."
@@ -36,7 +58,7 @@
     "body": "Somos un estudio independiente apasionado por crear experiencias de juego únicas. Cada título que desarrollamos está pensado para generar momentos divertidos, ya sea en reuniones, viajes o simplemente en casa.",
     "v1before": "Diseñados para ",
     "v1accent": "hacer reír",
-    "v1after": " y conectar con los que más querés.",
+    "v1after": " y conectar con los que más quieres.",
     "v2before": "Fáciles de aprender para que ",
     "v2accent": "todos puedan jugar",
     "v2after": " desde el primer momento.",
@@ -53,7 +75,7 @@
   "gamesSection": {
     "label": "Colección",
     "title": "Nuestros juegos",
-    "subtitle": "Descargá gratis y empezá a jugar.",
+    "subtitle": "Descarga gratis y empieza a jugar.",
     "explore": "Explorar",
     "comingSoon": "Próximamente"
   },
@@ -98,15 +120,29 @@
     "q3": "¿En qué dispositivos funcionan?",
     "a3": "Nuestros juegos son compatibles con dispositivos Android. Estamos trabajando en soporte para iOS próximamente.",
     "q4": "¿Habrá más juegos próximamente?",
-    "a4": "¡Sí! Estamos desarrollando nuevos títulos. Seguinos en redes sociales para enterarte de los próximos lanzamientos.",
+    "a4": "¡Sí! Estamos desarrollando nuevos títulos. Síguenos en redes sociales para enterarte de los próximos lanzamientos.",
     "q5": "¿Cómo puedo contactar al equipo?",
-    "a5": "Podés escribirnos a través de los formularios de contacto en cada juego, o enviarnos un mensaje por nuestras redes sociales."
+    "a5": "Puedes escribirnos a través de los formularios de contacto en cada juego, o enviarnos un mensaje por nuestras redes sociales."
+  },
+  "gameDetail": {
+    "statsPlayers": "jugadores",
+    "statsLanguages": "idiomas",
+    "statsModes": "modos de juego",
+    "howToPlayLabel": "Cómo se juega",
+    "howToPlayTitle": "6 pasos, diversión infinita",
+    "modesLabel": "Modos de juego",
+    "modesTitle": "Elige tu desafío",
+    "screenshotsLabel": "Capturas",
+    "screenshotsTitle": "Vélo en acción",
+    "downloadTitle": "¿Listo para jugar?",
+    "downloadDesc": "Descarga gratis y empieza tu primera partida en menos de un minuto.",
+    "downloadCta": "Descargar gratis"
   },
   "contact": {
     "label": "Contacto",
     "title": "¿Hablamos?",
     "subtitle": "Preguntas, feedback o simplemente saludar — estamos acá.",
-    "emailCta": "Escribinos",
+    "emailCta": "Escríbenos",
     "gamesCta": "Ver todos los juegos"
   },
   "footer": {
@@ -122,5 +158,12 @@
     "followUs": "Síguenos",
     "storeCta": "Ir a la tienda",
     "contactSubject": "Contacto myappcube"
+  },
+  "socials": {
+    "title": "Síguenos en redes sociales",
+    "subtitle": "Sigue a myappcube para conocer novedades, actualizaciones y contenido detrás de escena.",
+    "instagram": "Nuestro día a día, previews de juegos y comunidad.",
+    "facebook": "Noticias, lanzamientos y actualizaciones.",
+    "youtube": "Trailers, gameplay y tutoriales."
   }
 }

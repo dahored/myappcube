@@ -1,6 +1,7 @@
 {
   "nav": {
-    "games": "Games"
+    "games": "Games",
+    "socials": "Socials"
   },
   "home": {
     "headline": "Games you'll love.",
@@ -21,7 +22,28 @@
   },
   "games": {
     "el-infiltrado": {
-      "description": "A fun party game where friends try to find the infiltrator among the group. Perfect for gatherings — no app needed for players."
+      "description": "A fun party game where friends try to find the infiltrator among the group. Perfect for gatherings — no app needed for players.",
+      "tagline": "Can you find the infiltrator among your friends?",
+      "step1Title": "Configure the game",
+      "step1Desc": "Add players, choose word categories and adjust options: number of infiltrators, rounds, discussion time and game mode.",
+      "step2Title": "Secret words",
+      "step2Desc": "Each player takes the phone privately and sees their secret word. Innocents see the same word. The infiltrator sees a different one — or nothing at all in hard mode.",
+      "step3Title": "The infiltrator",
+      "step3Desc": "One or more players are infiltrators: they don't know the real word. In hard mode they get no hint either — only their instincts to survive.",
+      "step4Title": "The discussion",
+      "step4Desc": "Everyone talks about the word without saying it directly. The infiltrator tries to blend in using context clues from others.",
+      "step5Title": "The vote",
+      "step5Desc": "When discussion ends, everyone votes for who they think is the infiltrator. The majority decides who gets eliminated.",
+      "step6Title": "The result",
+      "step6Desc": "The truth is revealed — was the eliminated player innocent or the infiltrator? Play continues until all infiltrators are found or they survive.",
+      "modeClassicTitle": "Classic",
+      "modeClassicDesc": "The infiltrator gets a hint word similar to the real one. Ideal for balanced games.",
+      "modeHardTitle": "Hard",
+      "modeHardDesc": "The infiltrator gets no hint at all. Only instinct and acting skills to survive.",
+      "modeChaosTitle": "Infiltrado",
+      "modeChaosDesc": "The number of infiltrators is random — nobody knows how many. Total distrust.",
+      "tipTitle": "Strategy tip",
+      "tip": "Be vague but convincing. Too much detail gives you away, but so does too much hesitation."
     },
     "word-rush": {
       "description": "A fast-paced word game that tests your vocabulary and reflexes. Play solo or challenge your friends in real time."
@@ -102,6 +124,20 @@
     "q5": "How can I contact the team?",
     "a5": "You can reach us through the contact forms on each game page, or send us a message on our social media channels."
   },
+  "gameDetail": {
+    "statsPlayers": "players",
+    "statsLanguages": "languages",
+    "statsModes": "game modes",
+    "howToPlayLabel": "How to play",
+    "howToPlayTitle": "6 steps to fun",
+    "modesLabel": "Game modes",
+    "modesTitle": "Choose your challenge",
+    "screenshotsLabel": "Screenshots",
+    "screenshotsTitle": "See it in action",
+    "downloadTitle": "Ready to play?",
+    "downloadDesc": "Download for free and start your first game in under a minute.",
+    "downloadCta": "Download free"
+  },
   "contact": {
     "label": "Contact",
     "title": "Let's talk.",
@@ -122,5 +158,12 @@
     "followUs": "Follow us",
     "storeCta": "Go to store",
     "contactSubject": "Contact myappcube"
+  },
+  "socials": {
+    "title": "Find us on social media",
+    "subtitle": "Follow myappcube for news, updates, and behind-the-scenes content.",
+    "instagram": "Our day-to-day, game previews and community.",
+    "facebook": "News, launches and updates.",
+    "youtube": "Trailers, gameplay and tutorials."
   }
 }
