@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Geist } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
+import { studio } from '@/config/studio';
 
 const geist = Geist({
   variable: '--font-geist-sans',
@@ -9,7 +10,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://myappcube.com'),
+  metadataBase: new URL(studio.siteUrl),
   title: 'myappcube — Mobile Game Studio',
   description: 'We craft fun and unique mobile games.',
   openGraph: {
@@ -30,7 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Script
           async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5119314285197382"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${studio.adsensePublisherId}`}
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />

@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { Instagram, Facebook, Youtube } from 'lucide-react';
 import { games } from '@/config/games';
+import { studio, socials } from '@/config/studio';
 
 export default async function Footer() {
   const t = await getTranslations('footer');
@@ -31,7 +31,7 @@ export default async function Footer() {
               {t('description')}
             </p>
             <a
-              href="https://play.google.com/store/apps/developer?id=myappcube"
+              href={studio.googlePlayDeveloperUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-1 self-start flex items-center gap-3 px-5 py-2 rounded-xl bg-white dark:bg-zinc-800 border border-black/5 dark:border-white/10 hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors"
@@ -67,7 +67,10 @@ export default async function Footer() {
                 </Link>
               </li>
               <li>
-                <a href={`mailto:dahoreddiegohernandez@gmail.com?subject=${encodeURIComponent(t('contactSubject'))}`} className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
+                <a
+                href={`mailto:${studio.email}?subject=${encodeURIComponent(t('contactSubject'))}`}
+                className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
+              >
                   {t('linkContact')}
                 </a>
               </li>
@@ -102,33 +105,18 @@ export default async function Footer() {
               {t('followUs')}
             </h3>
             <div className="flex gap-3">
-              <a
-                href="https://www.instagram.com/myappcube/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="w-4 h-4" />
-              </a>
-              <a
-                href="https://www.facebook.com/profile.php?id=61586452775068"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-4 h-4" />
-              </a>
-              <a
-                href="https://youtube.com/@myappcube"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube className="w-4 h-4" />
-              </a>
+              {socials.map(({ label, href, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
+                >
+                  <Icon className="w-4 h-4" />
+                </a>
+              ))}
             </div>
           </div>
 
