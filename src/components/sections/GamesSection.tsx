@@ -16,6 +16,7 @@ export default async function GamesSection() {
     comingSoon: game.comingSoon ?? false,
     exploreLabel: t('explore'),
     comingSoonLabel: tCommon('comingSoon'),
+    comingSoonTitle: tCommon('comingSoonTitle'),
   }));
 
   return (

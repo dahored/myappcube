@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { ChevronsDown, Gamepad2 } from 'lucide-react';
+import { ChevronsDown, Gamepad2, ChevronRight } from 'lucide-react';
 import { games } from '@/config/games';
 import FloatingGameIcons from '@/components/ui/FloatingGameIcons';
 
@@ -67,9 +67,14 @@ export default async function HeroSection() {
 
         <Link
           href="#games"
-          className="inline-flex h-13 items-center gap-2 px-6 py-3 rounded-full bg-violet-600 hover:bg-violet-500 text-white text-medium font-semibold transition-colors"
+          className="inline-flex items-center gap-4 pl-5 pr-2 py-2 h-13 rounded-full bg-zinc-800/80 hover:bg-zinc-700/80 backdrop-blur-sm transition-colors"
         >
-          {t('scrollCta')}
+          <span className="text-base font-medium text-zinc-100 whitespace-nowrap">
+            {t('scrollCta')}
+          </span>
+          <span className="w-9 h-9 rounded-full bg-violet-600 flex items-center justify-center shrink-0">
+            <ChevronRight className="w-5 h-5 text-white" />
+          </span>
         </Link>
       </div>
 

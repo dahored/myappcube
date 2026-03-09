@@ -15,6 +15,7 @@ export interface GameSlide {
   comingSoon?: boolean;
   exploreLabel: string;
   comingSoonLabel: string;
+  comingSoonTitle: string;
 }
 
 const GAP = 20;
@@ -154,8 +155,12 @@ export default function GamesCarousel({ games }: { games: GameSlide[] }) {
                 {/* Info overlay */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 flex items-end justify-between gap-4 pointer-events-none">
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-white leading-tight">{game.name}</h3>
-                    <p className="text-sm text-zinc-400 mt-0.5">{game.genre}</p>
+                    <h3 className="text-xl sm:text-2xl font-bold text-white leading-tight">
+                      {game.comingSoon ? game.comingSoonTitle : game.name}
+                    </h3>
+                    {!game.comingSoon && (
+                      <p className="text-sm text-zinc-400 mt-0.5">{game.genre}</p>
+                    )}
                   </div>
                   {!game.comingSoon && (
                     <Link

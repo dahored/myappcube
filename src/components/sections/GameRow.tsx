@@ -63,22 +63,24 @@ export default async function GameRow({
             </span>
 
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 mb-4 leading-tight">
-              {game.name}
+              {game.comingSoon ? tCommon('comingSoonTitle') : game.name}
             </h2>
 
             <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 max-w-md mx-auto lg:mx-0 mb-8 leading-relaxed">
-              {description}
+              {game.comingSoon ? tCommon('comingSoonDesc') : description}
             </p>
 
-            {/* Tags */}
-            <div className="flex items-center justify-center lg:justify-start gap-2 mb-8">
-              <span className="px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-medium">
-                {game.genre}
-              </span>
-              <span className="px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-medium">
-                {game.platform}
-              </span>
-            </div>
+            {/* Tags — hidden for coming soon */}
+            {!game.comingSoon && (
+              <div className="flex items-center justify-center lg:justify-start gap-2 mb-8">
+                <span className="px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-medium">
+                  {game.genre}
+                </span>
+                <span className="px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-xs font-medium">
+                  {game.platform}
+                </span>
+              </div>
+            )}
 
             {/* CTAs */}
             {!game.comingSoon && (
@@ -98,12 +100,24 @@ export default async function GameRow({
             <div className="relative">
               <div className={`absolute -inset-6 bg-linear-to-br ${glow} blur-3xl rounded-3xl`} />
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-zinc-200 dark:border-white/5 aspect-square">
-                <Image
-                  src={game.banner}
-                  alt={game.name}
-                  fill
-                  className="object-cover"
-                />
+                {game.comingSoon ? (
+                  <div className="w-full h-full bg-zinc-900 flex items-center justify-center">
+                    <Image
+                      src="/images/logos/logo_myappcube.png"
+                      alt="myappcube"
+                      width={96}
+                      height={96}
+                      className="rounded-2xl opacity-40"
+                    />
+                  </div>
+                ) : (
+                  <Image
+                    src={game.banner}
+                    alt={game.name}
+                    fill
+                    className="object-cover"
+                  />
+                )}
               </div>
             </div>
           </ScrollReveal>
