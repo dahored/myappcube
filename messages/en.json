@@ -1,7 +1,8 @@
 {
   "nav": {
     "games": "Games",
-    "socials": "Socials"
+    "socials": "Socials",
+    "contact": "Contact"
   },
   "home": {
     "headline": "Games you'll love.",
@@ -122,7 +123,13 @@
     "q4": "Will there be more games coming soon?",
     "a4": "Yes! We are actively developing new titles. Follow us on social media to stay updated on upcoming releases.",
     "q5": "How can I contact the team?",
-    "a5": "You can reach us through the contact forms on each game page, or send us a message on our social media channels."
+    "a5": "You can reach us through the contact forms on each game page, or send us a message on our social media channels.",
+    "q6": "How many players does El Infiltrado need?",
+    "a6": "The game works best with 4 to 12 players, though it can be played with 3. Only the host needs the app installed.",
+    "q7": "How do I cancel my premium subscription?",
+    "a7": "Subscriptions are managed through Google Play. Go to your Google Play account → Subscriptions and cancel from there.",
+    "q8": "Where do I report a bug or issue?",
+    "a8": "Email us at dahoreddiegohernandez@gmail.com with a description of the issue and your device. We respond within 48 hours."
   },
   "gameDetail": {
     "statsPlayers": "players",

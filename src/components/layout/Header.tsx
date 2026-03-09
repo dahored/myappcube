@@ -21,7 +21,7 @@ export default async function Header() {
           <span className="font-semibold text-lg tracking-tight text-zinc-900 dark:text-zinc-50">myappcube</span>
         </Link>
 
-        <MobileNav gamesLabel={t('games')} socialsLabel={t('socials')} />
+        <MobileNav gamesLabel={t('games')} socialsLabel={t('socials')} contactLabel={t('contact')} />
         </div>
       </div>
     </header>

@@ -67,12 +67,9 @@ export default async function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                href={`mailto:${studio.email}?subject=${encodeURIComponent(t('contactSubject'))}`}
-                className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
-              >
+                <Link href="/contact" className="text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
                   {t('linkContact')}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

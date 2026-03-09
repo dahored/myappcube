@@ -13,7 +13,7 @@ function url(path: string, locale: string) {
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  const staticRoutes = ['', '/games', '/redes', '/privacy', '/terms'];
+  const staticRoutes = ['', '/games', '/redes', '/contact', '/privacy', '/terms'];
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.flatMap((path) =>
     locales.map((locale) => ({

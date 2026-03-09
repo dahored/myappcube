@@ -1,7 +1,8 @@
 {
   "nav": {
     "games": "Juegos",
-    "socials": "Redes"
+    "socials": "Redes",
+    "contact": "Contacto"
   },
   "home": {
     "headline": "Juegos que enamoran.",
@@ -122,7 +123,13 @@
     "q4": "¿Habrá más juegos próximamente?",
     "a4": "¡Sí! Estamos desarrollando nuevos títulos. Síguenos en redes sociales para enterarte de los próximos lanzamientos.",
     "q5": "¿Cómo puedo contactar al equipo?",
-    "a5": "Puedes escribirnos a través de los formularios de contacto en cada juego, o enviarnos un mensaje por nuestras redes sociales."
+    "a5": "Puedes escribirnos a través de los formularios de contacto en cada juego, o enviarnos un mensaje por nuestras redes sociales.",
+    "q6": "¿Cuántos jugadores necesita El Infiltrado?",
+    "a6": "El juego funciona mejor con 4 a 12 jugadores, aunque puede jugarse con 3. Solo el anfitrión necesita tener la app instalada.",
+    "q7": "¿Cómo cancelo mi suscripción premium?",
+    "a7": "Las suscripciones se gestionan desde Google Play. Ve a tu cuenta de Google Play → Suscripciones y cancela desde ahí.",
+    "q8": "¿Dónde reporto un error o problema?",
+    "a8": "Escríbenos a dahoreddiegohernandez@gmail.com con una descripción del problema y tu dispositivo. Respondemos en menos de 48 horas."
   },
   "gameDetail": {
     "statsPlayers": "jugadores",

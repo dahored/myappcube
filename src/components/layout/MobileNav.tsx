@@ -13,9 +13,10 @@ const localeLabels: Record<string, string> = { en: 'EN', es: 'ES' };
 interface MobileNavProps {
   gamesLabel: string;
   socialsLabel: string;
+  contactLabel: string;
 }
 
-export default function MobileNav({ gamesLabel, socialsLabel }: MobileNavProps) {
+export default function MobileNav({ gamesLabel, socialsLabel, contactLabel }: MobileNavProps) {
   const [open, setOpen] = useState(false);
   const locale = useLocale();
   const router = useRouter();
@@ -41,6 +42,9 @@ export default function MobileNav({ gamesLabel, socialsLabel }: MobileNavProps) 
         <Link href="/redes" className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
           {socialsLabel}
         </Link>
+        <Link href="/contact" className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
+          {contactLabel}
+        </Link>
         <ThemeToggle />
         <LocaleSwitcher />
       </nav>
@@ -62,6 +66,13 @@ export default function MobileNav({ gamesLabel, socialsLabel }: MobileNavProps) 
               className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors py-2 px-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800"
             >
               {socialsLabel}
+            </Link>
+            <Link
+              href="/contact"
+              onClick={() => setOpen(false)}
+              className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors py-2 px-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800"
+            >
+              {contactLabel}
             </Link>
             <div className="flex items-center gap-2 px-3 py-2">
               {['es', 'en'].map((l) => (
