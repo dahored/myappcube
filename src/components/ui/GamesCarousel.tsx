@@ -123,7 +123,7 @@ export default function GamesCarousel({ games }: { games: GameSlide[] }) {
               style={{ opacity: i === current ? 1 : 0.45, scale: i === current ? '1' : '0.97' }}
               onClick={() => { if (!isDragging.current) goTo(i); }}
             >
-              <div className="relative rounded-2xl overflow-hidden aspect-video min-h-[220px] border border-zinc-200/60 dark:border-zinc-800/60">
+              <div className="relative rounded-2xl overflow-hidden aspect-video min-h-[320px] sm:min-h-0 border border-zinc-200/60 dark:border-zinc-800/60">
                 {game.comingSoon ? (
                   /* Coming soon: dark card with logo centered */
                   <div className="absolute inset-0 bg-zinc-900 flex flex-col items-center justify-center gap-5">
