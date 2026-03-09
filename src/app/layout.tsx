@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Geist } from 'next/font/google';
-import Script from 'next/script';
 import './globals.css';
 import { studio } from '@/config/studio';
 
@@ -29,12 +28,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className={`${geist.variable} font-sans antialiased bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 min-h-screen flex flex-col`}>
         {children}
+        {/* AdSense — uncomment when adding ad units to the site
         <Script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${studio.adsensePublisherId}`}
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        */}
       </body>
     </html>
   );

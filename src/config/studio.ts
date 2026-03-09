@@ -6,6 +6,8 @@ export const studio = {
   email: 'dahoreddiegohernandez@gmail.com',
   googlePlayDeveloperUrl: 'https://play.google.com/store/apps/developer?id=myappcube',
   adsensePublisherId: 'ca-pub-5119314285197382',
+  /** Set to true to show the coming soon page on all routes */
+  comingSoon: false,
 } as const;
 
 export interface Social {
