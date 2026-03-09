@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Plus, X, Smile, Gamepad2, Users } from 'lucide-react';
+import { Plus, X, Smile, Zap, Users } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
-const iconMap = { Smile, Gamepad2, Users } as const;
+const iconMap = { Smile, Zap, Users } as const;
 type IconName = keyof typeof iconMap;
 
 export interface AboutCardData {

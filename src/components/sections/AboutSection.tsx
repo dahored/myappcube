@@ -17,7 +17,7 @@ export default async function AboutSection() {
       modalBody: t('v1modalBody'),
     },
     {
-      icon: 'Gamepad2' as const,
+      icon: 'Zap' as const,
       iconColor: 'text-violet-400',
       accentColor: 'text-violet-400',
       before: t('v2before'),
