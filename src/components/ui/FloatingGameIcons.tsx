@@ -21,17 +21,39 @@ function rand(min: number, max: number) {
   return Math.random() * (max - min) + min;
 }
 
-// Zones spread across the full section — avoid the center text column (~30-70% x)
-const zones = [
-  { side: 'left',  xMin: 1,  xMax: 28, yMin: 5,  yMax: 28 },
-  { side: 'left',  xMin: 1,  xMax: 24, yMin: 35, yMax: 62 },
-  { side: 'left',  xMin: 1,  xMax: 28, yMin: 68, yMax: 88 },
-  { side: 'right', xMin: 1,  xMax: 28, yMin: 5,  yMax: 28 },
-  { side: 'right', xMin: 1,  xMax: 24, yMin: 35, yMax: 62 },
-  { side: 'right', xMin: 1,  xMax: 28, yMin: 68, yMax: 88 },
-];
+interface Pos { left: string; top: string }
 
-interface Pos { left?: string; right?: string; top: string }
+// Generate a random position avoiding the center text column (28–72% x)
+function randomPos(): Pos {
+  const isLeft = Math.random() > 0.5;
+  const x = isLeft ? rand(1, 25) : rand(75, 97);
+  const y = rand(4, 88);
+  return { left: `${x}%`, top: `${y}%` };
+}
+
+// Minimum distance between icons to avoid heavy overlap
+const MIN_DIST = 14;
+
+function generatePositions(count: number): Pos[] {
+  const positions: Pos[] = [];
+  for (let i = 0; i < count; i++) {
+    let candidate: Pos;
+    let attempts = 0;
+    do {
+      candidate = randomPos();
+      attempts++;
+    } while (
+      attempts < 30 &&
+      positions.some((p) => {
+        const dx = parseFloat(p.left) - parseFloat(candidate.left);
+        const dy = parseFloat(p.top) - parseFloat(candidate.top);
+        return Math.sqrt(dx * dx + dy * dy) < MIN_DIST;
+      })
+    );
+    positions.push(candidate);
+  }
+  return positions;
+}
 
 export default function FloatingGameIcons({ icons }: FloatingGameIconsProps) {
   const refs = useRef<(HTMLDivElement | null)[]>([]);
@@ -39,17 +61,8 @@ export default function FloatingGameIcons({ icons }: FloatingGameIconsProps) {
 
   // Generate random positions after mount (avoids hydration mismatch)
   useEffect(() => {
-    setPositions(
-      icons.map((_, i) => {
-        const zone = zones[i % zones.length];
-        const x = rand(zone.xMin, zone.xMax);
-        const y = rand(zone.yMin, zone.yMax);
-        return zone.side === 'left'
-          ? { left: `${x}%`, top: `${y}%` }
-          : { right: `${x}%`, top: `${y}%` };
-      })
-    );
-  }, [icons]);
+    setPositions(generatePositions(icons.length));
+  }, [icons.length]);
 
   // Parallax on scroll
   useEffect(() => {

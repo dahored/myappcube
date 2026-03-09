@@ -41,7 +41,7 @@ export default async function Footer() {
                 alt="Google Play"
                 width={32}
                 height={32}
-                className="shrink-0"
+                className="shrink-0 w-8 h-8"
               />
               <div className="text-left leading-tight">
                 <p className="text-zinc-500 dark:text-zinc-400 text-[10px] font-medium">{t('storeCta')}</p>

@@ -94,7 +94,7 @@ export default async function BentoSection() {
                     alt="Google Play"
                     width={32}
                     height={32}
-                    className="shrink-0"
+                    className="shrink-0 w-8 h-8"
                   />
                   <div className="text-left leading-tight">
                     <p className="text-zinc-400 text-[10px] font-medium">{t('c5badge')}</p>

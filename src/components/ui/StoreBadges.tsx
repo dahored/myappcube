@@ -25,7 +25,7 @@ export default async function StoreBadges({ ios, android, className = '' }: Stor
             alt="App Store"
             width={32}
             height={32}
-            className="shrink-0"
+            className="shrink-0 w-8 h-8"
           />
           <div className="text-left leading-tight">
             <p className="text-zinc-500 dark:text-zinc-400 text-[10px] font-medium">{t('downloadOn')}</p>
@@ -47,7 +47,7 @@ export default async function StoreBadges({ ios, android, className = '' }: Stor
             alt="Google Play"
             width={32}
             height={32}
-            className="shrink-0"
+            className="shrink-0 w-8 h-8"
           />
           <div className="text-left leading-tight">
             <p className="text-zinc-500 dark:text-zinc-400 text-[10px] font-medium">{t('getItOn')}</p>
