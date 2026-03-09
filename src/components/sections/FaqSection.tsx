@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Plus } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import ScrollReveal from '@/components/ui/ScrollReveal';
+import { faqKeys } from '@/config/faq';
 
 interface FaqItem {
   q: string;
@@ -47,13 +48,7 @@ function FaqRow({ item }: { item: FaqItem }) {
 export default function FaqSection() {
   const t = useTranslations('faq');
 
-  const items: FaqItem[] = [
-    { q: t('q1'), a: t('a1') },
-    { q: t('q2'), a: t('a2') },
-    { q: t('q3'), a: t('a3') },
-    { q: t('q4'), a: t('a4') },
-    { q: t('q5'), a: t('a5') },
-  ];
+  const items: FaqItem[] = faqKeys.map(({ q, a }) => ({ q: t(q), a: t(a) }));
 
   return (
     <section className="border-t border-zinc-200/60 dark:border-zinc-800/60 bg-white dark:bg-zinc-950">

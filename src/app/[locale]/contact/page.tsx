@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
-import { Mail, ChevronDown, ChevronRight } from 'lucide-react';
-import { Link } from '@/i18n/navigation';
+import { Mail } from 'lucide-react';
 import { studio, socials } from '@/config/studio';
 import ScrollReveal from '@/components/ui/ScrollReveal';
+import FaqSection from '@/components/sections/FaqSection';
 
 export async function generateMetadata({
   params,
@@ -15,8 +15,8 @@ export async function generateMetadata({
   return {
     title: es ? 'Contacto y FAQ — myappcube' : 'Contact & FAQ — myappcube',
     description: es
-      ? 'Contacta al equipo de myappcube y encuentra respuestas a las preguntas más frecuentes sobre nuestros juegos.'
-      : 'Contact the myappcube team and find answers to the most common questions about our games.',
+      ? 'Contacta al equipo de myappcube y encuentra respuestas a las preguntas más frecuentes sobre nuestras apps.'
+      : 'Contact the myappcube team and find answers to the most common questions about our apps.',
     openGraph: {
       images: ['/images/logos/logo_myappcube.png'],
     },
@@ -30,26 +30,14 @@ export default async function ContactPage({
 }) {
   const { locale } = await params;
   const t = await getTranslations('contact');
-  const tf = await getTranslations('faq');
   const es = locale === 'es';
-
-  const faqItems = [
-    { q: tf('q1'), a: tf('a1') },
-    { q: tf('q2'), a: tf('a2') },
-    { q: tf('q3'), a: tf('a3') },
-    { q: tf('q6'), a: tf('a6') },
-    { q: tf('q7'), a: tf('a7') },
-    { q: tf('q4'), a: tf('a4') },
-    { q: tf('q5'), a: tf('a5') },
-    { q: tf('q8'), a: tf('a8') },
-  ];
 
   return (
     <main className="min-h-screen bg-zinc-950 -mt-16 pt-16">
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-b from-violet-500/8 via-transparent to-transparent pointer-events-none" />
-        <div className="container mx-auto px-6 py-24 md:py-32 text-center">
+        <div className="container mx-auto px-6 pt-20 pb-10 md:pt-28 md:pb-12 text-center">
           <ScrollReveal>
             <p className="text-xs font-semibold tracking-widest uppercase text-violet-400 mb-4">
               {t('label')}
@@ -105,45 +93,7 @@ export default async function ContactPage({
         </ScrollReveal>
       </section>
 
-      {/* FAQ */}
-      <section className="container mx-auto px-6 pb-24 max-w-2xl">
-        <ScrollReveal>
-          <div className="mb-10 text-center">
-            <p className="text-xs font-semibold tracking-widest uppercase text-violet-400 mb-3">FAQ</p>
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-zinc-50">{tf('title')}</h2>
-          </div>
-        </ScrollReveal>
-
-        <div className="flex flex-col divide-y divide-zinc-800/60">
-          {faqItems.map((item, i) => (
-            <ScrollReveal key={i} delay={i * 40}>
-              <details className="group py-5">
-                <summary className="flex items-center justify-between gap-4 cursor-pointer list-none text-zinc-50 font-medium leading-snug hover:text-violet-300 transition-colors">
-                  {item.q}
-                  <ChevronDown className="w-4 h-4 shrink-0 text-zinc-500 group-open:rotate-180 transition-transform" />
-                </summary>
-                <p className="mt-3 text-zinc-400 leading-relaxed text-sm">{item.a}</p>
-              </details>
-            </ScrollReveal>
-          ))}
-        </div>
-
-        <ScrollReveal delay={320}>
-          <div className="mt-12 flex justify-center">
-            <Link
-              href="/games"
-              className="inline-flex items-center gap-4 pl-5 pr-2 py-2 h-13 rounded-full bg-zinc-800/80 hover:bg-zinc-700/80 backdrop-blur-sm transition-colors"
-            >
-              <span className="text-base font-medium text-zinc-100 whitespace-nowrap">
-                {t('gamesCta')}
-              </span>
-              <span className="w-9 h-9 rounded-full bg-violet-600 flex items-center justify-center shrink-0">
-                <ChevronRight className="w-5 h-5 text-white" />
-              </span>
-            </Link>
-          </div>
-        </ScrollReveal>
-      </section>
+      <FaqSection />
     </main>
   );
 }
