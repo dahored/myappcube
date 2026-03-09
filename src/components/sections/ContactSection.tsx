@@ -1,6 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
-import { Mail, ChevronRight } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import { studio, socials } from '@/config/studio';
 
@@ -51,20 +50,6 @@ export default async function ContactSection() {
               ))}
             </div>
 
-            {/* See all games */}
-            <div className="mt-10 pt-10 border-t border-zinc-800/60">
-              <Link
-                href="/games"
-                className="inline-flex items-center gap-4 pl-5 pr-2 py-2 h-13 rounded-full bg-zinc-800/80 hover:bg-zinc-700/80 backdrop-blur-sm transition-colors"
-              >
-                <span className="text-base font-medium text-zinc-100 whitespace-nowrap">
-                  {t('gamesCta')}
-                </span>
-                <span className="w-9 h-9 rounded-full bg-violet-600 flex items-center justify-center shrink-0">
-                  <ChevronRight className="w-5 h-5 text-white" />
-                </span>
-              </Link>
-            </div>
           </ScrollReveal>
 
         </div>
