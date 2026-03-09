@@ -50,7 +50,7 @@
       "description": "Un juego de palabras trepidante que pone a prueba tu vocabulario y reflejos. Juega solo o desafía a tus amigos en tiempo real."
     },
     "cube-quest": {
-      "description": "Un adictivo juego de puzzles donde apilás, equilibrás y explotás cubos en niveles cada vez más creativos."
+      "description": "Un adictivo juego de puzzles donde apilas, equilibras y explotas cubos en niveles cada vez más creativos."
     }
   },
   "about": {
@@ -113,7 +113,7 @@
   },
   "faq": {
     "title": "Preguntas frecuentes",
-    "subtitle": "Todo lo que necesitás saber sobre nuestros juegos.",
+    "subtitle": "Todo lo que necesitas saber sobre nuestros juegos.",
     "q1": "¿Dónde puedo descargar los juegos?",
     "a1": "Nuestros juegos están disponibles en Google Play para dispositivos Android.",
     "q2": "¿Los juegos son gratuitos?",
