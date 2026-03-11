@@ -1,5 +1,6 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import { headers } from 'next/headers';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/Header';
@@ -26,13 +27,16 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages();
+  const headersList = await headers();
+  const pathname = headersList.get('x-pathname') ?? '';
+  const isTvMode = pathname.includes('/tv-mode');
 
   return (
     <NextIntlClientProvider messages={messages}>
       <LangAttribute locale={locale} />
-      <Header />
-      <main className="flex-1 pt-16">{children}</main>
-      <Footer />
+      {!isTvMode && <Header />}
+      <main className={isTvMode ? 'flex-1' : 'flex-1 pt-16'}>{children}</main>
+      {!isTvMode && <Footer />}
     </NextIntlClientProvider>
   );
 }

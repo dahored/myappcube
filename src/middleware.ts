@@ -1,8 +1,15 @@
 import createMiddleware from 'next-intl/middleware';
+import { type NextRequest } from 'next/server';
 import { routing } from './i18n/routing';
 
-export default createMiddleware(routing);
+const intlMiddleware = createMiddleware(routing);
+
+export default function middleware(request: NextRequest) {
+  const response = intlMiddleware(request);
+  response.headers.set('x-pathname', request.nextUrl.pathname);
+  return response;
+}
 
 export const config = {
-  matcher: ['/((?!_next|_vercel|.*\\..*|games/el-infiltrado/tv-mode|intv).*)'],
+  matcher: ['/((?!_next|_vercel|.*\\..*|intv).*)'],
 };
