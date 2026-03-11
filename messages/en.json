@@ -44,7 +44,34 @@
       "modeChaosTitle": "Infiltrado",
       "modeChaosDesc": "The number of infiltrators is random — nobody knows how many. Total distrust.",
       "tipTitle": "Strategy tip",
-      "tip": "Be vague but convincing. Too much detail gives you away, but so does too much hesitation."
+      "tip": "Be vague but convincing. Too much detail gives you away, but so does too much hesitation.",
+      "tvMode": {
+        "title": "El Infiltrado — TV Mode",
+        "enterCode": "Enter the room code",
+        "codePlaceholder": "CODE",
+        "connect": "Connect",
+        "connecting": "Connecting...",
+        "notFound": "Room not found. Check the code.",
+        "connectionError": "Connection error. Please try again.",
+        "setup": "Setting up the game...",
+        "revealTitle": "Players",
+        "revealWaiting": "Waiting for everyone to see their role…",
+        "revealReady": "Ready",
+        "countdown": "Get ready!",
+        "now": "Now!",
+        "discussionTitle": "Discussion",
+        "timeUp": "Time's up!",
+        "votingTitle": "Voting in progress",
+        "votingDesc": "Players are deciding who the infiltrator is",
+        "resultsRevealing": "Revealing the truth…",
+        "resultsWord": "The word was",
+        "innocentsWin": "Innocents win!",
+        "infiltratorWins": "The infiltrator wins!",
+        "infiltratorsWin": "The infiltrators win!",
+        "wasInfiltrator": "They were the infiltrator!",
+        "wasInnocent": "They were innocent",
+        "tie": "Tie! Nobody was eliminated"
+      }
     },
     "word-rush": {
       "description": "A fast-paced word game that tests your vocabulary and reflexes. Play solo or challenge your friends in real time."
