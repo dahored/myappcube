@@ -8,11 +8,19 @@ import { useLocale } from 'next-intl';
 const localeLabels: Record<string, string> = {
   en: 'EN',
   es: 'ES',
+  pt: 'PT',
+  fr: 'FR',
+  it: 'IT',
+  de: 'DE',
 };
 
 const localeFlags: Record<string, string> = {
   en: '🇺🇸',
   es: '🇪🇸',
+  pt: '🇧🇷',
+  fr: '🇫🇷',
+  it: '🇮🇹',
+  de: '🇩🇪',
 };
 
 export default function LocaleSwitcher() {
@@ -51,7 +59,7 @@ export default function LocaleSwitcher() {
 
       {open && (
         <div className="absolute right-0 mt-1 w-28 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-xl overflow-hidden z-50">
-          {['es', 'en'].map((l) => (
+          {['es', 'en', 'pt', 'fr', 'it', 'de'].map((l) => (
             <button
               key={l}
               onClick={() => switchLocale(l)}
