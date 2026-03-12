@@ -1,9 +1,10 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import Image from 'next/image';
 import { Poppins } from 'next/font/google';
+import { useRouter, usePathname } from '@/i18n/navigation';
 import { Tv, Loader2, Ghost, Trophy, Timer, Check, Lock, Scale, User, Maximize2, Minimize2 } from 'lucide-react';
 import { db } from '@/lib/firebase';
 import { ref, query, orderByChild, equalTo, get, set, onValue, off, onDisconnect, goOffline, goOnline, type DatabaseReference } from 'firebase/database';
@@ -1023,6 +1024,9 @@ function ResultsPhase({ room, t, p }: { room: TvRoom; t: ReturnType<typeof useTr
 
 export default function TvModeClient() {
   const t = useTranslations('games.el-infiltrado.tvMode');
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
 
   const [code, setCode] = useState('');
   const [connectionState, setConnectionState] = useState<ConnectionState>('idle');
@@ -1236,6 +1240,23 @@ export default function TvModeClient() {
         className={`min-h-screen flex flex-col items-center justify-center gap-10 p-8 ${poppins.className}`}
         style={{ backgroundColor: ep.bg }}
       >
+        {/* Language selector */}
+        <div className="absolute top-5 right-5 flex items-center gap-1 rounded-xl overflow-hidden border" style={{ borderColor: ep.cardBorder }}>
+          {(['en', 'es', 'pt', 'fr', 'it', 'de'] as const).map(lang => (
+            <button
+              key={lang}
+              onClick={() => router.replace(pathname, { locale: lang })}
+              className="px-3 py-1.5 text-sm font-bold uppercase tracking-wide transition-colors"
+              style={{
+                backgroundColor: locale === lang ? ep.purple : ep.card,
+                color: locale === lang ? '#fff' : ep.muted,
+              }}
+            >
+              {lang}
+            </button>
+          ))}
+        </div>
+
         <div className="flex flex-col items-center gap-4">
           {/* Logo + TV badge */}
           <div className="relative">
