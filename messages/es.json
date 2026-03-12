@@ -44,7 +44,34 @@
       "modeChaosTitle": "Infiltrado",
       "modeChaosDesc": "El número de infiltrados es aleatorio — nadie sabe cuántos hay. La desconfianza es total.",
       "tipTitle": "Consejo estratégico",
-      "tip": "Sé vago pero convincente. Demasiada información te delata, pero dudar demasiado también."
+      "tip": "Sé vago pero convincente. Demasiada información te delata, pero dudar demasiado también.",
+      "tvMode": {
+        "title": "El Infiltrado — Modo TV",
+        "enterCode": "Ingresa el código de sala",
+        "codePlaceholder": "CÓDIGO",
+        "connect": "Conectar",
+        "connecting": "Conectando...",
+        "notFound": "Sala no encontrada. Verifica el código.",
+        "connectionError": "Error de conexión. Intenta de nuevo.",
+        "setup": "Configurando el juego...",
+        "revealTitle": "Jugadores",
+        "revealWaiting": "Esperando que todos vean su rol…",
+        "revealReady": "Listo",
+        "countdown": "¡Prepárense!",
+        "now": "¡Ahora!",
+        "discussionTitle": "Discusión",
+        "timeUp": "¡Tiempo!",
+        "votingTitle": "Votación en curso",
+        "votingDesc": "Los jugadores están decidiendo quién es el infiltrado",
+        "resultsRevealing": "Descubriendo la verdad…",
+        "resultsWord": "La palabra era",
+        "innocentsWin": "¡Los inocentes ganan!",
+        "infiltratorWins": "¡El infiltrado gana!",
+        "infiltratorsWin": "¡Los infiltrados ganan!",
+        "wasInfiltrator": "¡Era el infiltrado!",
+        "wasInnocent": "Era inocente",
+        "tie": "¡Empate! Nadie fue eliminado"
+      }
     },
     "word-rush": {
       "description": "Un juego de palabras trepidante que pone a prueba tu vocabulario y reflejos. Juega solo o desafía a tus amigos en tiempo real."
