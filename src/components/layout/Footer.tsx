@@ -25,7 +25,9 @@ export default async function Footer() {
                 height={36}
                 className="rounded-lg"
               />
-              <span className="font-bold text-zinc-900 dark:text-zinc-50">myappcube</span>
+              <span className="font-poppins font-bold tracking-tight">
+                <span className="text-zinc-900 dark:text-white">myapp</span><span className="text-violet-500">cube</span>
+              </span>
             </Link>
             <p className="text-base text-zinc-500 leading-relaxed max-w-xs">
               {t('description')}
