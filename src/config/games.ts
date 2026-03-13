@@ -14,6 +14,24 @@ export interface Game {
     ios?: string;
     android?: string;
   };
+  ratings?: {
+    android?: number;
+    ios?: number;
+  };
+  downloads?: {
+    android?: number;
+    ios?: number;
+  };
+}
+
+/** Returns total downloads across platforms formatted as "30k+", "1.2M+", etc. */
+export function formatDownloads(downloads: Game['downloads']): string | null {
+  if (!downloads) return null;
+  const total = (downloads.android ?? 0) + (downloads.ios ?? 0);
+  if (total === 0) return null;
+  if (total >= 1_000_000) return `${(total / 1_000_000).toFixed(total % 1_000_000 === 0 ? 0 : 1)}M+`;
+  if (total >= 1_000) return `${Math.floor(total / 1_000)}k+`;
+  return `${total}+`;
 }
 
 export const games: Game[] = [
@@ -29,8 +47,17 @@ export const games: Game[] = [
     platform: 'Android',
     accent: 'orange',
     storeUrl: {
-      android: 'https://play.google.com/store/apps/details?id=com.myappcube.elinfiltrado',
+      android: 'https://play.google.com/store/apps/details?id=com.diegohernandez.myappcube.game.elinfiltrado',
+      // ios: 'https://play.google.com/store/apps/details?id=com.myappcube.elinfiltrado',
     },
+    ratings: { 
+      android: 5, 
+      // ios: 5 
+    },
+    downloads: {
+      // android: 10000,
+      // ios: 20000,
+    }
   },
   // ── Coming soon ──────────────────────────────────────────────────────────
   {

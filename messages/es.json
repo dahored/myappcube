@@ -208,7 +208,8 @@
     "c4desc": "Calificación en Google Play",
     "c5title": "¿Listo para jugar?",
     "c5desc": "Descarga gratis y empieza tu primera partida en menos de un minuto.",
-    "c5badge": "Disponible en"
+    "c5badge": "Disponible en",
+    "c5downloads": "descargas"
   },
   "testimonials": {
     "label": "Opiniones",

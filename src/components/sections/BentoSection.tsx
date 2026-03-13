@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
-import { Users, PartyPopper, Star } from 'lucide-react';
+import { Users, PartyPopper, Star, Download } from 'lucide-react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { games } from '@/config/games';
+import { games, formatDownloads } from '@/config/games';
 
 export default async function BentoSection() {
   const t = await getTranslations('bento');
@@ -62,47 +62,106 @@ export default async function BentoSection() {
             </div>
           </ScrollReveal>
 
-          {/* Row 2: rating + download CTA */}
+          {/* Row 2: rating (conditional) + download CTA */}
           <ScrollReveal delay={100} className="flex flex-col sm:flex-row gap-3">
 
-            {/* Card 4 — rating */}
-            <div className="rounded-2xl bg-zinc-900 border border-zinc-800/60 p-6 flex flex-col items-center justify-center text-center gap-2 flex-1 min-h-[180px]">
-              <div className="flex gap-1">
-                {Array.from({ length: 5 }).map((_, s) => (
-                  <Star key={s} className="w-4 h-4 fill-orange-400 text-orange-400" />
-                ))}
-              </div>
-              <p className="text-5xl font-bold text-white leading-none">4.8</p>
-              <p className="text-sm text-zinc-500">{t('c4desc')}</p>
-            </div>
-
-            {/* Card 5 — download CTA */}
-            <div className="rounded-2xl bg-violet-600/10 border border-violet-500/20 p-7 flex flex-col sm:flex-row items-center gap-5 flex-[2] min-h-[180px]">
-              <div className="flex-1 text-center sm:text-left">
-                <h3 className="font-bold text-white text-xl mb-1">{t('c5title')}</h3>
-                <p className="text-sm text-zinc-400 leading-relaxed">{t('c5desc')}</p>
-              </div>
-              {game.storeUrl?.android && (
-                <a
-                  href={game.storeUrl.android}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 px-5 py-2 rounded-xl bg-white/10 border border-white/10 hover:bg-white/15 transition-colors shrink-0"
-                >
-                  <Image
-                    src="/images/stores/google_play.png"
-                    alt="Google Play"
-                    width={32}
-                    height={32}
-                    className="shrink-0 w-8 h-8"
-                  />
-                  <div className="text-left leading-tight">
-                    <p className="text-zinc-400 text-[10px] font-medium">{t('c5badge')}</p>
-                    <p className="text-white text-base font-semibold tracking-tight">Google Play</p>
+            {/* Card 4 — rating: only shown if at least one platform has a rating */}
+            {(game.ratings?.ios || game.ratings?.android) && (
+              <div className="rounded-2xl bg-zinc-900 border border-zinc-800/60 p-6 flex items-center justify-around gap-4 flex-1 min-h-[180px]">
+                {game.ratings?.ios && (
+                  <div className="flex flex-col items-center gap-1.5">
+                    <Image src="/images/stores/apple_store.png" alt="App Store" width={28} height={28} className="w-7 h-7" />
+                    <p className="text-4xl font-bold text-white leading-none mt-1">{game.ratings.ios.toFixed(1)}</p>
+                    <div className="relative flex gap-0.5">
+                      <div className="flex gap-0.5">
+                        {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="w-3 h-3 text-zinc-700" />)}
+                      </div>
+                      <div className="absolute inset-0 flex gap-0.5 overflow-hidden" style={{ width: `${(game.ratings.ios / 5) * 100}%` }}>
+                        {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="w-3 h-3 fill-orange-400 text-orange-400 shrink-0" />)}
+                      </div>
+                    </div>
+                    <p className="text-[10px] text-zinc-500 uppercase tracking-widest">App Store</p>
                   </div>
-                </a>
-              )}
-            </div>
+                )}
+                {game.ratings?.ios && game.ratings?.android && (
+                  <div className="w-px h-14 bg-zinc-700/60 shrink-0" />
+                )}
+                {game.ratings?.android && (
+                  <div className="flex flex-col items-center gap-1.5">
+                    <Image src="/images/stores/google_play.png" alt="Google Play" width={28} height={28} className="w-7 h-7" />
+                    <p className="text-4xl font-bold text-white leading-none mt-1">{game.ratings.android.toFixed(1)}</p>
+                    <div className="relative flex gap-0.5">
+                      <div className="flex gap-0.5">
+                        {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="w-3 h-3 text-zinc-700" />)}
+                      </div>
+                      <div className="absolute inset-0 flex gap-0.5 overflow-hidden" style={{ width: `${(game.ratings.android / 5) * 100}%` }}>
+                        {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="w-3 h-3 fill-orange-400 text-orange-400 shrink-0" />)}
+                      </div>
+                    </div>
+                    <p className="text-[10px] text-zinc-500 uppercase tracking-widest">Google Play</p>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Card 5 — download CTA: only shown if at least one store URL exists */}
+            {(game.storeUrl?.android || game.storeUrl?.ios) && (
+              <div className="rounded-2xl bg-violet-600/10 border border-violet-500/20 p-7 flex flex-col sm:flex-row items-center gap-5 flex-[2] min-h-[180px]">
+                <div className="flex-1 text-center sm:text-left">
+                  <h3 className="font-bold text-white text-xl mb-1">{t('c5title')}</h3>
+                  <p className="text-sm text-zinc-400 leading-relaxed">{t('c5desc')}</p>
+                  {formatDownloads(game.downloads) && (
+                    <div className="flex items-center gap-1.5 mt-8 sm:justify-start justify-center">
+                      <Download className="w-4 h-4 text-violet-400 shrink-0" />
+                      <span className="text-sm font-bold text-white">{formatDownloads(game.downloads)}</span>
+                      <span className="text-sm font-normal text-white">{t('c5downloads')}</span>
+                    </div>
+                  )}
+                </div>
+                <div className="flex flex-col gap-2 shrink-0 w-full sm:w-auto">
+                  {game.storeUrl?.ios && (
+                    <a
+                      href={game.storeUrl.ios}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 px-5 py-2 rounded-xl bg-white/10 border border-white/10 hover:bg-white/15 transition-colors w-full"
+                    >
+                      <Image
+                        src="/images/stores/apple_store.png"
+                        alt="App Store"
+                        width={32}
+                        height={32}
+                        className="shrink-0 w-8 h-8"
+                      />
+                      <div className="text-left leading-tight">
+                        <p className="text-zinc-400 text-[10px] font-medium">{t('c5badge')}</p>
+                        <p className="text-white text-base font-semibold tracking-tight">App Store</p>
+                      </div>
+                    </a>
+                  )}
+                  {game.storeUrl?.android && (
+                    <a
+                      href={game.storeUrl.android}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 px-5 py-2 rounded-xl bg-white/10 border border-white/10 hover:bg-white/15 transition-colors w-full"
+                    >
+                      <Image
+                        src="/images/stores/google_play.png"
+                        alt="Google Play"
+                        width={32}
+                        height={32}
+                        className="shrink-0 w-8 h-8"
+                      />
+                      <div className="text-left leading-tight">
+                        <p className="text-zinc-400 text-[10px] font-medium">{t('c5badge')}</p>
+                        <p className="text-white text-base font-semibold tracking-tight">Google Play</p>
+                      </div>
+                    </a>
+                  )}
+                </div>
+              </div>
+            )}
 
           </ScrollReveal>
 

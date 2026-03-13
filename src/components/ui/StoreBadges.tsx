@@ -17,7 +17,7 @@ export default async function StoreBadges({ ios, android, className = '' }: Stor
           href={ios}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex items-center gap-3 px-5 py-3 rounded-xl bg-white dark:bg-zinc-800 border border-black/5 dark:border-white/10 hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-all hover:scale-105 active:scale-100"
+          className="group flex items-center gap-3 px-5 py-2 rounded-xl bg-white dark:bg-zinc-800 border border-black/5 dark:border-white/10 hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-all hover:scale-105 active:scale-100"
           aria-label={t('downloadOn') + ' ' + t('appStore')}
         >
           <Image

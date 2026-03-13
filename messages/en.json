@@ -208,7 +208,8 @@
     "c4desc": "Rating on Google Play",
     "c5title": "Ready to play?",
     "c5desc": "Download for free and start your first game in under a minute.",
-    "c5badge": "Get it on"
+    "c5badge": "Get it on",
+    "c5downloads": "downloads"
   },
   "testimonials": {
     "label": "Reviews",
