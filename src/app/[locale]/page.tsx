@@ -18,10 +18,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const isEs = locale === 'es';
-  const title = 'myappcube — Mobile Game Studio';
+  const title = 'myappcube — Mobile App & Game Studio';
   const description = isEs
-    ? 'myappcube crea juegos móviles de fiesta divertidos y únicos. Descarga El Infiltrado en Android.'
-    : 'myappcube crafts fun and unique mobile party games. Download El Infiltrado on Android.';
+    ? 'myappcube es un estudio independiente que crea apps y juegos móviles únicos para conectar personas. Descarga El Infiltrado en Android.'
+    : 'myappcube is an independent studio crafting unique mobile apps and games to connect people. Download El Infiltrado on Android.';
 
   return {
     title,

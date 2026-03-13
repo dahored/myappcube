@@ -6,10 +6,10 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 
 export const metadata: Metadata = {
   title: 'Redes sociales — myappcube',
-  description: 'Sigue a myappcube en Instagram, Facebook y YouTube. Novedades, gameplay y actualizaciones de nuestros juegos móviles.',
+  description: 'Sigue a myappcube en Instagram, Facebook y YouTube. Novedades, gameplay y actualizaciones de nuestras apps y juegos móviles.',
   openGraph: {
     title: 'Redes sociales — myappcube',
-    description: 'Sigue a myappcube en Instagram, Facebook y YouTube.',
+    description: 'Sigue a myappcube en Instagram, Facebook y YouTube. Apps y juegos móviles únicos.',
     images: ['/images/logos/logo_myappcube.png'],
   },
 };

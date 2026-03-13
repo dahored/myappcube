@@ -14,10 +14,10 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const isEs = locale === 'es';
-  const title = isEs ? 'Juegos — myappcube' : 'Games — myappcube';
+  const title = isEs ? 'Apps y Juegos — myappcube' : 'Apps & Games — myappcube';
   const description = isEs
-    ? 'Descubre todos los juegos móviles de myappcube. Juegos de fiesta para Android e iOS.'
-    : 'Discover all mobile games by myappcube. Party games for Android and iOS.';
+    ? 'Descubre todas las apps y juegos móviles de myappcube. Experiencias únicas para Android e iOS.'
+    : 'Discover all apps and mobile games by myappcube. Unique experiences for Android and iOS.';
 
   return {
     title,
