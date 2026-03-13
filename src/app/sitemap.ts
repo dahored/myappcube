@@ -64,6 +64,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
             ),
           },
         },
+        {
+          url: url(`/games/${game.slug}/delete-account`, locale),
+          lastModified: now,
+          changeFrequency: 'yearly' as const,
+          priority: 0.3,
+          alternates: {
+            languages: Object.fromEntries(
+              locales.map((l) => [l, url(`/games/${game.slug}/delete-account`, l)])
+            ),
+          },
+        },
       ])
     );
 
