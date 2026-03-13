@@ -1,7 +1,10 @@
 import type { Metadata } from 'next';
 import { Geist, Poppins } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import { studio } from '@/config/studio';
+
+const GA_ID = 'G-L6F386NFWM';
 
 const geist = Geist({
   variable: '--font-geist-sans',
@@ -68,6 +71,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         {children}
+
+        {/* Google Analytics */}
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="afterInteractive" />
+        <Script id="ga-init" strategy="afterInteractive">{`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_ID}');
+        `}</Script>
+
         {/* AdSense — uncomment when adding ad units to the site
         <Script
           async
