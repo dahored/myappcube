@@ -38,8 +38,8 @@ export default async function Footer() {
               rel="noopener noreferrer"
               className="mt-1 self-start flex items-center gap-3 px-5 py-2 rounded-xl bg-white dark:bg-zinc-800 border border-black/5 dark:border-white/10 hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors"
             >
-              <Image
-                src="/images/stores/google_play.png"
+              <img
+                src="/images/stores/google_play.svg"
                 alt="Google Play"
                 width={32}
                 height={32}

@@ -25,7 +25,7 @@ export default async function StoreBadges({ ios, android, className = '' }: Stor
             alt="App Store"
             width={32}
             height={32}
-            className="shrink-0 w-8 h-8"
+            className="shrink-0 w-8 h-8 p-0.5"
           />
           <div className="text-left leading-tight">
             <p className="text-zinc-500 dark:text-zinc-400 text-[10px] font-medium">{t('downloadOn')}</p>
@@ -42,8 +42,8 @@ export default async function StoreBadges({ ios, android, className = '' }: Stor
           className="group flex items-center gap-3 px-5 py-2 rounded-xl bg-white dark:bg-zinc-800 border border-black/5 dark:border-white/10 hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-all hover:scale-105 active:scale-100"
           aria-label={t('getItOn') + ' ' + t('googlePlay')}
         >
-          <Image
-            src="/images/stores/google_play.png"
+          <img
+            src="/images/stores/google_play.svg"
             alt="Google Play"
             width={32}
             height={32}

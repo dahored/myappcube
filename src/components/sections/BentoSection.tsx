@@ -70,7 +70,7 @@ export default async function BentoSection() {
               <div className="rounded-2xl bg-zinc-900 border border-zinc-800/60 p-6 flex items-center justify-around gap-4 flex-1 min-h-[180px]">
                 {game.ratings?.ios && (
                   <div className="flex flex-col items-center gap-1.5">
-                    <Image src="/images/stores/apple_store.png" alt="App Store" width={28} height={28} className="w-7 h-7" />
+                    <Image src="/images/stores/apple_store.png" alt="App Store" width={28} height={28} className="w-7 h-7 p-0.5" />
                     <p className="text-4xl font-bold text-white leading-none mt-1">{game.ratings.ios.toFixed(1)}</p>
                     <div className="relative flex gap-0.5">
                       <div className="flex gap-0.5">
@@ -88,7 +88,7 @@ export default async function BentoSection() {
                 )}
                 {game.ratings?.android && (
                   <div className="flex flex-col items-center gap-1.5">
-                    <Image src="/images/stores/google_play.png" alt="Google Play" width={28} height={28} className="w-7 h-7" />
+                    <img src="/images/stores/google_play.svg" alt="Google Play" width={28} height={28} className="w-7 h-7" />
                     <p className="text-4xl font-bold text-white leading-none mt-1">{game.ratings.android.toFixed(1)}</p>
                     <div className="relative flex gap-0.5">
                       <div className="flex gap-0.5">
@@ -131,7 +131,7 @@ export default async function BentoSection() {
                         alt="App Store"
                         width={32}
                         height={32}
-                        className="shrink-0 w-8 h-8"
+                        className="shrink-0 w-8 h-8 p-0.5"
                       />
                       <div className="text-left leading-tight">
                         <p className="text-zinc-400 text-[10px] font-medium">{t('c5badge')}</p>
@@ -146,8 +146,8 @@ export default async function BentoSection() {
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 px-5 py-2 rounded-xl bg-white/10 border border-white/10 hover:bg-white/15 transition-colors"
                     >
-                      <Image
-                        src="/images/stores/google_play.png"
+                      <img
+                        src="/images/stores/google_play.svg"
                         alt="Google Play"
                         width={32}
                         height={32}
