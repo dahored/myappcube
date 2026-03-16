@@ -23,11 +23,15 @@ export default function AboutCardsGrid({ cards }: { cards: AboutCardData[] }) {
   const [visible, setVisible] = useState(false);
   const active = openIndex !== null ? cards[openIndex] : null;
 
-  // Animate in
+  // Animate in + scroll lock
   useEffect(() => {
     if (openIndex !== null) {
+      document.body.style.overflow = 'hidden';
       requestAnimationFrame(() => setVisible(true));
+    } else {
+      document.body.style.overflow = '';
     }
+    return () => { document.body.style.overflow = ''; };
   }, [openIndex]);
 
   function closeModal() {
