@@ -26,10 +26,10 @@ export default async function BentoSection() {
 
             {/* Card 1 — large image */}
             <div className="relative overflow-hidden rounded-2xl flex-[2] min-h-[400px] lg:min-h-[460px]">
-              <Image src={game.banner} alt={game.name} fill className="object-cover" />
+              <Image src={game.banner} alt={game.name} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 800px" priority />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/10 to-transparent" />
               <div className="absolute bottom-0 left-0 p-7">
-                <p className="text-xs text-zinc-400 font-semibold uppercase tracking-widest mb-2">
+                <p className="text-xs text-white/70 font-semibold uppercase tracking-widest mb-2">
                   {t('c1label')}
                 </p>
                 <h3 className="text-2xl sm:text-3xl font-bold text-white leading-snug max-w-xs">
@@ -118,13 +118,13 @@ export default async function BentoSection() {
                     </div>
                   )}
                 </div>
-                <div className="flex flex-col gap-2 shrink-0 w-full sm:w-auto">
+                <div className="flex flex-col gap-2 shrink-0">
                   {game.storeUrl?.ios && (
                     <a
                       href={game.storeUrl.ios}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 px-5 py-2 rounded-xl bg-white/10 border border-white/10 hover:bg-white/15 transition-colors w-full"
+                      className="flex items-center gap-3 px-5 py-2 rounded-xl bg-white/10 border border-white/10 hover:bg-white/15 transition-colors"
                     >
                       <Image
                         src="/images/stores/apple_store.png"
@@ -144,7 +144,7 @@ export default async function BentoSection() {
                       href={game.storeUrl.android}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 px-5 py-2 rounded-xl bg-white/10 border border-white/10 hover:bg-white/15 transition-colors w-full"
+                      className="flex items-center gap-3 px-5 py-2 rounded-xl bg-white/10 border border-white/10 hover:bg-white/15 transition-colors"
                     >
                       <Image
                         src="/images/stores/google_play.png"
