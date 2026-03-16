@@ -133,7 +133,7 @@ export default async function TermsPage({
         <h2>11. Contacto</h2>
         <p>
           Para consultas sobre estos términos, puedes escribirnos a{' '}
-          <a href={`mailto:${studio.email}`}>{studio.email}</a>.
+          <a href={`mailto:${studio.email}?subject=${encodeURIComponent('Términos / Terms — myappcube')}`}>{studio.email}</a>.
         </p>
       </LegalLayout>
     );
@@ -246,7 +246,7 @@ export default async function TermsPage({
       <h2>11. Contact</h2>
       <p>
         For questions about these terms, you can reach us at{' '}
-        <a href={`mailto:${studio.email}`}>{studio.email}</a>.
+        <a href={`mailto:${studio.email}?subject=${encodeURIComponent('Términos / Terms — myappcube')}`}>{studio.email}</a>.
       </p>
     </LegalLayout>
   );

@@ -119,7 +119,7 @@ export default async function GamePrivacyPage({
         <p>
           Puedes solicitar acceso, rectificación o eliminación de tus datos (incluyendo tu cuenta)
           escribiéndonos a{' '}
-          <a href={`mailto:${studio.email}`}>{studio.email}</a>.
+          <a href={`mailto:${studio.email}?subject=${encodeURIComponent('Privacidad / Privacy — myappcube')}`}>{studio.email}</a>.
         </p>
 
         <h2>7. Cambios</h2>
@@ -130,7 +130,7 @@ export default async function GamePrivacyPage({
 
         <h2>8. Contacto</h2>
         <p>
-          <a href={`mailto:${studio.email}`}>{studio.email}</a>
+          <a href={`mailto:${studio.email}?subject=${encodeURIComponent('Privacidad / Privacy — myappcube')}`}>{studio.email}</a>
         </p>
       </LegalLayout>
     );
@@ -214,7 +214,7 @@ export default async function GamePrivacyPage({
       <p>
         You may request access, correction, or deletion of your data (including your account) by
         writing to us at{' '}
-        <a href={`mailto:${studio.email}`}>{studio.email}</a>.
+        <a href={`mailto:${studio.email}?subject=${encodeURIComponent('Privacidad / Privacy — myappcube')}`}>{studio.email}</a>.
       </p>
 
       <h2>7. Changes</h2>
@@ -225,7 +225,7 @@ export default async function GamePrivacyPage({
 
       <h2>8. Contact</h2>
       <p>
-        <a href={`mailto:${studio.email}`}>{studio.email}</a>
+        <a href={`mailto:${studio.email}?subject=${encodeURIComponent('Privacidad / Privacy — myappcube')}`}>{studio.email}</a>
       </p>
     </LegalLayout>
   );

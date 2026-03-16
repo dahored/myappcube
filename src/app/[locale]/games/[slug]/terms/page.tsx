@@ -127,7 +127,7 @@ export default async function GameTermsPage({
 
         <h2>9. Contacto</h2>
         <p>
-          <a href={`mailto:${studio.email}`}>{studio.email}</a>
+          <a href={`mailto:${studio.email}?subject=${encodeURIComponent('Términos / Terms — myappcube')}`}>{studio.email}</a>
         </p>
       </LegalLayout>
     );
@@ -218,7 +218,7 @@ export default async function GameTermsPage({
 
       <h2>9. Contact</h2>
       <p>
-        <a href={`mailto:${studio.email}`}>{studio.email}</a>
+        <a href={`mailto:${studio.email}?subject=${encodeURIComponent('Términos / Terms — myappcube')}`}>{studio.email}</a>
       </p>
     </LegalLayout>
   );

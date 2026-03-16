@@ -482,7 +482,7 @@ export default async function DeleteAccountPage({
               <p className="text-zinc-400 leading-relaxed">
                 {c.helpText}
                 <a
-                  href={`mailto:${studio.email}`}
+                  href={`mailto:${studio.email}?subject=${encodeURIComponent('Eliminar cuenta / Delete account — myappcube')}`}
                   className="text-violet-400 underline underline-offset-4 hover:text-violet-300 transition-colors"
                 >
                   {studio.email}

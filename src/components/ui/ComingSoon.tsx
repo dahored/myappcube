@@ -31,7 +31,7 @@ export default function ComingSoon() {
       <p className="text-zinc-500 text-sm max-w-xs leading-relaxed">
         Estamos preparando algo. Mientras tanto, escríbenos a{' '}
         <a
-          href={`mailto:${studio.email}`}
+          href={`mailto:${studio.email}?subject=${encodeURIComponent('Contacto — myappcube')}`}
           className="text-violet-400 hover:text-violet-300 transition-colors underline underline-offset-2"
         >
           {studio.email}

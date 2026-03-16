@@ -138,7 +138,7 @@ export default async function PrivacyPage({
         <p>
           Tu cuenta (email, nombre de usuario, avatar y UID de Firebase) se retiene mientras
           la cuenta esté activa. Puedes solicitar su eliminación en cualquier momento
-          escribiéndonos a <a href={`mailto:${studio.email}`}>{studio.email}</a>. Los informes
+          escribiéndonos a <a href={`mailto:${studio.email}?subject=${encodeURIComponent('Privacidad / Privacy — myappcube')}`}>{studio.email}</a>. Los informes
           de fallos de Crashlytics se retienen conforme a la política de retención de Google
           Firebase. Los datos de uso anónimos se retienen el tiempo necesario para análisis.
         </p>
@@ -191,7 +191,7 @@ export default async function PrivacyPage({
         </ul>
         <p>
           Para ejercer cualquiera de estos derechos, escríbenos a{' '}
-          <a href={`mailto:${studio.email}`}>{studio.email}</a>. Responderemos en un plazo máximo
+          <a href={`mailto:${studio.email}?subject=${encodeURIComponent('Privacidad / Privacy — myappcube')}`}>{studio.email}</a>. Responderemos en un plazo máximo
           de 30 días.
         </p>
 
@@ -200,7 +200,7 @@ export default async function PrivacyPage({
           Tienes derecho a acceder, rectificar o eliminar tus datos personales (incluyendo tu
           cuenta, correo electrónico, nombre de usuario y avatar). Para ejercer estos derechos,
           escríbenos a{' '}
-          <a href={`mailto:${studio.email}`}>{studio.email}</a>.
+          <a href={`mailto:${studio.email}?subject=${encodeURIComponent('Privacidad / Privacy — myappcube')}`}>{studio.email}</a>.
         </p>
 
         <h2>9. Cambios a esta política</h2>
@@ -213,7 +213,7 @@ export default async function PrivacyPage({
         <h2>10. Contacto</h2>
         <p>
           Si tienes preguntas sobre esta política, puedes escribirnos a{' '}
-          <a href={`mailto:${studio.email}`}>{studio.email}</a>.
+          <a href={`mailto:${studio.email}?subject=${encodeURIComponent('Privacidad / Privacy — myappcube')}`}>{studio.email}</a>.
         </p>
       </LegalLayout>
     );
@@ -329,7 +329,7 @@ export default async function PrivacyPage({
       <p>
         Your account (email, username, avatar, and Firebase UID) is retained for as long as your
         account is active. You may request deletion at any time by contacting us at{' '}
-        <a href={`mailto:${studio.email}`}>{studio.email}</a>. Crashlytics crash reports are
+        <a href={`mailto:${studio.email}?subject=${encodeURIComponent('Privacidad / Privacy — myappcube')}`}>{studio.email}</a>. Crashlytics crash reports are
         retained in accordance with Google Firebase's retention policy. Anonymous usage data is
         retained as long as needed for analysis.
       </p>
@@ -380,14 +380,14 @@ export default async function PrivacyPage({
       </ul>
       <p>
         To exercise any of these rights, write to us at{' '}
-        <a href={`mailto:${studio.email}`}>{studio.email}</a>. We will respond within 30 days.
+        <a href={`mailto:${studio.email}?subject=${encodeURIComponent('Privacidad / Privacy — myappcube')}`}>{studio.email}</a>. We will respond within 30 days.
       </p>
 
       <h2>8. Your Rights (General)</h2>
       <p>
         You have the right to access, correct, or delete your personal data (including your
         account, email address, username, and avatar). To exercise these rights, please write
-        to us at <a href={`mailto:${studio.email}`}>{studio.email}</a>.
+        to us at <a href={`mailto:${studio.email}?subject=${encodeURIComponent('Privacidad / Privacy — myappcube')}`}>{studio.email}</a>.
       </p>
 
       <h2>9. Changes to This Policy</h2>
@@ -399,7 +399,7 @@ export default async function PrivacyPage({
       <h2>10. Contact</h2>
       <p>
         If you have questions about this policy, you can reach us at{' '}
-        <a href={`mailto:${studio.email}`}>{studio.email}</a>.
+        <a href={`mailto:${studio.email}?subject=${encodeURIComponent('Privacidad / Privacy — myappcube')}`}>{studio.email}</a>.
       </p>
     </LegalLayout>
   );
