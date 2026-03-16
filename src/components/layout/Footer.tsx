@@ -36,7 +36,7 @@ export default async function Footer() {
               href={studio.googlePlayDeveloperUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-1 self-start flex items-center gap-3 px-5 py-2 rounded-xl bg-white dark:bg-zinc-800 border border-black/5 dark:border-white/10 hover:bg-zinc-100 dark:hover:bg-zinc-700 transition-colors"
+              className="mt-1 self-start flex items-center gap-3 px-5 py-2 rounded-xl bg-white dark:bg-white/10 border border-black/5 dark:border-white/15 dark:backdrop-blur-md hover:bg-zinc-100 dark:hover:bg-white/20 transition-colors"
             >
               <img
                 src="/images/stores/google_play.svg"
@@ -111,7 +111,7 @@ export default async function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
+                  className="p-2 rounded-lg bg-zinc-100 dark:bg-white/10 dark:border dark:border-white/15 dark:backdrop-blur-md text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 hover:bg-zinc-200 dark:hover:bg-white/20 transition-colors"
                 >
                   <Icon className="w-4 h-4" />
                 </a>

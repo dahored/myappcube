@@ -84,7 +84,7 @@ export default async function ContactPage({
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={label}
-                className="p-3 rounded-xl bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-zinc-50 hover:border-zinc-600 transition-colors"
+                className="p-3 rounded-xl bg-white/10 border border-white/15 backdrop-blur-md text-zinc-400 hover:text-zinc-50 hover:bg-white/20 transition-colors"
               >
                 <Icon className="w-5 h-5" />
               </a>

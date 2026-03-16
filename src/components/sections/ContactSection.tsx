@@ -28,10 +28,12 @@ export default async function ContactSection() {
             {/* Email CTA */}
             <a
               href={`mailto:${studio.email}?subject=${encodeURIComponent(tFooter('contactSubject'))}`}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-violet-600 hover:bg-violet-500 text-white font-semibold transition-colors"
+              className="inline-flex items-center gap-4 pl-5 pr-2 py-2 h-13 rounded-full bg-white/10 border border-white/15 backdrop-blur-md text-white font-semibold hover:bg-white/20 transition-colors"
             >
-              <Mail className="w-4 h-4" />
               {t('emailCta')}
+              <span className="w-9 h-9 rounded-full bg-violet-600 flex items-center justify-center shrink-0">
+                <Mail className="w-4 h-4 text-white" />
+              </span>
             </a>
 
             {/* Social links */}
@@ -43,7 +45,7 @@ export default async function ContactSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="p-3 rounded-xl bg-zinc-800 text-zinc-400 hover:text-zinc-50 hover:bg-zinc-700 transition-colors"
+                  className="p-3 rounded-xl bg-white/10 border border-white/15 text-zinc-400 hover:text-zinc-50 hover:bg-white/20 backdrop-blur-md transition-colors"
                 >
                   <Icon className="w-5 h-5" />
                 </a>

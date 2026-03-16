@@ -433,7 +433,7 @@ export default async function GameDetailPage({
             <ScrollReveal delay={250}>
               <Link
                 href="/games"
-                className="inline-flex items-center gap-4 pl-5 pr-2 py-2 h-13 rounded-full bg-zinc-800/80 hover:bg-zinc-700/80 backdrop-blur-sm transition-colors"
+                className="inline-flex items-center gap-4 pl-5 pr-2 py-2 h-13 rounded-full bg-white/10 border border-white/15 backdrop-blur-md hover:bg-white/20 transition-colors"
               >
                 <span className="text-base font-medium text-zinc-100 whitespace-nowrap">
                   {locale === 'es' ? 'Todos los juegos' : 'All games'}

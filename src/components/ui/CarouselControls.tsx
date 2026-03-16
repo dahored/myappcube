@@ -26,10 +26,10 @@ export default function CarouselControls({
 }: CarouselControlsProps) {
   const isDark = theme === 'dark';
 
-  const pillBg    = isDark ? 'bg-zinc-800'                            : 'bg-zinc-200 dark:bg-zinc-700';
+  const pillBg    = isDark ? 'bg-zinc-800'                            : 'bg-zinc-200 dark:bg-white/10 dark:backdrop-blur-md dark:border dark:border-white/15';
   const dotActive = isDark ? 'bg-zinc-100'                            : 'bg-zinc-800 dark:bg-zinc-100';
   const dotIdle   = isDark ? 'bg-zinc-500/70'                         : 'bg-zinc-500 dark:bg-zinc-400';
-  const btnBg     = isDark ? 'bg-zinc-800 hover:bg-zinc-700 text-zinc-300' : 'bg-zinc-200 dark:bg-zinc-700 hover:bg-zinc-300 dark:hover:bg-zinc-600 text-zinc-700 dark:text-zinc-200';
+  const btnBg     = isDark ? 'bg-zinc-800 hover:bg-zinc-700 text-zinc-300' : 'bg-zinc-200 dark:bg-white/10 dark:backdrop-blur-md dark:border dark:border-white/15 hover:bg-zinc-300 dark:hover:bg-white/20 text-zinc-700 dark:text-zinc-100';
 
   return (
     <div className={`flex items-center justify-center gap-3 ${className}`}>

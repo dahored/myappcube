@@ -29,7 +29,7 @@ export default async function GamesSection() {
           <ScrollReveal delay={0} repeat>
             <Link
               href="/#all-games"
-              className="pointer-events-auto flex items-center gap-4 pl-5 pr-2 py-2 h-13 rounded-full bg-zinc-200/80 dark:bg-zinc-950/80 backdrop-blur-sm"
+              className="pointer-events-auto flex items-center gap-4 pl-5 pr-2 py-2 h-13 rounded-full bg-zinc-200/80 dark:bg-white/10 dark:border dark:border-white/15 backdrop-blur-md"
             >
               <span className="text-base font-medium text-zinc-900 dark:text-zinc-100 whitespace-nowrap">
                 {t('exploreAll')}
