@@ -44,6 +44,7 @@ export default async function FeaturedGameSection({ game }: { game: Game }) {
             <ScrollReveal delay={0} repeat>
               <Link
                 href={`/games/${game.slug}`}
+                aria-label={`${t('featuredCta')} — ${game.name}`}
                 className="pointer-events-auto flex items-center gap-4 pl-5 pr-2 py-2 h-13 rounded-full bg-zinc-200/80 dark:bg-white/10 dark:border dark:border-white/15 backdrop-blur-md"
               >
                 <span className="text-base font-medium text-zinc-900 dark:text-zinc-100 whitespace-nowrap">

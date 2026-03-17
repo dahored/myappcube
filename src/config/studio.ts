@@ -2,8 +2,8 @@ import { Instagram, Facebook, Youtube, type LucideIcon } from 'lucide-react';
 
 export const studio = {
   name: 'myappcube',
-  siteUrl: 'https://myappcube.com',
-  email: 'dahoreddiegohernandez@gmail.com',
+  siteUrl: 'https://www.myappcube.com',
+  email: 'dahoreddiegohernandez+myappcube@gmail.com',
   googlePlayDeveloperUrl: 'https://play.google.com/store/apps/developer?id=myappcube',
   adsensePublisherId: 'ca-pub-5119314285197382',
   /** Controlled via NEXT_PUBLIC_COMING_SOON env var — set to "false" in Vercel to launch */

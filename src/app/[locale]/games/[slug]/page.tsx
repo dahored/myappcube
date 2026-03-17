@@ -5,6 +5,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { ChevronRight, Users, Globe, Layers, Quote, SlidersHorizontal, Eye, Ghost, MessageCircle, Vote, Trophy, type LucideIcon } from 'lucide-react';
 import { games } from '@/config/games';
+import { studio } from '@/config/studio';
 import { routing } from '@/i18n/routing';
 import StoreBadges from '@/components/ui/StoreBadges';
 import ScrollReveal from '@/components/ui/ScrollReveal';
@@ -32,7 +33,7 @@ export async function generateMetadata({
   const game = games.find((g) => g.slug === slug);
   if (!game) return {};
 
-  const base = 'https://myappcube.com';
+  const base = studio.siteUrl;
 
   return {
     title: game.name,
@@ -170,9 +171,9 @@ export default async function GameDetailPage({
     operatingSystem: game.storeUrl?.ios ? 'Android, iOS' : 'Android',
     applicationCategory: 'GameApplication',
     genre: game.genre,
-    image: `https://myappcube.com${game.banner}`,
-    screenshot: screenshots.map((s) => `https://myappcube.com${s.src}`),
-    author: { '@type': 'Organization', name: 'myappcube', url: 'https://myappcube.com' },
+    image: `${studio.siteUrl}${game.banner}`,
+    screenshot: screenshots.map((s) => `${studio.siteUrl}${s.src}`),
+    author: { '@type': 'Organization', name: 'myappcube', url: studio.siteUrl },
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     ...(game.storeUrl?.android && { installUrl: game.storeUrl.android }),
     ...(game.storeUrl?.ios && { installUrl: game.storeUrl.ios }),

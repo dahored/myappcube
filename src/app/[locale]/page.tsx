@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { games } from '@/config/games';
+import { studio } from '@/config/studio';
 import HeroSection from '@/components/sections/HeroSection';
 import FeaturedGameSection from '@/components/sections/FeaturedGameSection';
 import AboutSection from '@/components/sections/AboutSection';
@@ -9,7 +10,7 @@ import BentoSection from '@/components/sections/BentoSection';
 import FaqSection from '@/components/sections/FaqSection';
 import ContactSection from '@/components/sections/ContactSection';
 
-const base = 'https://myappcube.com';
+const base = studio.siteUrl;
 
 export async function generateMetadata({
   params,

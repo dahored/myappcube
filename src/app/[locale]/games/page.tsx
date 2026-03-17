@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { games } from '@/config/games';
+import { studio } from '@/config/studio';
 import FeaturedGameSection from '@/components/sections/FeaturedGameSection';
 import GameRow from '@/components/sections/GameRow';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 
-const base = 'https://myappcube.com';
+const base = studio.siteUrl;
 
 export async function generateMetadata({
   params,
