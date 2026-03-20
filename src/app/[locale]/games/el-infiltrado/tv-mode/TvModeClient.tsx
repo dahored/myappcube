@@ -1237,8 +1237,30 @@ export default function TvModeClient() {
         className={`min-h-screen flex flex-col items-center justify-center gap-10 p-8 ${poppins.className}`}
         style={{ backgroundColor: ep.bg }}
       >
-        {/* Language selector */}
-        <div className="absolute top-5 right-5">
+        {/* Language selector + fullscreen */}
+        <div className="absolute top-5 right-5 flex items-center gap-2">
+          <button
+            onClick={toggleFullscreen}
+            title={isFullscreen ? 'Salir de pantalla completa' : 'Pantalla completa'}
+            style={{
+              background: 'rgba(255,255,255,0.08)',
+              border: '1px solid rgba(255,255,255,0.15)',
+              borderRadius: 8,
+              padding: '6px 10px',
+              cursor: 'pointer',
+              color: ep.muted,
+              lineHeight: 1,
+              transition: 'opacity 0.2s',
+              opacity: 0.5,
+            }}
+            onMouseEnter={e => (e.currentTarget.style.opacity = '1')}
+            onMouseLeave={e => (e.currentTarget.style.opacity = '0.5')}
+          >
+            {isFullscreen
+              ? <Minimize2 size={18} strokeWidth={1.8} />
+              : <Maximize2 size={18} strokeWidth={1.8} />
+            }
+          </button>
           <LocaleSwitcher />
         </div>
 
