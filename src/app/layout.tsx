@@ -69,6 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 'https://www.facebook.com/profile.php?id=61586452775068',
                 'https://youtube.com/@myappcube',
                 studio.googlePlayDeveloperUrl,
+                studio.appStoreDeveloperUrl,
               ],
             }),
           }}

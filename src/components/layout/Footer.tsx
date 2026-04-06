@@ -32,24 +32,44 @@ export default async function Footer() {
             <p className="text-base text-zinc-500 leading-relaxed max-w-xs">
               {t('description')}
             </p>
-            <a
-              href={studio.googlePlayDeveloperUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-1 self-start flex items-center gap-3 px-5 py-2 rounded-xl bg-white dark:bg-white/10 border border-black/5 dark:border-white/15 dark:backdrop-blur-md hover:bg-zinc-100 dark:hover:bg-white/20 transition-colors"
-            >
-              <img
-                src="/images/stores/google_play.svg"
-                alt="Google Play"
-                width={32}
-                height={32}
-                className="shrink-0 w-8 h-8"
-              />
-              <div className="text-left leading-tight">
-                <p className="text-zinc-500 dark:text-zinc-400 text-[10px] font-medium">{t('storeCta')}</p>
-                <p className="text-zinc-900 dark:text-zinc-50 text-base font-semibold tracking-tight">Google Play</p>
-              </div>
-            </a>
+            <div className="mt-1 flex flex-col gap-2">
+              <a
+                href={studio.googlePlayDeveloperUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="self-start flex items-center gap-3 px-5 py-2 rounded-xl bg-white dark:bg-white/10 border border-black/5 dark:border-white/15 dark:backdrop-blur-md hover:bg-zinc-100 dark:hover:bg-white/20 transition-colors"
+              >
+                <img
+                  src="/images/stores/google_play.svg"
+                  alt="Google Play"
+                  width={32}
+                  height={32}
+                  className="shrink-0 w-8 h-8"
+                />
+                <div className="text-left leading-tight">
+                  <p className="text-zinc-500 dark:text-zinc-400 text-[10px] font-medium">{t('storeCta')}</p>
+                  <p className="text-zinc-900 dark:text-zinc-50 text-base font-semibold tracking-tight">Google Play</p>
+                </div>
+              </a>
+              <a
+                href={studio.appStoreDeveloperUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="self-start flex items-center gap-3 px-5 py-2 rounded-xl bg-white dark:bg-white/10 border border-black/5 dark:border-white/15 dark:backdrop-blur-md hover:bg-zinc-100 dark:hover:bg-white/20 transition-colors"
+              >
+                <img
+                  src="/images/stores/apple_store.png"
+                  alt="App Store"
+                  width={32}
+                  height={32}
+                  className="shrink-0 w-8 h-8"
+                />
+                <div className="text-left leading-tight">
+                  <p className="text-zinc-500 dark:text-zinc-400 text-[10px] font-medium">{t('storeCta')}</p>
+                  <p className="text-zinc-900 dark:text-zinc-50 text-base font-semibold tracking-tight">App Store</p>
+                </div>
+              </a>
+            </div>
           </div>
 
           {/* Company column */}
