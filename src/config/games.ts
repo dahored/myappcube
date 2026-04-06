@@ -44,15 +44,15 @@ export const games: Game[] = [
     banner: '/images/games/el-infiltrado/banner/home_banner.png',
     logo: '/images/games/el-infiltrado/logo/logo.jpg',
     genre: 'Party / Social',
-    platform: 'Android',
+    platform: 'iOS & Android',
     accent: 'orange',
     storeUrl: {
       android: 'https://play.google.com/store/apps/details?id=com.diegohernandez.myappcube.game.elinfiltrado',
-      // ios: 'https://play.google.com/store/apps/details?id=com.myappcube.elinfiltrado',
+      ios: 'https://apps.apple.com/us/app/the-infiltrator/id6760855405',
     },
-    ratings: { 
-      android: 5, 
-      // ios: 5 
+    ratings: {
+      android: 5,
+      ios: 5,
     },
     downloads: {
       // android: 10000,
