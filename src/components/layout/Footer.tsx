@@ -32,12 +32,12 @@ export default async function Footer() {
             <p className="text-base text-zinc-500 leading-relaxed max-w-xs">
               {t('description')}
             </p>
-            <div className="mt-1 flex flex-col gap-2">
+            <div className="mt-1 flex flex-col gap-2 w-fit">
               <a
                 href={studio.googlePlayDeveloperUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="self-start flex items-center gap-3 px-5 py-2 rounded-xl bg-white dark:bg-white/10 border border-black/5 dark:border-white/15 dark:backdrop-blur-md hover:bg-zinc-100 dark:hover:bg-white/20 transition-colors"
+                className="flex items-center gap-3 px-5 py-2 rounded-xl bg-white dark:bg-white/10 border border-black/5 dark:border-white/15 dark:backdrop-blur-md hover:bg-zinc-100 dark:hover:bg-white/20 transition-colors"
               >
                 <img
                   src="/images/stores/google_play.svg"
@@ -55,7 +55,7 @@ export default async function Footer() {
                 href={studio.appStoreDeveloperUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="self-start flex items-center gap-3 px-5 py-2 rounded-xl bg-white dark:bg-white/10 border border-black/5 dark:border-white/15 dark:backdrop-blur-md hover:bg-zinc-100 dark:hover:bg-white/20 transition-colors"
+                className="flex items-center gap-3 px-5 py-2 rounded-xl bg-white dark:bg-white/10 border border-black/5 dark:border-white/15 dark:backdrop-blur-md hover:bg-zinc-100 dark:hover:bg-white/20 transition-colors"
               >
                 <img
                   src="/images/stores/apple_store.png"
