@@ -22,6 +22,35 @@
     "getItOn": "Disponible sur"
   },
   "games": {
+    "disaster-tycoon": {
+      "description": "Affrontez jusqu'à 8 joueurs sur Roblox. Construisez des défenses, lancez des désastres dévastateurs et battez-vous pour être le dernier debout.",
+      "tagline": "Construisez votre base, lancez des désastres et soyez le dernier debout.",
+      "playOnRoblox": "Jouer sur Roblox",
+      "statsPlayers": "Joueurs",
+      "statsDisasters": "Désastres",
+      "statsWinner": "Vainqueur",
+      "buildLabel": "Construire",
+      "buildTitle": "Défendez votre noyau",
+      "buildDesc": "Placez des structures stratégiquement pour protéger votre base des désastres que vos rivaux vont lancer.",
+      "defenseWalls": "Murs",
+      "defenseBunkers": "Bunkers",
+      "defenseShields": "Boucliers",
+      "defenseTowers": "Tours",
+      "disastersLabel": "Détruire",
+      "disastersTitle": "7 désastres dévastateurs",
+      "disastersDesc": "Choisissez le désastre parfait et anéantissez les bases ennemies.",
+      "disasterMeteorite": "Météorite",
+      "disasterTornado": "Tornado",
+      "disasterEarthquake": "Tremblement de terre",
+      "disasterTsunami": "Tsunami",
+      "disasterFireRain": "Pluie de feu",
+      "disasterBlackHole": "Trou noir",
+      "disasterNuke": "Bombe nucléaire",
+      "galleryLabel": "Captures",
+      "galleryTitle": "Action en temps réel",
+      "ctaTitle": "Prêt pour la bataille ?",
+      "ctaDesc": "Lancez-vous sur Roblox, construisez votre base et déclenchez des désastres. Le dernier debout gagne."
+    },
     "el-infiltrado": {
       "description": "Un jeu de soirée amusant où des amis tentent de trouver l'infiltré parmi le groupe. Parfait pour les rassemblements — aucune app requise pour les joueurs.",
       "tagline": "Pouvez-vous trouver l'infiltré parmi vos amis ?",
@@ -260,7 +289,10 @@
     "screenshotsTitle": "Voyez-le en action",
     "downloadTitle": "Prêt à jouer ?",
     "downloadDesc": "Téléchargez gratuitement et lancez votre première partie en moins d'une minute.",
-    "downloadCta": "Télécharger gratuitement"
+    "downloadCta": "Télécharger gratuitement",
+    "allGames": "Tous les jeux",
+    "privacy": "Confidentialité",
+    "terms": "Conditions"
   },
   "contact": {
     "label": "Contact",

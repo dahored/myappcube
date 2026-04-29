@@ -22,6 +22,35 @@
     "getItOn": "Disponible en"
   },
   "games": {
+    "disaster-tycoon": {
+      "description": "Compite en partidas de hasta 8 jugadores en Roblox. Construye defensas, lanza desastres devastadores y lucha por ser el último en pie.",
+      "tagline": "Construye tu base, lanza desastres y sé el último en pie.",
+      "playOnRoblox": "Jugar en Roblox",
+      "statsPlayers": "Jugadores",
+      "statsDisasters": "Desastres",
+      "statsWinner": "Ganador",
+      "buildLabel": "Construye",
+      "buildTitle": "Defiende tu núcleo",
+      "buildDesc": "Coloca estructuras estratégicamente para proteger tu base de los desastres que lanzarán tus rivales.",
+      "defenseWalls": "Paredes",
+      "defenseBunkers": "Búnkeres",
+      "defenseShields": "Escudos",
+      "defenseTowers": "Torres",
+      "disastersLabel": "Destruye",
+      "disastersTitle": "7 desastres devastadores",
+      "disastersDesc": "Elige el desastre perfecto para el momento y arrasar con las bases enemigas.",
+      "disasterMeteorite": "Meteorito",
+      "disasterTornado": "Tornado",
+      "disasterEarthquake": "Terremoto",
+      "disasterTsunami": "Tsunami",
+      "disasterFireRain": "Lluvia de fuego",
+      "disasterBlackHole": "Agujero negro",
+      "disasterNuke": "Bomba nuclear",
+      "galleryLabel": "Capturas",
+      "galleryTitle": "Acción en tiempo real",
+      "ctaTitle": "¿Listo para la batalla?",
+      "ctaDesc": "Entra a Roblox, construye tu base y lanza desastres. El último en pie gana."
+    },
     "el-infiltrado": {
       "description": "Un juego de fiesta donde tus amigos intentan descubrir al infiltrado del grupo. Perfecto para reuniones — los jugadores no necesitan la app.",
       "tagline": "¿Puedes encontrar al infiltrado entre tus amigos?",
@@ -260,7 +289,10 @@
     "screenshotsTitle": "Míralo en acción",
     "downloadTitle": "¿Listo para jugar?",
     "downloadDesc": "Descarga gratis y empieza tu primera partida en menos de un minuto.",
-    "downloadCta": "Descargar gratis"
+    "downloadCta": "Descargar gratis",
+    "allGames": "Todos los juegos",
+    "privacy": "Privacidad",
+    "terms": "Términos"
   },
   "contact": {
     "label": "Contacto",

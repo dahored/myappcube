@@ -22,6 +22,35 @@
     "getItOn": "Get it on"
   },
   "games": {
+    "disaster-tycoon": {
+      "description": "Compete in matches with up to 8 players on Roblox. Build defenses, launch devastating disasters and fight to be the last one standing.",
+      "tagline": "Build your base, launch disasters and be the last one standing.",
+      "playOnRoblox": "Play on Roblox",
+      "statsPlayers": "Players",
+      "statsDisasters": "Disasters",
+      "statsWinner": "Winner",
+      "buildLabel": "Build",
+      "buildTitle": "Defend your core",
+      "buildDesc": "Strategically place structures to protect your base from the disasters your rivals will launch.",
+      "defenseWalls": "Walls",
+      "defenseBunkers": "Bunkers",
+      "defenseShields": "Shields",
+      "defenseTowers": "Towers",
+      "disastersLabel": "Destroy",
+      "disastersTitle": "7 devastating disasters",
+      "disastersDesc": "Choose the perfect disaster for the moment and wipe out enemy bases.",
+      "disasterMeteorite": "Meteorite",
+      "disasterTornado": "Tornado",
+      "disasterEarthquake": "Earthquake",
+      "disasterTsunami": "Tsunami",
+      "disasterFireRain": "Fire Rain",
+      "disasterBlackHole": "Black Hole",
+      "disasterNuke": "Nuclear Bomb",
+      "galleryLabel": "Screenshots",
+      "galleryTitle": "Real-time action",
+      "ctaTitle": "Ready for battle?",
+      "ctaDesc": "Jump into Roblox, build your base and launch disasters. Last one standing wins."
+    },
     "el-infiltrado": {
       "description": "A fun party game where friends try to find the infiltrator among the group. Perfect for gatherings — no app needed for players.",
       "tagline": "Can you find the infiltrator among your friends?",
@@ -260,7 +289,10 @@
     "screenshotsTitle": "See it in action",
     "downloadTitle": "Ready to play?",
     "downloadDesc": "Download for free and start your first game in under a minute.",
-    "downloadCta": "Download free"
+    "downloadCta": "Download free",
+    "allGames": "All games",
+    "privacy": "Privacy",
+    "terms": "Terms"
   },
   "contact": {
     "label": "Contact",

@@ -7,13 +7,16 @@ export interface Game {
   logo: string;
   genre: string;
   platform: string;
-  /** Tailwind color token used for the glow/accent (e.g. 'orange', 'violet', 'emerald') */
+  /** Tailwind color token used for the glow/accent (e.g. 'orange', 'violet', 'emerald', 'blue') */
   accent: string;
+  /** 'mobile' (default) = iOS/Android app; 'roblox' = Roblox experience */
+  type?: 'mobile' | 'roblox';
   comingSoon?: boolean;
   storeUrl?: {
     ios?: string;
     android?: string;
   };
+  robloxUrl?: string;
   ratings?: {
     android?: number;
     ios?: number;
@@ -58,6 +61,20 @@ export const games: Game[] = [
       // android: 10000,
       // ios: 20000,
     }
+  },
+  {
+    slug: 'disaster-tycoon',
+    name: 'Disaster Tycoon',
+    tagline: '⚡ Build & Destroy',
+    description:
+      'Build your base, launch disasters and be the last one standing! Compete in matches with up to 8 players on Roblox.',
+    banner: '/images/games/disaster-tycoon/posters/poster_disaster_tycoon.png',
+    logo: '/images/games/disaster-tycoon/logos/icon_disaster_tycoon-2.png',
+    genre: 'Action / Strategy',
+    platform: 'Roblox',
+    accent: 'blue',
+    type: 'roblox',
+    robloxUrl: 'https://www.roblox.com/games/134163944889115/Disaster-Tycoon-Build-Destroy',
   },
   // ── Coming soon ──────────────────────────────────────────────────────────
   {

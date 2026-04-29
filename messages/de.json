@@ -22,6 +22,35 @@
     "getItOn": "Jetzt bei"
   },
   "games": {
+    "disaster-tycoon": {
+      "description": "Tritt in Matches mit bis zu 8 Spielern auf Roblox an. Baue Verteidigungen, starte verheerende Katastrophen und kämpfe darum, der Letzte zu sein.",
+      "tagline": "Baue deine Basis, starte Katastrophen und sei der Letzte, der steht.",
+      "playOnRoblox": "Auf Roblox spielen",
+      "statsPlayers": "Spieler",
+      "statsDisasters": "Katastrophen",
+      "statsWinner": "Gewinner",
+      "buildLabel": "Bauen",
+      "buildTitle": "Verteidige deinen Kern",
+      "buildDesc": "Platziere Strukturen strategisch, um deine Basis vor den Katastrophen zu schützen, die deine Rivalen starten werden.",
+      "defenseWalls": "Wände",
+      "defenseBunkers": "Bunker",
+      "defenseShields": "Schilde",
+      "defenseTowers": "Türme",
+      "disastersLabel": "Zerstören",
+      "disastersTitle": "7 verheerende Katastrophen",
+      "disastersDesc": "Wähle die perfekte Katastrophe und vernichte feindliche Basen.",
+      "disasterMeteorite": "Meteorit",
+      "disasterTornado": "Tornado",
+      "disasterEarthquake": "Erdbeben",
+      "disasterTsunami": "Tsunami",
+      "disasterFireRain": "Feuerregen",
+      "disasterBlackHole": "Schwarzes Loch",
+      "disasterNuke": "Atombombe",
+      "galleryLabel": "Screenshots",
+      "galleryTitle": "Echtzeit-Action",
+      "ctaTitle": "Bereit für die Schlacht?",
+      "ctaDesc": "Geh auf Roblox, baue deine Basis und starte Katastrophen. Der Letzte, der steht, gewinnt."
+    },
     "el-infiltrado": {
       "description": "Ein lustiges Partyspiel, bei dem Freunde versuchen, den Eindringling in der Gruppe zu finden. Perfekt für Zusammenkünfte — die Spieler brauchen keine App.",
       "tagline": "Kannst du den Eindringling unter deinen Freunden finden?",
@@ -260,7 +289,10 @@
     "screenshotsTitle": "Sieh es in Aktion",
     "downloadTitle": "Bereit zu spielen?",
     "downloadDesc": "Kostenlos herunterladen und das erste Spiel in unter einer Minute starten.",
-    "downloadCta": "Kostenlos herunterladen"
+    "downloadCta": "Kostenlos herunterladen",
+    "allGames": "Alle Spiele",
+    "privacy": "Datenschutz",
+    "terms": "AGB"
   },
   "contact": {
     "label": "Kontakt",

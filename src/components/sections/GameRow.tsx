@@ -12,18 +12,21 @@ const accentChip: Record<string, string> = {
   orange: 'text-orange-600 dark:text-orange-400',
   violet: 'text-violet-600 dark:text-violet-400',
   emerald: 'text-emerald-600 dark:text-emerald-400',
+  blue: 'text-blue-600 dark:text-blue-400',
 };
 
 const accentBtn: Record<string, string> = {
   orange: 'bg-orange-500 hover:bg-orange-400 shadow-orange-900/30',
   violet: 'bg-violet-600 hover:bg-violet-500 shadow-violet-900/30',
   emerald: 'bg-emerald-600 hover:bg-emerald-500 shadow-emerald-900/30',
+  blue: 'bg-blue-600 hover:bg-blue-500 shadow-blue-900/30',
 };
 
 const accentGlow: Record<string, string> = {
   orange: 'from-orange-500/20 to-orange-400/5',
   violet: 'from-violet-600/20 to-violet-400/5',
   emerald: 'from-emerald-500/20 to-emerald-400/5',
+  blue: 'from-blue-600/20 to-blue-400/5',
 };
 
 export default async function GameRow({

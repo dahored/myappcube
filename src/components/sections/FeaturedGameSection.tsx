@@ -14,6 +14,7 @@ const accentGlow: Record<string, string> = {
   orange: 'from-orange-500/20 via-orange-400/10 to-violet-600/20',
   violet: 'from-violet-600/20 via-violet-400/10 to-violet-600/20',
   emerald: 'from-emerald-500/20 via-emerald-400/10 to-violet-600/20',
+  blue: 'from-blue-600/20 via-blue-400/10 to-violet-600/20',
 };
 
 

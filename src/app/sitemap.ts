@@ -29,8 +29,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const gameEntries: MetadataRoute.Sitemap = games
     .filter((g) => !g.comingSoon)
-    .flatMap((game) =>
-      locales.flatMap((locale) => [
+    .flatMap((game) => {
+      const isMobile = game.type !== 'roblox';
+      return locales.flatMap((locale) => [
         {
           url: url(`/games/${game.slug}`, locale),
           lastModified: now,
@@ -42,41 +43,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
             ),
           },
         },
-        {
-          url: url(`/games/${game.slug}/privacy`, locale),
-          lastModified: now,
-          changeFrequency: 'yearly' as const,
-          priority: 0.4,
-          alternates: {
-            languages: Object.fromEntries(
-              locales.map((l) => [l, url(`/games/${game.slug}/privacy`, l)])
-            ),
+        ...(isMobile ? [
+          {
+            url: url(`/games/${game.slug}/privacy`, locale),
+            lastModified: now,
+            changeFrequency: 'yearly' as const,
+            priority: 0.4,
+            alternates: {
+              languages: Object.fromEntries(
+                locales.map((l) => [l, url(`/games/${game.slug}/privacy`, l)])
+              ),
+            },
           },
-        },
-        {
-          url: url(`/games/${game.slug}/terms`, locale),
-          lastModified: now,
-          changeFrequency: 'yearly' as const,
-          priority: 0.4,
-          alternates: {
-            languages: Object.fromEntries(
-              locales.map((l) => [l, url(`/games/${game.slug}/terms`, l)])
-            ),
+          {
+            url: url(`/games/${game.slug}/terms`, locale),
+            lastModified: now,
+            changeFrequency: 'yearly' as const,
+            priority: 0.4,
+            alternates: {
+              languages: Object.fromEntries(
+                locales.map((l) => [l, url(`/games/${game.slug}/terms`, l)])
+              ),
+            },
           },
-        },
-        {
-          url: url(`/games/${game.slug}/delete-account`, locale),
-          lastModified: now,
-          changeFrequency: 'yearly' as const,
-          priority: 0.3,
-          alternates: {
-            languages: Object.fromEntries(
-              locales.map((l) => [l, url(`/games/${game.slug}/delete-account`, l)])
-            ),
+          {
+            url: url(`/games/${game.slug}/delete-account`, locale),
+            lastModified: now,
+            changeFrequency: 'yearly' as const,
+            priority: 0.3,
+            alternates: {
+              languages: Object.fromEntries(
+                locales.map((l) => [l, url(`/games/${game.slug}/delete-account`, l)])
+              ),
+            },
           },
-        },
-      ])
-    );
+        ] : []),
+      ]);
+    });
 
   return [...staticEntries, ...gameEntries];
 }

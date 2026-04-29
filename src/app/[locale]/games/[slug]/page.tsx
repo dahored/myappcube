@@ -16,7 +16,7 @@ import BentoSection from '@/components/sections/BentoSection';
 /* ─── Static params ─────────────────────────────────────────────────────── */
 
 export function generateStaticParams() {
-  const slugs = games.filter((g) => !g.comingSoon).map((g) => g.slug);
+  const slugs = games.filter((g) => !g.comingSoon && g.type !== 'roblox').map((g) => g.slug);
   return routing.locales.flatMap((locale) =>
     slugs.map((slug) => ({ locale, slug }))
   );
@@ -38,23 +38,24 @@ export async function generateMetadata({
   return {
     title: game.name,
     description: game.description,
+    keywords: [game.name.toLowerCase(), game.genre.toLowerCase(), 'myappcube', 'mobile game', 'juego movil', game.slug],
     openGraph: {
       type: 'website',
-      title: game.name,
+      title: `${game.name} — myappcube`,
       description: game.description,
-      images: [{ url: game.banner, width: 1200, height: 675, alt: `${game.name} banner` }],
+      images: [{ url: game.banner, width: 1200, height: 1200, alt: `${game.name} banner` }],
     },
     twitter: {
       card: 'summary_large_image',
-      title: game.name,
+      title: `${game.name} — myappcube`,
       description: game.description,
       images: [game.banner],
     },
     alternates: {
       canonical: `${base}/${locale}/games/${slug}`,
       languages: {
-        en: `${base}/en/games/${slug}`,
-        es: `${base}/es/games/${slug}`,
+        ...Object.fromEntries(routing.locales.map((l) => [l, `${base}/${l}/games/${slug}`])),
+        'x-default': `${base}/es/games/${slug}`,
       },
     },
   };
@@ -437,7 +438,7 @@ export default async function GameDetailPage({
                 className="inline-flex items-center gap-4 pl-5 pr-2 py-2 h-13 rounded-full bg-white/10 border border-white/15 backdrop-blur-md hover:bg-white/20 transition-colors"
               >
                 <span className="text-base font-medium text-zinc-100 whitespace-nowrap">
-                  {locale === 'es' ? 'Todos los juegos' : 'All games'}
+                  {t('allGames')}
                 </span>
                 <span className="w-9 h-9 rounded-full bg-violet-600 flex items-center justify-center shrink-0">
                   <ChevronRight className="w-5 h-5 text-white" />
@@ -448,11 +449,11 @@ export default async function GameDetailPage({
             <ScrollReveal delay={300}>
               <div className="flex items-center gap-1 text-base text-zinc-500">
                 <Link href={`/games/${slug}/privacy`} className="hover:text-zinc-300 transition-colors px-3">
-                  {locale === 'es' ? 'Privacidad' : 'Privacy'}
+                  {t('privacy')}
                 </Link>
                 <span className="text-zinc-700 select-none">|</span>
                 <Link href={`/games/${slug}/terms`} className="hover:text-zinc-300 transition-colors px-3">
-                  {locale === 'es' ? 'Términos' : 'Terms'}
+                  {t('terms')}
                 </Link>
               </div>
             </ScrollReveal>
