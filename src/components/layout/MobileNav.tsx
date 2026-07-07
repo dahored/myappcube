@@ -68,7 +68,7 @@ export default function MobileNav({ gamesLabel, socialsLabel, contactLabel }: Mo
               {contactLabel}
             </Link>
             <div className="flex items-center gap-2 px-3 py-2">
-              <LocaleSwitcher />
+              <LocaleSwitcher align="left" />
               <ThemeToggle />
             </div>
           </div>

@@ -44,7 +44,7 @@ const localeFlags: Record<string, string> = {
   th: '🇹🇭',
 };
 
-export default function LocaleSwitcher() {
+export default function LocaleSwitcher({ align = 'right' }: { align?: 'left' | 'right' }) {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
@@ -79,7 +79,9 @@ export default function LocaleSwitcher() {
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-1 w-56 max-h-80 overflow-y-auto rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-xl z-50 p-1 grid grid-cols-2 gap-0.5">
+        <div
+          className={`absolute ${align === 'left' ? 'left-0' : 'right-0'} mt-1 w-[min(14rem,calc(100vw-2rem))] max-h-80 overflow-y-auto rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-xl z-50 p-1 grid grid-cols-2 gap-0.5`}
+        >
           {routing.locales.map((l) => (
             <button
               key={l}
