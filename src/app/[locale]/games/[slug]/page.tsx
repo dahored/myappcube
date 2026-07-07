@@ -34,20 +34,22 @@ export async function generateMetadata({
   if (!game) return {};
 
   const base = studio.siteUrl;
+  const tGame = await getTranslations({ locale, namespace: 'games' });
+  const name = tGame.has(`${slug}.name`) ? tGame(`${slug}.name` as never) : game.name;
 
   return {
-    title: game.name,
+    title: name,
     description: game.description,
-    keywords: [game.name.toLowerCase(), game.genre.toLowerCase(), 'myappcube', 'mobile game', 'juego movil', game.slug],
+    keywords: [name.toLowerCase(), game.genre.toLowerCase(), 'myappcube', 'mobile game', 'juego movil', game.slug],
     openGraph: {
       type: 'website',
-      title: `${game.name} — myappcube`,
+      title: `${name} — myappcube`,
       description: game.description,
-      images: [{ url: game.banner, width: 1200, height: 1200, alt: `${game.name} banner` }],
+      images: [{ url: game.banner, width: 1200, height: 1200, alt: `${name} banner` }],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${game.name} — myappcube`,
+      title: `${name} — myappcube`,
       description: game.description,
       images: [game.banner],
     },
@@ -96,6 +98,7 @@ export default async function GameDetailPage({
 
   const t = await getTranslations('gameDetail');
   const tGame = await getTranslations({ locale, namespace: `games.${slug}` as never });
+  const name = tGame.has('name') ? (tGame as (k: string) => string)('name') : game.name;
 
   /* ── How-to-play steps ──────────────────────────────────────────────── */
   const howToPlayImages = [
@@ -154,7 +157,7 @@ export default async function GameDetailPage({
 
   const screenshots = screenshotFiles.map((file, i) => ({
     src: `/images/games/el-infiltrado/screenshots/${screenshotLocale}/${file}`,
-    alt: `${game.name} screenshot ${i + 1}`,
+    alt: `${name} screenshot ${i + 1}`,
   }));
 
   /* ── Stats ──────────────────────────────────────────────────────────── */
@@ -167,7 +170,7 @@ export default async function GameDetailPage({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'MobileApplication',
-    name: game.name,
+    name,
     description: game.description,
     operatingSystem: game.storeUrl?.ios ? 'Android, iOS' : 'Android',
     applicationCategory: 'GameApplication',
@@ -199,7 +202,7 @@ export default async function GameDetailPage({
                 <div className="absolute -inset-4 bg-orange-500/20 blur-2xl rounded-3xl" />
                 <Image
                   src={game.logo}
-                  alt={game.name}
+                  alt={name}
                   width={96}
                   height={96}
                   className="relative rounded-3xl shadow-2xl border border-white/10"
@@ -211,7 +214,7 @@ export default async function GameDetailPage({
             {/* Name + tagline */}
             <ScrollReveal delay={100}>
               <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-zinc-50">
-                {game.name}
+                {name}
               </h1>
               <p className="mt-4 text-xl text-zinc-400 max-w-xl mx-auto leading-relaxed">
                 {(tGame as (k: string) => string)('tagline')}
@@ -250,7 +253,7 @@ export default async function GameDetailPage({
             <div className="relative rounded-3xl overflow-hidden max-w-2xl mx-auto shadow-2xl border border-white/5">
               <Image
                 src={game.banner}
-                alt={`${game.name} banner`}
+                alt={`${name} banner`}
                 width={1200}
                 height={675}
                 className="w-full h-auto"
@@ -406,7 +409,7 @@ export default async function GameDetailPage({
                 <div className="absolute -inset-6 bg-orange-500/15 blur-3xl rounded-full" />
                 <Image
                   src={game.logo}
-                  alt={game.name}
+                  alt={name}
                   width={80}
                   height={80}
                   className="relative rounded-2xl border border-white/10"

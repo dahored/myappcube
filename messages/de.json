@@ -52,8 +52,9 @@
       "ctaDesc": "Geh auf Roblox, baue deine Basis und starte Katastrophen. Der Letzte, der steht, gewinnt."
     },
     "el-infiltrado": {
+      "name": "Der Infiltrierte",
       "description": "Ein lustiges Partyspiel, bei dem Freunde versuchen, den Eindringling in der Gruppe zu finden. Perfekt für Zusammenkünfte — die Spieler brauchen keine App.",
-      "tagline": "Kannst du den Eindringling unter deinen Freunden finden?",
+      "tagline": "Wer ist der Infiltrierte?",
       "step1Title": "Spiel konfigurieren",
       "step1Desc": "Spieler hinzufügen, Wortkategorien wählen und Optionen anpassen: Anzahl der Eindringlinge, Runden, Diskussionszeit und Spielmodus.",
       "step2Title": "Geheimwörter",
@@ -75,7 +76,7 @@
       "tipTitle": "Strategietipp",
       "tip": "Sei vage, aber überzeugend. Zu viele Details verraten dich, aber auch zu viel Zögern.",
       "tvMode": {
-        "title": "El Infiltrado — TV-Modus",
+        "title": "Der Infiltrierte — TV-Modus",
         "enterCode": "Raumcode eingeben",
         "codePlaceholder": "CODE",
         "connect": "Verbinden",
@@ -227,7 +228,7 @@
   },
   "bento": {
     "title": "Alles, was du für den perfekten Spieleabend brauchst.",
-    "subtitle": "El Infiltrado ist so konzipiert, dass alle Spaß haben — ohne Aufwand.",
+    "subtitle": "Der Infiltrierte ist so konzipiert, dass alle Spaß haben — ohne Aufwand.",
     "c1label": "Empfohlenes Spiel",
     "c1title": "Kannst du den Eindringling unter deinen Freunden finden?",
     "c2title": "Kein Download für Spieler",
@@ -245,7 +246,7 @@
     "title": "Was unsere Nutzer sagen",
     "subtitle": "Tausende gespielte Runden auf der ganzen Welt.",
     "r1name": "Valentina R.",
-    "r1": "El Infiltrado ist bei jedem Familientreffen zum absoluten Lieblingsspiel geworden. Alle wollen spielen!",
+    "r1": "Der Infiltrierte ist bei jedem Familientreffen zum absoluten Lieblingsspiel geworden. Alle wollen spielen!",
     "r2name": "Marcos T.",
     "r2": "Super einfach zu verstehen und wirklich lustig. Wir haben es für einen Spieleabend heruntergeladen und bis 3 Uhr morgens gespielt.",
     "r3name": "Lucía M.",
@@ -270,7 +271,7 @@
     "a4": "Ja! Wir entwickeln aktiv neue Titel. Folge uns in den sozialen Medien, um über neue Releases informiert zu bleiben.",
     "q5": "Wie kann ich das Team kontaktieren?",
     "a5": "Du kannst uns über die Kontaktformulare auf jeder App-Seite erreichen oder uns eine Nachricht über unsere Social-Media-Kanäle schicken.",
-    "q6": "Wie viele Spieler braucht El Infiltrado?",
+    "q6": "Wie viele Spieler braucht Der Infiltrierte?",
     "a6": "Das Spiel funktioniert am besten mit 4 bis 12 Spielern, kann aber auch zu dritt gespielt werden. Nur der Host benötigt die installierte App.",
     "q7": "Wie kündige ich mein Premium-Abonnement?",
     "a7": "Abonnements werden über Google Play verwaltet. Gehe zu deinem Google Play-Konto → Abonnements und kündige dort.",

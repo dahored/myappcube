@@ -52,8 +52,9 @@
       "ctaDesc": "Entra a Roblox, construye tu base y lanza desastres. El último en pie gana."
     },
     "el-infiltrado": {
+      "name": "El Infiltrado",
       "description": "Un juego de fiesta donde tus amigos intentan descubrir al infiltrado del grupo. Perfecto para reuniones — los jugadores no necesitan la app.",
-      "tagline": "¿Puedes encontrar al infiltrado entre tus amigos?",
+      "tagline": "¿Quién es el infiltrado?",
       "step1Title": "Configurar la partida",
       "step1Desc": "Añade los jugadores, elige las categorías de palabras y ajusta las opciones: número de infiltrados, rondas, duración de la discusión y modo de juego.",
       "step2Title": "Palabras secretas",

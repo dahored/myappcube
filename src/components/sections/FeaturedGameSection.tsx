@@ -27,6 +27,9 @@ export default async function FeaturedGameSection({ game }: { game: Game }) {
   const description = tGame.has(`${game.slug}.description`)
     ? tGame(`${game.slug}.description` as never)
     : game.description;
+  const name = tGame.has(`${game.slug}.name`)
+    ? tGame(`${game.slug}.name` as never)
+    : game.name;
 
   return (
     <section
@@ -45,7 +48,7 @@ export default async function FeaturedGameSection({ game }: { game: Game }) {
             <ScrollReveal delay={0} repeat>
               <Link
                 href={`/games/${game.slug}`}
-                aria-label={game.name}
+                aria-label={name}
                 className="pointer-events-auto flex items-center gap-4 pl-5 pr-2 py-2 h-13 rounded-full bg-zinc-200/80 dark:bg-white/10 dark:border dark:border-white/15 backdrop-blur-md"
               >
                 <span className="text-base font-medium text-zinc-900 dark:text-zinc-100 whitespace-nowrap">
@@ -75,7 +78,7 @@ export default async function FeaturedGameSection({ game }: { game: Game }) {
 
               {/* Title */}
               <h2 className="text-center text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 mb-4">
-                {game.name}
+                {name}
               </h2>
 
               {/* Description */}
@@ -94,7 +97,7 @@ export default async function FeaturedGameSection({ game }: { game: Game }) {
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-zinc-200 dark:border-white/5">
                   <Image
                     src={game.banner}
-                    alt={game.name}
+                    alt={name}
                     width={800}
                     height={800}
                     className="w-full h-auto"

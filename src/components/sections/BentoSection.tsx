@@ -6,7 +6,11 @@ import { games, formatDownloads } from '@/config/games';
 
 export default async function BentoSection() {
   const t = await getTranslations('bento');
+  const tGame = await getTranslations('games');
   const game = games[0];
+  const gameName = tGame.has(`${game.slug}.name`)
+    ? tGame(`${game.slug}.name` as never)
+    : game.name;
 
   return (
     <section className="bg-zinc-950 border-t border-zinc-800/60">
@@ -26,7 +30,7 @@ export default async function BentoSection() {
 
             {/* Card 1 — large image */}
             <div className="relative overflow-hidden rounded-2xl flex-[2] min-h-[400px] lg:min-h-[460px]">
-              <Image src={game.banner} alt={game.name} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 800px" priority />
+              <Image src={game.banner} alt={gameName} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 800px" priority />
               <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-zinc-950/10 to-transparent" />
               <div className="absolute bottom-0 left-0 p-7">
                 <p className="text-xs text-white/70 font-semibold uppercase tracking-widest mb-2">

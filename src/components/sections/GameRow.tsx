@@ -43,6 +43,9 @@ export default async function GameRow({
   const description = tGame.has(`${game.slug}.description`)
     ? tGame(`${game.slug}.description` as never)
     : game.description;
+  const name = tGame.has(`${game.slug}.name`)
+    ? tGame(`${game.slug}.name` as never)
+    : game.name;
 
   const isEven = index % 2 === 0;
   const chip = accentChip[game.accent] ?? accentChip.violet;
@@ -66,7 +69,7 @@ export default async function GameRow({
             </span>
 
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 mb-4 leading-tight">
-              {game.comingSoon ? tCommon('comingSoonTitle') : game.name}
+              {game.comingSoon ? tCommon('comingSoonTitle') : name}
             </h2>
 
             <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 max-w-md mx-auto lg:mx-0 mb-8 leading-relaxed">
@@ -116,7 +119,7 @@ export default async function GameRow({
                 ) : (
                   <Image
                     src={game.banner}
-                    alt={game.name}
+                    alt={name}
                     fill
                     className="object-cover"
                   />

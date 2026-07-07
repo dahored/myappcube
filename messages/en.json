@@ -52,8 +52,9 @@
       "ctaDesc": "Jump into Roblox, build your base and launch disasters. Last one standing wins."
     },
     "el-infiltrado": {
+      "name": "The Infiltrator",
       "description": "A fun party game where friends try to find the infiltrator among the group. Perfect for gatherings — no app needed for players.",
-      "tagline": "Can you find the infiltrator among your friends?",
+      "tagline": "Who is the infiltrator?",
       "step1Title": "Configure the game",
       "step1Desc": "Add players, choose word categories and adjust options: number of infiltrators, rounds, discussion time and game mode.",
       "step2Title": "Secret words",
@@ -75,7 +76,7 @@
       "tipTitle": "Strategy tip",
       "tip": "Be vague but convincing. Too much detail gives you away, but so does too much hesitation.",
       "tvMode": {
-        "title": "El Infiltrado — TV Mode",
+        "title": "The Infiltrator — TV Mode",
         "enterCode": "Enter the room code",
         "codePlaceholder": "CODE",
         "connect": "Connect",
@@ -227,7 +228,7 @@
   },
   "bento": {
     "title": "Everything you need for the perfect game night.",
-    "subtitle": "El Infiltrado is designed for everyone to have fun, no hassle.",
+    "subtitle": "The Infiltrator is designed for everyone to have fun, no hassle.",
     "c1label": "Featured game",
     "c1title": "Can you find the infiltrator among your friends?",
     "c2title": "No download for players",
@@ -245,7 +246,7 @@
     "title": "What our users say",
     "subtitle": "Thousands of rounds played around the world.",
     "r1name": "Valentina R.",
-    "r1": "El Infiltrado became the go-to game at every family gathering. Everyone wants to play!",
+    "r1": "The Infiltrator became the go-to game at every family gathering. Everyone wants to play!",
     "r2name": "Marcos T.",
     "r2": "Super easy to understand and really fun. We downloaded it for a game night and ended up playing until 3am.",
     "r3name": "Lucía M.",
@@ -270,7 +271,7 @@
     "a4": "Yes! We are actively developing new titles. Follow us on social media to stay updated on upcoming releases.",
     "q5": "How can I contact the team?",
     "a5": "You can reach us through the contact forms on each app page, or send us a message on our social media channels.",
-    "q6": "How many players does El Infiltrado need?",
+    "q6": "How many players does The Infiltrator need?",
     "a6": "The game works best with 4 to 12 players, though it can be played with 3. Only the host needs the app installed.",
     "q7": "How do I cancel my premium subscription?",
     "a7": "Subscriptions are managed through Google Play. Go to your Google Play account → Subscriptions and cancel from there.",

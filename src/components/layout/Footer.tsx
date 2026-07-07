@@ -6,6 +6,7 @@ import { studio, socials } from '@/config/studio';
 
 export default async function Footer() {
   const t = await getTranslations('footer');
+  const tGame = await getTranslations('games');
   const year = new Date().getFullYear();
 
   return (
@@ -102,19 +103,24 @@ export default async function Footer() {
               {t('gamesCol')}
             </h3>
             <ul className="flex flex-col gap-3">
-              {games.map((game) => (
-                <li key={game.slug}>
-                  {game.comingSoon ? (
-                    <span className="text-base text-zinc-400 dark:text-zinc-600">
-                      {game.name}
-                    </span>
-                  ) : (
-                    <Link href={`/games/${game.slug}`} className="text-base text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
-                      {game.name}
-                    </Link>
-                  )}
-                </li>
-              ))}
+              {games.map((game) => {
+                const name = tGame.has(`${game.slug}.name`)
+                  ? tGame(`${game.slug}.name` as never)
+                  : game.name;
+                return (
+                  <li key={game.slug}>
+                    {game.comingSoon ? (
+                      <span className="text-base text-zinc-400 dark:text-zinc-600">
+                        {name}
+                      </span>
+                    ) : (
+                      <Link href={`/games/${game.slug}`} className="text-base text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
+                        {name}
+                      </Link>
+                    )}
+                  </li>
+                );
+              })}
             </ul>
           </div>
 

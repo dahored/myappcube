@@ -8,10 +8,11 @@ import GamesCarousel from '@/components/ui/GamesCarousel';
 export default async function GamesSection() {
   const t = await getTranslations('gamesSection');
   const tCommon = await getTranslations('common');
+  const tGame = await getTranslations('games');
 
   const slides = games.map((game) => ({
     slug: game.slug,
-    name: game.name,
+    name: tGame.has(`${game.slug}.name`) ? tGame(`${game.slug}.name` as never) : game.name,
     genre: game.genre,
     banner: game.banner,
     logo: game.logo,

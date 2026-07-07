@@ -1024,6 +1024,7 @@ function ResultsPhase({ room, t, p }: { room: TvRoom; t: ReturnType<typeof useTr
 
 export default function TvModeClient() {
   const t = useTranslations('games.el-infiltrado.tvMode');
+  const gameName = useTranslations('games.el-infiltrado')('name');
 
   const [code, setCode] = useState('');
   const [connectionState, setConnectionState] = useState<ConnectionState>('idle');
@@ -1270,7 +1271,7 @@ export default function TvModeClient() {
             <div className="w-28 h-28 rounded-3xl overflow-hidden">
               <Image
                 src="/images/games/el-infiltrado/logo/logo.jpg"
-                alt="El Infiltrado"
+                alt={gameName}
                 width={112}
                 height={112}
                 className="object-cover w-full h-full"
