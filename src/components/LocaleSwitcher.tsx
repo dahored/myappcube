@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useRouter, usePathname } from '@/i18n/navigation';
 import { useLocale } from 'next-intl';
+import { routing } from '@/i18n/routing';
 
 const localeLabels: Record<string, string> = {
   en: 'EN',
@@ -12,6 +13,16 @@ const localeLabels: Record<string, string> = {
   fr: 'FR',
   it: 'IT',
   de: 'DE',
+  tr: 'TR',
+  ja: 'JA',
+  ar: 'AR',
+  ko: 'KO',
+  pl: 'PL',
+  nl: 'NL',
+  ru: 'RU',
+  id: 'ID',
+  vi: 'VI',
+  th: 'TH',
 };
 
 const localeFlags: Record<string, string> = {
@@ -21,6 +32,16 @@ const localeFlags: Record<string, string> = {
   fr: '🇫🇷',
   it: '🇮🇹',
   de: '🇩🇪',
+  tr: '🇹🇷',
+  ja: '🇯🇵',
+  ar: '🇸🇦',
+  ko: '🇰🇷',
+  pl: '🇵🇱',
+  nl: '🇳🇱',
+  ru: '🇷🇺',
+  id: '🇮🇩',
+  vi: '🇻🇳',
+  th: '🇹🇭',
 };
 
 export default function LocaleSwitcher() {
@@ -58,12 +79,12 @@ export default function LocaleSwitcher() {
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-1 w-28 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-xl overflow-hidden z-50">
-          {['es', 'en', 'pt', 'fr', 'it', 'de'].map((l) => (
+        <div className="absolute right-0 mt-1 w-56 max-h-80 overflow-y-auto rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-xl z-50 p-1 grid grid-cols-2 gap-0.5">
+          {routing.locales.map((l) => (
             <button
               key={l}
               onClick={() => switchLocale(l)}
-              className={`w-full flex items-center gap-2 px-3 py-2 text-sm transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800 ${
+              className={`flex items-center gap-2 px-2.5 py-2 rounded-lg text-sm transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800 ${
                 l === locale ? 'text-violet-600 dark:text-violet-400 font-medium' : 'text-zinc-600 dark:text-zinc-300'
               }`}
             >

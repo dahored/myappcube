@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { games } from '@/config/games';
 import { studio } from '@/config/studio';
+import { routing } from '@/i18n/routing';
 import HeroSection from '@/components/sections/HeroSection';
 import FeaturedGameSection from '@/components/sections/FeaturedGameSection';
 import AboutSection from '@/components/sections/AboutSection';
@@ -30,7 +31,7 @@ export async function generateMetadata({
     openGraph: { title, description, images: ['/images/logos/logo_myappcube.png'] },
     alternates: {
       canonical: `${base}/${locale}`,
-      languages: { en: `${base}/en`, es: `${base}/es` },
+      languages: Object.fromEntries(routing.locales.map((l) => [l, `${base}/${l}`])),
     },
   };
 }

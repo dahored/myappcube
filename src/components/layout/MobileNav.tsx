@@ -1,14 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { Link, useRouter, usePathname } from '@/i18n/navigation';
-import { useLocale } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import LocaleSwitcher from '@/components/LocaleSwitcher';
 import { Menu, X } from 'lucide-react';
 import ThemeToggle from '@/components/ThemeToggle';
-
-const localeFlags: Record<string, string> = { en: '🇺🇸', es: '🇪🇸' };
-const localeLabels: Record<string, string> = { en: 'EN', es: 'ES' };
 
 interface MobileNavProps {
   gamesLabel: string;
@@ -18,9 +14,6 @@ interface MobileNavProps {
 
 export default function MobileNav({ gamesLabel, socialsLabel, contactLabel }: MobileNavProps) {
   const [open, setOpen] = useState(false);
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
 
   return (
     <>
@@ -75,20 +68,7 @@ export default function MobileNav({ gamesLabel, socialsLabel, contactLabel }: Mo
               {contactLabel}
             </Link>
             <div className="flex items-center gap-2 px-3 py-2">
-              {['es', 'en'].map((l) => (
-                <button
-                  key={l}
-                  onClick={() => { router.replace(pathname, { locale: l }); setOpen(false); }}
-                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm transition-colors ${
-                    l === locale
-                      ? 'bg-zinc-200 dark:bg-zinc-800 text-violet-600 dark:text-violet-400 font-medium'
-                      : 'text-zinc-500 dark:text-zinc-400 hover:bg-zinc-100 dark:hover:bg-zinc-800 hover:text-zinc-900 dark:hover:text-zinc-50'
-                  }`}
-                >
-                  <span>{localeFlags[l]}</span>
-                  <span>{localeLabels[l]}</span>
-                </button>
-              ))}
+              <LocaleSwitcher />
               <ThemeToggle />
             </div>
           </div>

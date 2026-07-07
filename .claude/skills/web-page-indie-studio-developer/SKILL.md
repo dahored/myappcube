@@ -127,7 +127,10 @@ Custom font utility example: add `--font-poppins: var(--font-poppins);` under `@
 ```ts
 // src/i18n/routing.ts
 export const routing = defineRouting({
-  locales: ['en', 'es', 'pt', 'fr', 'it', 'de'],
+  locales: [
+    'en', 'es', 'pt', 'fr', 'it', 'de',
+    'tr', 'ja', 'ar', 'ko', 'pl', 'nl', 'ru', 'id', 'vi', 'th',
+  ],
   defaultLocale: 'es',
 });
 ```
@@ -177,7 +180,7 @@ if (tGame.has(`${slug}.description`)) { ... }
 
 ### Locale-aware Screenshots
 ```tsx
-const screenshotLocale = ['es', 'pt', 'fr', 'it', 'de'].includes(locale) ? 'es' : 'en';
+const screenshotLocale = locale === 'es' ? 'es' : 'en';
 const screenshots = files.map(f => ({
   src: `/images/games/${slug}/screenshots/${screenshotLocale}/${f}`,
   alt: `${name} screenshot ${i + 1}`,

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { games } from '@/config/games';
 import { studio } from '@/config/studio';
+import { routing } from '@/i18n/routing';
 import FeaturedGameSection from '@/components/sections/FeaturedGameSection';
 import GameRow from '@/components/sections/GameRow';
 import ScrollReveal from '@/components/ui/ScrollReveal';
@@ -26,7 +27,7 @@ export async function generateMetadata({
     openGraph: { title, description, images: ['/images/logos/logo_myappcube.png'] },
     alternates: {
       canonical: `${base}/${locale}/games`,
-      languages: { en: `${base}/en/games`, es: `${base}/es/games` },
+      languages: Object.fromEntries(routing.locales.map((l) => [l, `${base}/${l}/games`])),
     },
   };
 }
