@@ -98,7 +98,7 @@ export default async function FeaturedGameSection({ game }: { game: Game }) {
                   <Image
                     src={game.banner}
                     alt={name}
-                    width={800}
+                    width={1200}
                     height={800}
                     className="w-full h-auto"
                     priority

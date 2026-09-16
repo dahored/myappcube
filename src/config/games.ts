@@ -44,8 +44,8 @@ export const games: Game[] = [
     tagline: '¿Puedes encontrar al infiltrado?',
     description:
       'Un juego de fiesta donde tus amigos intentan descubrir al infiltrado del grupo. Perfecto para reuniones — los jugadores no necesitan la app.',
-    banner: '/images/games/el-infiltrado/banner/home_banner.png',
-    logo: '/images/games/el-infiltrado/logo/logo.jpg',
+    banner: '/images/games/el-infiltrado/banner/home_banner_v2.jpg',
+    logo: '/images/games/el-infiltrado/logo/logo_v2.jpg',
     genre: 'Party / Social',
     platform: 'iOS & Android',
     accent: 'orange',

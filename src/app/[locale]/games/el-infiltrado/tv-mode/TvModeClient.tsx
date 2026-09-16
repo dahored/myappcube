@@ -1270,7 +1270,7 @@ export default function TvModeClient() {
           <div className="relative">
             <div className="w-28 h-28 rounded-3xl overflow-hidden">
               <Image
-                src="/images/games/el-infiltrado/logo/logo.jpg"
+                src="/images/games/el-infiltrado/logo/logo_v2.jpg"
                 alt={gameName}
                 width={112}
                 height={112}

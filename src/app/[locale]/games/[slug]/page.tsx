@@ -45,7 +45,7 @@ export async function generateMetadata({
       type: 'website',
       title: `${name} — myappcube`,
       description: game.description,
-      images: [{ url: game.banner, width: 1200, height: 1200, alt: `${name} banner` }],
+      images: [{ url: game.banner, width: 1200, height: 800, alt: `${name} banner` }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -255,7 +255,7 @@ export default async function GameDetailPage({
                 src={game.banner}
                 alt={`${name} banner`}
                 width={1200}
-                height={675}
+                height={800}
                 className="w-full h-auto"
               />
             </div>
