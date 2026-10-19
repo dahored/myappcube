@@ -19,6 +19,7 @@ import { games } from '@/config/games';
 import { studio } from '@/config/studio';
 import { routing } from '@/i18n/routing';
 import ScrollReveal from '@/components/ui/ScrollReveal';
+import AdUnit from '@/components/ui/AdUnit';
 
 /* ─── Static params ─────────────────────────────────────────────────────── */
 
@@ -276,6 +277,9 @@ export default async function DisasterTycoonPage({
           </div>
         </div>
       </section>
+
+      {/* ── Ad ───────────────────────────────────────────────────────── */}
+      <AdUnit slot="gameDetail" />
 
       {/* ── Gameplay video ────────────────────────────────────────────── */}
       <section className="bg-white dark:bg-zinc-950">

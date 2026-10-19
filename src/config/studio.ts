@@ -7,9 +7,20 @@ export const studio = {
   googlePlayDeveloperUrl: 'https://play.google.com/store/apps/dev?id=8771045632526553752',
   appStoreDeveloperUrl: 'https://apps.apple.com/es/developer/diego-alejandro-hernandez-orrego/id1886540688',
   adsensePublisherId: 'ca-pub-5119314285197382',
-  /** Controlled via NEXT_PUBLIC_COMING_SOON env var — set to "false" in Vercel to launch */
-  comingSoon: process.env.NEXT_PUBLIC_COMING_SOON !== 'false',
 } satisfies Record<string, unknown>;
+
+/**
+ * AdSense ad unit IDs (data-ad-slot). Create one "Display ad" (responsive)
+ * per placement in AdSense → Ads → By ad unit, and paste its numeric ID here.
+ * Empty = the block is not rendered.
+ */
+export const adSlots = {
+  homeInContent: '',
+  gamesList: '',
+  gameDetail: '',
+} as const;
+
+export type AdSlot = keyof typeof adSlots;
 
 export interface Social {
   label: string;

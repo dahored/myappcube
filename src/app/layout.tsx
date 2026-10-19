@@ -3,6 +3,7 @@ import { Geist, Poppins } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 import { studio } from '@/config/studio';
+import AdSenseScript from '@/components/AdSenseScript';
 
 const GA_ID = 'G-L6F386NFWM';
 
@@ -41,6 +42,7 @@ export const metadata: Metadata = {
     images: ['/images/logos/logo_myappcube.png'],
   },
   robots: { index: true, follow: true },
+  other: { 'google-adsense-account': studio.adsensePublisherId },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -53,7 +55,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Prevent flash of wrong theme */}
         <script dangerouslySetInnerHTML={{ __html: `(function(){var t=localStorage.getItem('theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(!t&&p)){document.documentElement.classList.add('dark');}})();` }} />
       </head>
-      <body className={`${geist.variable} ${poppins.variable} font-sans antialiased bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 min-h-screen flex flex-col`}>
+      {/* suppressHydrationWarning: browser extensions often add attributes to <body> before hydration */}
+      <body suppressHydrationWarning className={`${geist.variable} ${poppins.variable} font-sans antialiased bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50 min-h-screen flex flex-col`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -76,6 +79,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         {children}
 
+        <AdSenseScript />
+
         {/* Google Analytics */}
         <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />
         <Script id="ga-init" strategy="lazyOnload">{`
@@ -84,15 +89,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           gtag('js', new Date());
           gtag('config', '${GA_ID}');
         `}</Script>
-
-        {/* AdSense — uncomment when adding ad units to the site
-        <Script
-          async
-          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${studio.adsensePublisherId}`}
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-        */}
       </body>
     </html>
   );

@@ -12,6 +12,7 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import StickyScreenshots from '@/components/ui/StickyScreenshots';
 import BentoSection from '@/components/sections/BentoSection';
+import AdUnit from '@/components/ui/AdUnit';
 
 /* ─── Static params ─────────────────────────────────────────────────────── */
 
@@ -385,6 +386,9 @@ export default async function GameDetailPage({
           </div>
         </div>
       </section>
+
+      {/* ── Ad ───────────────────────────────────────────────────────── */}
+      <AdUnit slot="gameDetail" className="bg-white dark:bg-zinc-950" />
 
       {/* ── Screenshots ──────────────────────────────────────────────── */}
       <StickyScreenshots

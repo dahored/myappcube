@@ -24,6 +24,7 @@ type T = {
   li2_4: string; li2_5: string; li2_6: string; li2_7: string; li2_8: string;
   h3: string; s3_app_bold: string; s3_app: string; s3_web_bold: string; s3_web: string;
   googleAdsLink: string;
+  s3_web_google: string; googlePartnerLink: string; s3_optout: string;
   h4: string; s4intro: string;
   h5: string; s5: string;
   h6: string; s6: string;
@@ -48,7 +49,7 @@ type T = {
 const translations: Record<string, T> = {
   es: {
     title: 'Política de privacidad',
-    lastUpdated: 'Última actualización: marzo 2026',
+    lastUpdated: 'Última actualización: octubre 2026',
     intro: 'En myappcube nos tomamos tu privacidad en serio. Esta política explica qué información recopilamos, cómo la usamos y cuáles son tus derechos al respecto.',
     h1: '1. Información que recopilamos',
     s1intro: 'Nuestras aplicaciones y este sitio web pueden recopilar los siguientes tipos de datos:',
@@ -72,6 +73,9 @@ const translations: Record<string, T> = {
     s3_app_bold: 'En la app:', s3_app: ' utilizamos Google AdMob para mostrar anuncios a usuarios sin suscripción activa. Incluye anuncios banner, intersticiales (al finalizar una partida) y anuncios recompensados (que el usuario puede ver voluntariamente para desbloquear categorías premium de forma temporal). El consentimiento para anuncios personalizados se solicita en el primer lanzamiento mediante el CMP de Google (UMP). Puedes revisar o revocar tu consentimiento en cualquier momento desde la configuración de la app.',
     s3_web_bold: 'En el sitio web:', s3_web: ' utilizamos cookies de terceros (Google AdSense) para medir el tráfico y mostrar anuncios. Puedes controlar las cookies desde la configuración de tu navegador o mediante el',
     googleAdsLink: 'Centro de preferencias de anuncios de Google',
+    s3_web_google: 'Los proveedores externos, incluido Google, utilizan cookies para mostrar anuncios basados en tus visitas anteriores a este sitio web o a otros sitios. Las cookies publicitarias de Google permiten que Google y sus socios muestren anuncios basados en tus visitas a este sitio y/o a otros sitios de Internet. Más información en',
+    googlePartnerLink: 'Cómo utiliza Google la información de los sitios que usan sus servicios',
+    s3_optout: 'Puedes inhabilitar la publicidad personalizada de proveedores externos en',
     h4: '4. Servicios de terceros',
     s4intro: 'Nuestras apps y sitio integran servicios de terceros con sus propias políticas de privacidad:',
     h5: '5. Retención de datos',
@@ -101,7 +105,7 @@ const translations: Record<string, T> = {
   },
   en: {
     title: 'Privacy Policy',
-    lastUpdated: 'Last updated: March 2026',
+    lastUpdated: 'Last updated: October 2026',
     intro: 'At myappcube we take your privacy seriously. This policy explains what information we collect, how we use it, and your rights regarding it.',
     h1: '1. Information We Collect',
     s1intro: 'Our applications and this website may collect the following types of data:',
@@ -125,6 +129,9 @@ const translations: Record<string, T> = {
     s3_app_bold: 'In the app:', s3_app: ' we use Google AdMob to show ads to users without an active subscription. This includes banner ads, interstitial ads (shown when a game ends), and rewarded ads (which users can voluntarily watch to temporarily unlock premium categories). Consent for personalized ads is requested at first launch via Google\'s UMP. You can review or withdraw consent at any time from the app settings.',
     s3_web_bold: 'On the website:', s3_web: ' we use third-party cookies (Google AdSense) to measure traffic and display ads. You can manage cookies through your browser settings or via',
     googleAdsLink: "Google's Ads Settings",
+    s3_web_google: "Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites. Google's use of advertising cookies enables it and its partners to serve ads based on your visits to this site and/or other sites on the Internet. Learn more at",
+    googlePartnerLink: 'How Google uses information from sites that use its services',
+    s3_optout: 'You can opt out of personalized advertising from third-party vendors at',
     h4: '4. Third-Party Services',
     s4intro: 'Our apps and site integrate third-party services with their own privacy policies:',
     h5: '5. Data Retention',
@@ -154,7 +161,7 @@ const translations: Record<string, T> = {
   },
   pt: {
     title: 'Política de Privacidade',
-    lastUpdated: 'Última atualização: março de 2026',
+    lastUpdated: 'Última atualização: outubro de 2026',
     intro: 'Na myappcube levamos sua privacidade a sério. Esta política explica quais informações coletamos, como as usamos e quais são seus direitos.',
     h1: '1. Informações que coletamos',
     s1intro: 'Nossos aplicativos e este site podem coletar os seguintes tipos de dados:',
@@ -178,6 +185,9 @@ const translations: Record<string, T> = {
     s3_app_bold: 'No app:', s3_app: ' usamos o Google AdMob para exibir anúncios a usuários sem assinatura ativa. Inclui banners, anúncios intersticiais (ao final de uma partida) e anúncios recompensados (que o usuário pode assistir voluntariamente para desbloquear categorias premium temporariamente). O consentimento para anúncios personalizados é solicitado no primeiro lançamento via UMP do Google. Você pode revisar ou revogar o consentimento a qualquer momento nas configurações do app.',
     s3_web_bold: 'No site:', s3_web: ' usamos cookies de terceiros (Google AdSense) para medir o tráfego e exibir anúncios. Você pode gerenciar os cookies pelas configurações do navegador ou pelo',
     googleAdsLink: 'Centro de preferências de anúncios do Google',
+    s3_web_google: 'Fornecedores terceiros, incluindo o Google, usam cookies para exibir anúncios com base nas suas visitas anteriores a este site ou a outros sites. Os cookies de publicidade do Google permitem que o Google e seus parceiros exibam anúncios com base nas suas visitas a este site e/ou a outros sites na Internet. Saiba mais em',
+    googlePartnerLink: 'Como o Google usa as informações de sites que usam seus serviços',
+    s3_optout: 'Você pode desativar a publicidade personalizada de fornecedores terceiros em',
     h4: '4. Serviços de terceiros',
     s4intro: 'Nossos aplicativos e site integram serviços de terceiros com suas próprias políticas de privacidade:',
     h5: '5. Retenção de dados',
@@ -207,7 +217,7 @@ const translations: Record<string, T> = {
   },
   fr: {
     title: 'Politique de confidentialité',
-    lastUpdated: 'Dernière mise à jour : mars 2026',
+    lastUpdated: 'Dernière mise à jour : octobre 2026',
     intro: 'Chez myappcube, nous prenons votre vie privée au sérieux. Cette politique explique quelles informations nous collectons, comment nous les utilisons et quels sont vos droits.',
     h1: '1. Informations que nous collectons',
     s1intro: 'Nos applications et ce site web peuvent collecter les types de données suivants :',
@@ -231,6 +241,9 @@ const translations: Record<string, T> = {
     s3_app_bold: "Dans l'application :", s3_app: " nous utilisons Google AdMob pour afficher des publicités aux utilisateurs sans abonnement actif. Cela inclut des bannières publicitaires, des publicités interstitielles (affichées en fin de partie) et des publicités récompensées (que l'utilisateur peut regarder volontairement pour débloquer temporairement des catégories premium). Le consentement pour les publicités personnalisées est demandé au premier lancement via le CMP de Google (UMP). Vous pouvez consulter ou retirer votre consentement à tout moment depuis les paramètres de l'application.",
     s3_web_bold: 'Sur le site web :', s3_web: ' nous utilisons des cookies tiers (Google AdSense) pour mesurer le trafic et afficher des publicités. Vous pouvez gérer les cookies depuis les paramètres de votre navigateur ou via le',
     googleAdsLink: 'Centre de préférences des annonces Google',
+    s3_web_google: "Des fournisseurs tiers, y compris Google, utilisent des cookies pour diffuser des annonces en fonction de vos visites antérieures sur ce site ou sur d'autres sites. Les cookies publicitaires de Google permettent à Google et à ses partenaires de diffuser des annonces en fonction de vos visites sur ce site et/ou sur d'autres sites Internet. En savoir plus :",
+    googlePartnerLink: 'Comment Google utilise les informations des sites qui utilisent ses services',
+    s3_optout: 'Vous pouvez désactiver la publicité personnalisée des fournisseurs tiers sur',
     h4: '4. Services tiers',
     s4intro: 'Nos applications et ce site intègrent des services tiers avec leurs propres politiques de confidentialité :',
     h5: '5. Conservation des données',
@@ -260,7 +273,7 @@ const translations: Record<string, T> = {
   },
   it: {
     title: 'Informativa sulla privacy',
-    lastUpdated: 'Ultimo aggiornamento: marzo 2026',
+    lastUpdated: 'Ultimo aggiornamento: ottobre 2026',
     intro: 'Da myappcube prendiamo sul serio la tua privacy. Questa informativa spiega quali informazioni raccogliamo, come le utilizziamo e quali sono i tuoi diritti.',
     h1: '1. Informazioni che raccogliamo',
     s1intro: 'Le nostre applicazioni e questo sito web possono raccogliere i seguenti tipi di dati:',
@@ -284,6 +297,9 @@ const translations: Record<string, T> = {
     s3_app_bold: "Nell'app:", s3_app: " utilizziamo Google AdMob per mostrare annunci agli utenti senza abbonamento attivo. Include banner, annunci interstitial (mostrati al termine di una partita) e annunci con premio (che l'utente può guardare volontariamente per sbloccare temporaneamente categorie premium). Il consenso per gli annunci personalizzati viene richiesto al primo avvio tramite il CMP di Google (UMP). Puoi consultare o revocare il consenso in qualsiasi momento dalle impostazioni dell'app.",
     s3_web_bold: 'Sul sito web:', s3_web: ' utilizziamo cookie di terze parti (Google AdSense) per misurare il traffico e mostrare annunci. Puoi gestire i cookie dalle impostazioni del browser o tramite il',
     googleAdsLink: 'Centro preferenze annunci di Google',
+    s3_web_google: 'Fornitori di terze parti, tra cui Google, utilizzano cookie per pubblicare annunci basati sulle tue visite precedenti a questo sito o ad altri siti. I cookie pubblicitari di Google consentono a Google e ai suoi partner di pubblicare annunci basati sulle tue visite a questo sito e/o ad altri siti Internet. Maggiori informazioni:',
+    googlePartnerLink: 'Come Google utilizza le informazioni dei siti che usano i suoi servizi',
+    s3_optout: 'Puoi disattivare la pubblicità personalizzata dei fornitori di terze parti su',
     h4: '4. Servizi di terze parti',
     s4intro: 'Le nostre app e il sito integrano servizi di terze parti con le proprie informative sulla privacy:',
     h5: '5. Conservazione dei dati',
@@ -313,7 +329,7 @@ const translations: Record<string, T> = {
   },
   de: {
     title: 'Datenschutzrichtlinie',
-    lastUpdated: 'Zuletzt aktualisiert: März 2026',
+    lastUpdated: 'Zuletzt aktualisiert: Oktober 2026',
     intro: 'Bei myappcube nehmen wir Ihren Datenschutz ernst. Diese Richtlinie erklärt, welche Informationen wir erfassen, wie wir sie verwenden und welche Rechte Sie haben.',
     h1: '1. Informationen, die wir erfassen',
     s1intro: 'Unsere Anwendungen und diese Website können folgende Arten von Daten erfassen:',
@@ -337,6 +353,9 @@ const translations: Record<string, T> = {
     s3_app_bold: 'In der App:', s3_app: ' wir verwenden Google AdMob, um Nutzern ohne aktives Abonnement Werbung anzuzeigen. Dies umfasst Bannerwerbung, Interstitial-Anzeigen (nach Spielende) und Belohnungswerbung (die Nutzer freiwillig ansehen können, um Premium-Kategorien vorübergehend freizuschalten). Die Einwilligung für personalisierte Werbung wird beim ersten Start über Googles UMP eingeholt. Sie können Ihre Einwilligung jederzeit in den App-Einstellungen einsehen oder widerrufen.',
     s3_web_bold: 'Auf der Website:', s3_web: ' wir verwenden Drittanbieter-Cookies (Google AdSense), um den Traffic zu messen und Werbung anzuzeigen. Sie können Cookies über Ihre Browsereinstellungen oder über die',
     googleAdsLink: 'Google-Anzeigeneinstellungen',
+    s3_web_google: 'Drittanbieter, einschließlich Google, verwenden Cookies, um Anzeigen auf Grundlage Ihrer früheren Besuche dieser oder anderer Websites auszuliefern. Mithilfe von Werbe-Cookies können Google und seine Partner Anzeigen auf Grundlage Ihrer Besuche dieser und/oder anderer Websites im Internet schalten. Mehr dazu:',
+    googlePartnerLink: 'Wie Google Informationen von Websites nutzt, die Google-Dienste verwenden',
+    s3_optout: 'Sie können personalisierte Werbung von Drittanbietern deaktivieren unter',
     h4: '4. Dienste von Drittanbietern',
     s4intro: 'Unsere Apps und diese Website integrieren Dienste von Drittanbietern mit eigenen Datenschutzrichtlinien:',
     h5: '5. Datenspeicherung',
@@ -419,6 +438,20 @@ export default async function PrivacyPage({
         </a>
         .
       </p>
+      <p>
+        {t.s3_web_google}{' '}
+        <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">
+          {t.googlePartnerLink}
+        </a>
+        .
+      </p>
+      <p>
+        {t.s3_optout}{' '}
+        <a href="https://www.aboutads.info/choices" target="_blank" rel="noopener noreferrer">
+          aboutads.info
+        </a>
+        .
+      </p>
 
       <h2>{t.h4}</h2>
       <p>{t.s4intro}</p>
@@ -431,6 +464,11 @@ export default async function PrivacyPage({
         <li>
           <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
             Google AdMob / Google Play
+          </a>
+        </li>
+        <li>
+          <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">
+            Google AdSense
           </a>
         </li>
         <li>
