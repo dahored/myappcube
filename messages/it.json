@@ -1,6 +1,7 @@
 {
   "nav": {
     "games": "Giochi",
+    "apps": "App",
     "socials": "Social",
     "contact": "Contatti"
   },
@@ -19,7 +20,8 @@
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "downloadOn": "Scarica su",
-    "getItOn": "Disponibile su"
+    "getItOn": "Disponibile su",
+    "advertisement": "Pubblicità"
   },
   "games": {
     "disaster-tycoon": {
@@ -322,5 +324,20 @@
     "instagram": "Il nostro quotidiano, anteprime dei giochi e community.",
     "facebook": "Notizie, lanci e aggiornamenti.",
     "youtube": "Trailer, gameplay e tutorial."
+  },
+  "appsPage": {
+    "label": "App",
+    "title": "Le nostre app",
+    "subtitle": "Strumenti semplici per organizzare momenti con le persone a cui tieni.",
+    "webOnly": "Solo web per ora",
+    "open": "Apri l'app",
+    "homeSubtitle": "Gratis e senza download: aprile dal browser.",
+    "viewAll": "Vedi tutte le app"
+  },
+  "apps": {
+    "amigo-secreto": {
+      "name": "Amico Segreto",
+      "description": "Organizza l’Amico Segreto (Secret Santa) con famiglia, ufficio o amici. Ognuno scopre dal telefono a chi fa il regalo e scrive la sua lista dei desideri."
+    }
   }
 }

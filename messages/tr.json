@@ -1,6 +1,7 @@
 {
   "nav": {
     "games": "Oyunlar",
+    "apps": "Uygulamalar",
     "socials": "Sosyal Medya",
     "contact": "İletişim"
   },
@@ -19,7 +20,8 @@
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "downloadOn": "İndirin:",
-    "getItOn": "Edinin:"
+    "getItOn": "Edinin:",
+    "advertisement": "Reklam"
   },
   "games": {
     "disaster-tycoon": {
@@ -322,5 +324,20 @@
     "instagram": "Günlük hayatımız, oyun ön izlemeleri ve topluluğumuz.",
     "facebook": "Haberler, çıkışlar ve güncellemeler.",
     "youtube": "Fragmanlar, oynanış videoları ve eğitimler."
+  },
+  "appsPage": {
+    "label": "Uygulamalar",
+    "title": "Uygulamalarımız",
+    "subtitle": "Sevdiklerinle anları organize etmek için basit araçlar.",
+    "webOnly": "Şimdilik yalnızca web",
+    "open": "Uygulamayı aç",
+    "homeSubtitle": "Ücretsiz, indirme gerekmez — tarayıcından aç.",
+    "viewAll": "Tüm uygulamaları gör"
+  },
+  "apps": {
+    "amigo-secreto": {
+      "name": "Gizli Arkadaş",
+      "description": "Aile, ofis ya da arkadaşlarınla gizli hediyeleşme düzenle. Herkes kime hediye alacağını telefonundan görür ve dilek listesini paylaşır."
+    }
   }
 }

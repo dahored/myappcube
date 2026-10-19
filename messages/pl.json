@@ -1,6 +1,7 @@
 {
   "nav": {
     "games": "Gry",
+    "apps": "Aplikacje",
     "socials": "Media społecznościowe",
     "contact": "Kontakt"
   },
@@ -19,7 +20,8 @@
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "downloadOn": "Pobierz w",
-    "getItOn": "Dostępne w"
+    "getItOn": "Dostępne w",
+    "advertisement": "Reklama"
   },
   "games": {
     "disaster-tycoon": {
@@ -322,5 +324,20 @@
     "instagram": "Nasza codzienność, zapowiedzi gier i społeczność.",
     "facebook": "Nowości, premiery i aktualizacje.",
     "youtube": "Zwiastuny, rozgrywka i poradniki."
+  },
+  "appsPage": {
+    "label": "Aplikacje",
+    "title": "Nasze aplikacje",
+    "subtitle": "Proste narzędzia do organizowania chwil z bliskimi.",
+    "webOnly": "Na razie tylko w przeglądarce",
+    "open": "Otwórz aplikację",
+    "homeSubtitle": "Za darmo i bez pobierania — otwórz w przeglądarce.",
+    "viewAll": "Zobacz wszystkie aplikacje"
+  },
+  "apps": {
+    "amigo-secreto": {
+      "name": "Losowanie prezentów",
+      "description": "Zorganizuj Mikołajki w rodzinie, w pracy lub wśród znajomych. Każdy widzi na telefonie, komu kupuje prezent, i dodaje swoją listę życzeń."
+    }
   }
 }

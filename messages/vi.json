@@ -1,6 +1,7 @@
 {
   "nav": {
     "games": "Trò chơi",
+    "apps": "Ứng dụng",
     "socials": "Mạng xã hội",
     "contact": "Liên hệ"
   },
@@ -19,7 +20,8 @@
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "downloadOn": "Tải về trên",
-    "getItOn": "Có trên"
+    "getItOn": "Có trên",
+    "advertisement": "Quảng cáo"
   },
   "games": {
     "disaster-tycoon": {
@@ -322,5 +324,20 @@
     "instagram": "Cuộc sống hàng ngày, xem trước trò chơi và cộng đồng của chúng tôi.",
     "facebook": "Tin tức, ra mắt sản phẩm và cập nhật.",
     "youtube": "Trailer, gameplay và hướng dẫn."
+  },
+  "appsPage": {
+    "label": "Ứng dụng",
+    "title": "Ứng dụng của chúng tôi",
+    "subtitle": "Công cụ đơn giản để tổ chức những khoảnh khắc bên người thân.",
+    "webOnly": "Hiện chỉ có trên web",
+    "open": "Mở ứng dụng",
+    "homeSubtitle": "Miễn phí, không cần tải về — mở ngay trên trình duyệt.",
+    "viewAll": "Xem tất cả ứng dụng"
+  },
+  "apps": {
+    "amigo-secreto": {
+      "name": "Người bạn bí mật",
+      "description": "Tổ chức trao đổi quà cùng gia đình, công ty hoặc bạn bè. Mỗi người xem mình tặng quà cho ai trên điện thoại và chia sẻ danh sách mong muốn."
+    }
   }
 }

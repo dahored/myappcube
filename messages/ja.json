@@ -1,6 +1,7 @@
 {
   "nav": {
     "games": "ゲーム",
+    "apps": "アプリ",
     "socials": "SNS",
     "contact": "お問い合わせ"
   },
@@ -19,7 +20,8 @@
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "downloadOn": "ダウンロードは",
-    "getItOn": "入手は"
+    "getItOn": "入手は",
+    "advertisement": "広告"
   },
   "games": {
     "disaster-tycoon": {
@@ -322,5 +324,20 @@
     "instagram": "日常の様子やゲームのプレビュー、コミュニティの投稿。",
     "facebook": "ニュース、リリース情報、アップデート。",
     "youtube": "トレーラー、プレイ動画、チュートリアル。"
+  },
+  "appsPage": {
+    "label": "アプリ",
+    "title": "私たちのアプリ",
+    "subtitle": "大切な人との時間をかんたんに準備できるツール。",
+    "webOnly": "現在はWeb版のみ",
+    "open": "アプリを開く",
+    "homeSubtitle": "無料・ダウンロード不要。ブラウザですぐに使えます。",
+    "viewAll": "すべてのアプリを見る"
+  },
+  "apps": {
+    "amigo-secreto": {
+      "name": "シークレットフレンド",
+      "description": "家族・職場・友だちとのプレゼント交換を簡単に。誰に贈るかは本人のスマホだけに表示され、ほしい物リストも共有できます。参加者の登録は不要。"
+    }
   }
 }

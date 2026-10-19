@@ -1,6 +1,7 @@
 {
   "nav": {
     "games": "게임",
+    "apps": "앱",
     "socials": "소셜",
     "contact": "문의"
   },
@@ -19,7 +20,8 @@
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "downloadOn": "다운로드",
-    "getItOn": "다운로드"
+    "getItOn": "다운로드",
+    "advertisement": "광고"
   },
   "games": {
     "disaster-tycoon": {
@@ -322,5 +324,20 @@
     "instagram": "우리의 일상, 게임 미리보기와 커뮤니티 소식.",
     "facebook": "소식, 출시 정보와 업데이트.",
     "youtube": "트레일러, 게임플레이 영상과 튜토리얼."
+  },
+  "appsPage": {
+    "label": "앱",
+    "title": "우리의 앱",
+    "subtitle": "소중한 사람들과의 순간을 쉽게 준비하는 도구.",
+    "webOnly": "현재 웹 전용",
+    "open": "앱 열기",
+    "homeSubtitle": "무료, 다운로드 없이 브라우저에서 바로 사용하세요.",
+    "viewAll": "모든 앱 보기"
+  },
+  "apps": {
+    "amigo-secreto": {
+      "name": "마니또",
+      "description": "가족, 회사, 친구들과 선물 교환을 쉽게. 누구에게 선물할지는 본인 휴대폰에서만 보이고, 위시리스트도 함께 쓸 수 있어요. 참여자는 가입이 필요 없어요."
+    }
   }
 }

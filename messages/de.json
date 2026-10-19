@@ -1,6 +1,7 @@
 {
   "nav": {
     "games": "Spiele",
+    "apps": "Apps",
     "socials": "Social Media",
     "contact": "Kontakt"
   },
@@ -19,7 +20,8 @@
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "downloadOn": "Laden im",
-    "getItOn": "Jetzt bei"
+    "getItOn": "Jetzt bei",
+    "advertisement": "Anzeige"
   },
   "games": {
     "disaster-tycoon": {
@@ -322,5 +324,20 @@
     "instagram": "Unser Alltag, Spielvorschauen und Community.",
     "facebook": "Neuigkeiten, Launches und Updates.",
     "youtube": "Trailer, Gameplay und Tutorials."
+  },
+  "appsPage": {
+    "label": "Apps",
+    "title": "Unsere Apps",
+    "subtitle": "Einfache Tools, um gemeinsame Momente zu organisieren.",
+    "webOnly": "Vorerst nur im Web",
+    "open": "App öffnen",
+    "homeSubtitle": "Kostenlos und ohne Download – einfach im Browser öffnen.",
+    "viewAll": "Alle Apps ansehen"
+  },
+  "apps": {
+    "amigo-secreto": {
+      "name": "Wichteln",
+      "description": "Organisiere das Wichteln mit Familie, Kollegen oder Freunden. Jeder sieht auf dem Handy, wen er beschenkt, und teilt seine Wunschliste. Ohne Anmeldung für Gäste."
+    }
   }
 }

@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import CarouselControls from '@/components/ui/CarouselControls';
 
@@ -16,9 +16,13 @@ export interface GameSlide {
   exploreLabel: string;
   comingSoonLabel: string;
   comingSoonTitle: string;
+  /** Defaults to `/games/<slug>`; set with `external` for web apps on another domain */
+  href?: string;
+  external?: boolean;
 }
 
 const GAP = 20;
+const exploreBtn = 'pointer-events-auto flex items-center gap-1.5 px-6 py-2 h-13 rounded-full bg-white/15 border border-white/20 backdrop-blur-sm text-white text-base font-semibold hover:bg-white/25 transition-colors shrink-0';
 const DRAG_THRESHOLD = 50;
 
 export default function GamesCarousel({ games }: { games: GameSlide[] }) {
@@ -59,7 +63,7 @@ export default function GamesCarousel({ games }: { games: GameSlide[] }) {
   const goTo = (i: number) => setCurrent(i);
 
   useEffect(() => {
-    if (paused) return;
+    if (paused || games.length < 2) return;
     const t = setInterval(next, 5000);
     return () => clearInterval(t);
   }, [paused, next]);
@@ -163,14 +167,27 @@ export default function GamesCarousel({ games }: { games: GameSlide[] }) {
                     )}
                   </div>
                   {!game.comingSoon && (
-                    <Link
-                      href={`/games/${game.slug}`}
-                      className="pointer-events-auto flex items-center gap-1.5 px-6 py-2 h-13 rounded-full bg-white/15 border border-white/20 backdrop-blur-sm text-white text-base font-semibold hover:bg-white/25 transition-colors shrink-0"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      {game.exploreLabel}
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
+                    game.external ? (
+                      <a
+                        href={game.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={exploreBtn}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {game.exploreLabel}
+                        <ArrowUpRight className="w-3.5 h-3.5" />
+                      </a>
+                    ) : (
+                      <Link
+                        href={game.href ?? `/games/${game.slug}`}
+                        className={exploreBtn}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {game.exploreLabel}
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </Link>
+                    )
                   )}
                 </div>
               </div>
@@ -179,6 +196,7 @@ export default function GamesCarousel({ games }: { games: GameSlide[] }) {
         </div>
       </div>
 
+      {games.length > 1 && (
       <CarouselControls
         count={games.length}
         current={current}
@@ -187,6 +205,7 @@ export default function GamesCarousel({ games }: { games: GameSlide[] }) {
         onTogglePause={() => setUserPaused((p) => !p)}
         className="mt-6"
       />
+      )}
     </div>
   );
 }

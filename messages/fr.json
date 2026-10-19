@@ -1,6 +1,7 @@
 {
   "nav": {
     "games": "Jeux",
+    "apps": "Applis",
     "socials": "Réseaux sociaux",
     "contact": "Contact"
   },
@@ -19,7 +20,8 @@
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "downloadOn": "Télécharger sur le",
-    "getItOn": "Disponible sur"
+    "getItOn": "Disponible sur",
+    "advertisement": "Publicité"
   },
   "games": {
     "disaster-tycoon": {
@@ -322,5 +324,20 @@
     "instagram": "Notre quotidien, aperçus des jeux et communauté.",
     "facebook": "Actualités, lancements et mises à jour.",
     "youtube": "Bandes-annonces, gameplay et tutoriels."
+  },
+  "appsPage": {
+    "label": "Applis",
+    "title": "Nos applis",
+    "subtitle": "Des outils simples pour organiser des moments avec vos proches.",
+    "webOnly": "Web uniquement pour le moment",
+    "open": "Ouvrir l'appli",
+    "homeSubtitle": "Gratuites et sans téléchargement : ouvrez-les dans votre navigateur.",
+    "viewAll": "Voir toutes les applis"
+  },
+  "apps": {
+    "amigo-secreto": {
+      "name": "Ami Secret",
+      "description": "Organisez un échange de cadeaux en famille, au bureau ou entre amis. Chacun découvre sur son téléphone à qui il offre et partage sa liste d’envies."
+    }
   }
 }

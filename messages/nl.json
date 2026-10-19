@@ -1,6 +1,7 @@
 {
   "nav": {
     "games": "Games",
+    "apps": "Apps",
     "socials": "Socials",
     "contact": "Contact"
   },
@@ -19,7 +20,8 @@
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "downloadOn": "Download in de",
-    "getItOn": "Verkrijgbaar op"
+    "getItOn": "Verkrijgbaar op",
+    "advertisement": "Advertentie"
   },
   "games": {
     "disaster-tycoon": {
@@ -322,5 +324,20 @@
     "instagram": "Ons dagelijks leven, sneak previews van games en de community.",
     "facebook": "Nieuws, lanceringen en updates.",
     "youtube": "Trailers, gameplay en tutorials."
+  },
+  "appsPage": {
+    "label": "Apps",
+    "title": "Onze apps",
+    "subtitle": "Eenvoudige tools om momenten met je mensen te organiseren.",
+    "webOnly": "Voorlopig alleen op het web",
+    "open": "App openen",
+    "homeSubtitle": "Gratis en zonder download — open ze in je browser.",
+    "viewAll": "Alle apps bekijken"
+  },
+  "apps": {
+    "amigo-secreto": {
+      "name": "Lootjes trekken",
+      "description": "Regel lootjes trekken met familie, collega’s of vrienden. Iedereen ziet op zijn telefoon voor wie hij een cadeau koopt en deelt een verlanglijstje."
+    }
   }
 }

@@ -1,6 +1,7 @@
 {
   "nav": {
     "games": "Jogos",
+    "apps": "Apps",
     "socials": "Redes sociais",
     "contact": "Contato"
   },
@@ -19,7 +20,8 @@
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "downloadOn": "Baixe na",
-    "getItOn": "Disponível no"
+    "getItOn": "Disponível no",
+    "advertisement": "Publicidade"
   },
   "games": {
     "disaster-tycoon": {
@@ -322,5 +324,20 @@
     "instagram": "Nosso dia a dia, prévia dos jogos e comunidade.",
     "facebook": "Notícias, lançamentos e atualizações.",
     "youtube": "Trailers, gameplay e tutoriais."
+  },
+  "appsPage": {
+    "label": "Apps",
+    "title": "Nossos apps",
+    "subtitle": "Ferramentas simples para organizar momentos com a sua galera.",
+    "webOnly": "Só na web por enquanto",
+    "open": "Abrir app",
+    "homeSubtitle": "Grátis e sem downloads: abra direto no navegador.",
+    "viewAll": "Ver todos os apps"
+  },
+  "apps": {
+    "amigo-secreto": {
+      "name": "Amigo Secreto",
+      "description": "Organize o amigo secreto da família, do trabalho ou dos amigos. Cada pessoa vê quem tirou no celular e escreve sua lista de desejos. Convidados não criam conta."
+    }
   }
 }

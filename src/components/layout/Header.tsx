@@ -23,7 +23,7 @@ export default async function Header() {
           </span>
         </Link>
 
-        <MobileNav gamesLabel={t('games')} socialsLabel={t('socials')} contactLabel={t('contact')} />
+        <MobileNav gamesLabel={t('games')} appsLabel={t('apps')} socialsLabel={t('socials')} contactLabel={t('contact')} />
         </div>
       </div>
     </header>

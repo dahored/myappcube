@@ -1,6 +1,7 @@
 {
   "nav": {
     "games": "Game",
+    "apps": "Aplikasi",
     "socials": "Media Sosial",
     "contact": "Kontak"
   },
@@ -19,7 +20,8 @@
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "downloadOn": "Unduh di",
-    "getItOn": "Dapatkan di"
+    "getItOn": "Dapatkan di",
+    "advertisement": "Iklan"
   },
   "games": {
     "disaster-tycoon": {
@@ -322,5 +324,20 @@
     "instagram": "Keseharian kami, cuplikan game, dan komunitas.",
     "facebook": "Berita, peluncuran, dan pembaruan.",
     "youtube": "Trailer, gameplay, dan tutorial."
+  },
+  "appsPage": {
+    "label": "Aplikasi",
+    "title": "Aplikasi kami",
+    "subtitle": "Alat sederhana untuk mengatur momen bersama orang terdekat.",
+    "webOnly": "Saat ini hanya versi web",
+    "open": "Buka aplikasi",
+    "homeSubtitle": "Gratis tanpa unduhan — buka langsung di browser.",
+    "viewAll": "Lihat semua aplikasi"
+  },
+  "apps": {
+    "amigo-secreto": {
+      "name": "Teman Rahasia",
+      "description": "Atur tukar kado (Secret Santa) bersama keluarga, kantor, atau teman. Setiap orang melihat penerima kadonya di ponsel dan membagikan daftar keinginan."
+    }
   }
 }

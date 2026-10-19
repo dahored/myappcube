@@ -6,6 +6,7 @@ import { routing } from '@/i18n/routing';
 import FeaturedGameSection from '@/components/sections/FeaturedGameSection';
 import GameRow from '@/components/sections/GameRow';
 import ScrollReveal from '@/components/ui/ScrollReveal';
+import AdUnit from '@/components/ui/AdUnit';
 
 const base = studio.siteUrl;
 
@@ -65,6 +66,8 @@ export default async function GamesPage() {
       {rest.map((game, i) => (
         <GameRow key={game.slug} game={game} index={i} />
       ))}
+
+      <AdUnit slot="gamesList" className="pb-16" />
     </>
   );
 }

@@ -1,11 +1,15 @@
 import Image from 'next/image';
-import { getTranslations } from 'next-intl/server';
+import { getLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { games } from '@/config/games';
+import { apps, appUrl } from '@/config/apps';
 import { studio, socials } from '@/config/studio';
 
 export default async function Footer() {
   const t = await getTranslations('footer');
+  const tNav = await getTranslations('nav');
+  const tApps = await getTranslations('apps');
+  const locale = await getLocale();
   const tGame = await getTranslations('games');
   const year = new Date().getFullYear();
 
@@ -14,7 +18,7 @@ export default async function Footer() {
       {/* Subfooter grid */}
       <div className="container mx-auto px-6 py-16">
         <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
 
           {/* Brand column */}
           <div className="flex flex-col gap-4">
@@ -121,6 +125,27 @@ export default async function Footer() {
                   </li>
                 );
               })}
+            </ul>
+          </div>
+
+          {/* Apps column */}
+          <div>
+            <h3 className="text-xs font-semibold tracking-widest uppercase text-zinc-400 dark:text-zinc-500 mb-4">
+              {tNav('apps')}
+            </h3>
+            <ul className="flex flex-col gap-3">
+              {apps.map((app) => (
+                <li key={app.slug}>
+                  <a
+                    href={appUrl(app, locale)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-base text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors"
+                  >
+                    {tApps(`${app.slug}.name` as never)}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 

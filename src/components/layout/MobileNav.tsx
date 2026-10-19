@@ -8,11 +8,12 @@ import ThemeToggle from '@/components/ThemeToggle';
 
 interface MobileNavProps {
   gamesLabel: string;
+  appsLabel: string;
   socialsLabel: string;
   contactLabel: string;
 }
 
-export default function MobileNav({ gamesLabel, socialsLabel, contactLabel }: MobileNavProps) {
+export default function MobileNav({ gamesLabel, appsLabel, socialsLabel, contactLabel }: MobileNavProps) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -31,6 +32,9 @@ export default function MobileNav({ gamesLabel, socialsLabel, contactLabel }: Mo
       <nav className="hidden sm:flex items-center gap-4">
         <Link href="/games" className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
           {gamesLabel}
+        </Link>
+        <Link href="/apps" className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
+          {appsLabel}
         </Link>
         <Link href="/redes" className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors">
           {socialsLabel}
@@ -52,6 +56,13 @@ export default function MobileNav({ gamesLabel, socialsLabel, contactLabel }: Mo
               className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors py-2 px-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800"
             >
               {gamesLabel}
+            </Link>
+            <Link
+              href="/apps"
+              onClick={() => setOpen(false)}
+              className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-50 transition-colors py-2 px-3 rounded-lg hover:bg-zinc-100 dark:hover:bg-zinc-800"
+            >
+              {appsLabel}
             </Link>
             <Link
               href="/redes"

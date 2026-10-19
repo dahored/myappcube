@@ -1,6 +1,7 @@
 {
   "nav": {
     "games": "Games",
+    "apps": "Apps",
     "socials": "Socials",
     "contact": "Contact"
   },
@@ -19,7 +20,8 @@
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "downloadOn": "Download on the",
-    "getItOn": "Get it on"
+    "getItOn": "Get it on",
+    "advertisement": "Advertisement"
   },
   "games": {
     "disaster-tycoon": {
@@ -322,5 +324,20 @@
     "instagram": "Our day-to-day, game previews and community.",
     "facebook": "News, launches and updates.",
     "youtube": "Trailers, gameplay and tutorials."
+  },
+  "appsPage": {
+    "label": "Apps",
+    "title": "Our apps",
+    "subtitle": "Simple tools to organize moments with your people.",
+    "webOnly": "Web only for now",
+    "open": "Open app",
+    "homeSubtitle": "Free, no download needed — open them in your browser.",
+    "viewAll": "See all apps"
+  },
+  "apps": {
+    "amigo-secreto": {
+      "name": "Secret Friend",
+      "description": "Run a Secret Santa or gift exchange for family, work or friends. Everyone sees who they're buying for on their phone and shares a wishlist. No sign-up for guests."
+    }
   }
 }
