@@ -3,7 +3,7 @@ import { Instagram, Facebook, Youtube, type LucideIcon } from 'lucide-react';
 export const studio = {
   name: 'myappcube',
   siteUrl: 'https://www.myappcube.com',
-  email: 'dahoreddiegohernandez+myappcube@gmail.com',
+  email: 'hi@myappcube.com',
   googlePlayDeveloperUrl: 'https://play.google.com/store/apps/dev?id=8771045632526553752',
   appStoreDeveloperUrl: 'https://apps.apple.com/es/developer/diego-alejandro-hernandez-orrego/id1886540688',
   adsensePublisherId: 'ca-pub-5119314285197382',
