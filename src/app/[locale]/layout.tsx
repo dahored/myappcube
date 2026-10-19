@@ -6,8 +6,6 @@ import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import LangAttribute from '@/components/LangAttribute';
-import ComingSoon from '@/components/ui/ComingSoon';
-import { studio } from '@/config/studio';
 
 export default async function LocaleLayout({
   children,
@@ -20,10 +18,6 @@ export default async function LocaleLayout({
 
   if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
     notFound();
-  }
-
-  if (studio.comingSoon) {
-    return <ComingSoon />;
   }
 
   const messages = await getMessages();
